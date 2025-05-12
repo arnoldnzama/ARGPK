@@ -1,0 +1,31 @@
+{
+  "emplacements": [
+    {
+      "id": "EMP001",
+      "commune": "Gombe",
+      "type": "Panneau publicitaire",
+      "dimensions": "6m x 3m",
+      "statut": "disponible",
+      "latitude": -4.3217,
+      "longitude": 15.3125
+    },
+    {
+      "id": "EMP002",
+      "commune": "Lingwala",
+      "type": "Façade",
+      "dimensions": "8m x 4m",
+      "statut": "occupe",
+      "latitude": -4.3298,
+      "longitude": 15.3198
+    },
+    {
+      "id": "EMP003",
+      "commune": "Barumbu",
+      "type": "Totem",
+      "dimensions": "3m x 1.5m",
+      "statut": "disponible",
+      "latitude": -4.3156,
+      "longitude": 15.3267
+    }
+  ]
+}

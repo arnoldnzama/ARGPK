@@ -291,7 +291,7 @@
                                 <span class="text-gray-700">Infractions signalées</span>
                             </label>
                         </div>
-                        <button class="mt-6 bg-primary text-white px-4 py-2 rounded-button w-full hover:bg-opacity-90 transition duration-300 flex items-center justify-center" aria-label="Appliquer les filtres">
+                        <button id="apply-filters" class="mt-6 bg-primary text-white px-4 py-2 rounded-button w-full hover:bg-opacity-90 transition duration-300 flex items-center justify-center" aria-label="Appliquer les filtres">
                             <i class="ri-filter-3-line mr-2"></i>
                             Appliquer les filtres
                         </button>
@@ -588,35 +588,32 @@
     </script>
 
         <script>
-            // Initialisation du slider partenaires
-            new Swiper('.partners-slider .swiper-container', {
-                slidesPerView: 1,
-                spaceBetween: 30,
-                loop: true,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 2,
+            // Initialisation du slider partenaires (uniquement si le conteneur existe)
+            const partnersContainer = document.querySelector('.partners-slider .swiper-container');
+            if (partnersContainer && window.Swiper) {
+                new Swiper(partnersContainer, {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    loop: true,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
                     },
-                    768: {
-                        slidesPerView: 3,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
                     },
-                    1024: {
-                        slidesPerView: 4,
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
                     },
-                }
-            });
+                    breakpoints: {
+                        640: { slidesPerView: 2 },
+                        768: { slidesPerView: 3 },
+                        1024: { slidesPerView: 4 },
+                    }
+                });
+            }
         </script>
 
     <!-- Bouton Retour en haut -->

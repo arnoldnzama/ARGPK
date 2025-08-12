@@ -1,7 +1,7 @@
 // Fonction pour charger les données des emplacements
 async function loadEmplacements() {
     try {
-        const response = await fetch('/data/emplacements.json');
+        const response = await fetch('data/emplacements.json');
         const data = await response.json();
         return data.emplacements;
     } catch (error) {
@@ -13,6 +13,7 @@ async function loadEmplacements() {
 // Fonction pour rendre les données dans le tableau
 function renderEmplacements(emplacements) {
     const tableBody = document.getElementById('emplacements-table-body');
+    if (!tableBody) return;
     tableBody.innerHTML = '';
 
     emplacements.forEach(emplacement => {
@@ -41,6 +42,9 @@ function renderEmplacements(emplacements) {
 
 // Initialisation
 document.addEventListener('DOMContentLoaded', async () => {
+    // Ne rien faire si la table n'est pas présente (autres pages)
+    if (!document.getElementById('emplacements-table-body')) return;
+
     const emplacements = await loadEmplacements();
     renderEmplacements(emplacements);
 

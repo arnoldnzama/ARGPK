@@ -7,11 +7,25 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
+        // Coordonnées de Kinshasa
+        const kinshasaCoordinates = [-4.4419, 15.2663];
         // Initialisation de la carte
         const map = L.map('map').setView(kinshasaCoordinates, 12);
         
-        // Coordonnées de Kinshasa
-        const kinshasaCoordinates = [-4.4419, 15.2663]; // C'est correct
+        // Ajout de la couche OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors',
+            maxZoom: 19,
+            minZoom: 10
+        }).addTo(map);
+        
+        // Contrôles de zoom personnalisés
+        const zoomInBtn = document.getElementById('zoomIn');
+        const zoomOutBtn = document.getElementById('zoomOut');
+        const centerMapBtn = document.getElementById('centerMap');
+        if (zoomInBtn) zoomInBtn.addEventListener('click', () => map.zoomIn());
+        if (zoomOutBtn) zoomOutBtn.addEventListener('click', () => map.zoomOut());
+        if (centerMapBtn) centerMapBtn.addEventListener('click', () => map.setView(kinshasaCoordinates, 13));
         
         // Pour les emplacements publicitaires, inversez l'ordre des coordonnées
         const advertisingLocations = [
@@ -248,65 +262,68 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Remplir le tableau des emplacements
         const tableBody = document.getElementById('locations-table-body');
-        
-        advertisingLocations.forEach(location => {
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${location.id}</td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${location.address}</td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${location.type}</td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${location.dimensions}</td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm">
-                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${location.status === 'Disponible' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}">
-                        ${location.status}
-                    </span>
-                </td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    <button class="text-primary hover:text-primary-dark" data-id="${location.id}">
-                        <i class="ri-eye-line"></i> Voir
-                    </button>
-                </td>
-            `;
-            tableBody.appendChild(row);
-            
-            // Ajouter un événement pour centrer la carte sur l'emplacement sélectionné
-            row.querySelector('button').addEventListener('click', function() {
-                const id = this.getAttribute('data-id');
-                const selectedLocation = advertisingLocations.find(loc => loc.id === id);
+        if (tableBody) {
+            advertisingLocations.forEach(location => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${location.id}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${location.address}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${location.type}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${location.dimensions}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm">
+                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${location.status === 'Disponible' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}">
+                            ${location.status}
+                        </span>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <button class="text-primary hover:text-primary-dark" data-id="${location.id}">
+                            <i class="ri-eye-line"></i> Voir
+                        </button>
+                    </td>
+                `;
+                tableBody.appendChild(row);
                 
-                if (selectedLocation) {
-                    map.setView(selectedLocation.coordinates, 16);
+                // Ajouter un événement pour centrer la carte sur l'emplacement sélectionné
+                row.querySelector('button').addEventListener('click', function() {
+                    const id = this.getAttribute('data-id');
+                    const selectedLocation = advertisingLocations.find(loc => loc.id === id);
                     
-                    // Trouver et ouvrir le popup correspondant
-                    if (selectedLocation.status === 'Disponible') {
-                        availablePanelsGroup.eachLayer(layer => {
-                            if (layer.getLatLng().lat === selectedLocation.coordinates[0] && 
-                                layer.getLatLng().lng === selectedLocation.coordinates[1]) {
-                                layer.openPopup();
-                            }
-                        });
-                    } else {
-                        occupiedPanelsGroup.eachLayer(layer => {
-                            if (layer.getLatLng().lat === selectedLocation.coordinates[0] && 
-                                layer.getLatLng().lng === selectedLocation.coordinates[1]) {
-                                layer.openPopup();
-                            }
-                        });
+                    if (selectedLocation) {
+                        map.setView(selectedLocation.coordinates, 16);
+                        
+                        // Trouver et ouvrir le popup correspondant
+                        if (selectedLocation.status === 'Disponible') {
+                            availablePanelsGroup.eachLayer(layer => {
+                                if (layer.getLatLng().lat === selectedLocation.coordinates[0] && 
+                                    layer.getLatLng().lng === selectedLocation.coordinates[1]) {
+                                    layer.openPopup();
+                                }
+                            });
+                        } else {
+                            occupiedPanelsGroup.eachLayer(layer => {
+                                if (layer.getLatLng().lat === selectedLocation.coordinates[0] && 
+                                    layer.getLatLng().lng === selectedLocation.coordinates[1]) {
+                                    layer.openPopup();
+                                }
+                            });
+                        }
                     }
-                }
+                });
             });
-        });
-        
-        // Función de recherche
-        document.getElementById('location-search').addEventListener('input', function() {
-            const searchTerm = this.value.toLowerCase();
-            const rows = tableBody.querySelectorAll('tr');
             
-            rows.forEach(row => {
-                const text = row.textContent.toLowerCase();
-                row.style.display = text.includes(searchTerm) ? '' : 'none';
-            });
-        });
+            // Recherche
+            const searchInput = document.getElementById('location-search');
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    const searchTerm = this.value.toLowerCase();
+                    const rows = tableBody.querySelectorAll('tr');
+                    rows.forEach(row => {
+                        const text = row.textContent.toLowerCase();
+                        row.style.display = text.includes(searchTerm) ? '' : 'none';
+                    });
+                });
+            }
+        }
         
     } catch (error) {
         console.error("Erreur lors de l'initialisation de la carte:", error);
@@ -314,191 +331,3 @@ document.addEventListener('DOMContentLoaded', function() {
 }); // Solo un paréntesis de cierre aquí
 
 
-// Fonction pour charger les données depuis l'API
-async function loadLocationsData() {
-    try {
-        const response = await fetch('https://api.argpk.com/locations');
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error('Erreur lors du chargement des données:', error);
-        return [];
-    }
-}
-
-// Initialisation de la carte avec les données de l'API
-document.addEventListener('DOMContentLoaded', async function() {
-    try {
-        const locations = await loadLocationsData();
-        updateLocationsList(locations);
-    } catch (error) {
-        console.error('Erreur lors de l\'initialisation:', error);
-    }
-});
-
-// Configuration initiale de la carte
-const map = L.map('map').setView([-4.3252, 15.3225], 13); // Coordonnées de Kinshasa
-
-// Ajout de la couche OpenStreetMap
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors',
-    maxZoom: 19,
-    minZoom: 10
-}).addTo(map);
-
-// Contrôles de zoom personnalisés
-document.getElementById('zoomIn').addEventListener('click', () => {
-    map.zoomIn();
-});
-
-document.getElementById('zoomOut').addEventListener('click', () => {
-    map.zoomOut();
-});
-
-document.getElementById('centerMap').addEventListener('click', () => {
-    map.setView([-4.3252, 15.3225], 13);
-});
-
-// Style personnalisé pour les marqueurs
-const markerIcon = L.icon({
-    iconUrl: 'assets/images/icons/marker.png',
-    iconSize: [32, 32],
-    iconAnchor: [16, 32],
-    popupAnchor: [0, -32]
-});
-
-// Exemple de marqueurs (à remplacer par vos données réelles)
-const markers = [
-    {
-        position: [-4.3252, 15.3225],
-        title: "Panneau publicitaire #1",
-        status: "disponible"
-    },
-    // Ajoutez d'autres marqueurs selon vos besoins
-];
-
-// Ajout des marqueurs à la carte
-markers.forEach(marker => {
-    L.marker(marker.position, { icon: markerIcon })
-        .bindPopup(`
-            <div class="p-2">
-                <h3 class="font-semibold">${marker.title}</h3>
-                <p class="text-sm text-gray-600">Statut: ${marker.status}</p>
-            </div>
-        `)
-        .addTo(map);
-});
-
-// Gestion des filtres
-const filters = {
-    availablePanels: document.getElementById('available-panels'),
-    occupiedPanels: document.getElementById('occupied-panels'),
-    regulatedZones: document.getElementById('regulated-zones'),
-    reportedInfractions: document.getElementById('reported-infractions')
-};
-
-// Fonction pour mettre à jour les marqueurs selon les filtres
-function updateMarkers() {
-    // Logique de filtrage des marqueurs selon les cases cochées
-    Object.keys(filters).forEach(filterKey => {
-        if (filters[filterKey].checked) {
-            // Afficher les marqueurs correspondants
-        } else {
-            // Masquer les marqueurs correspondants
-        }
-    });
-}
-
-// Écouteurs d'événements pour les filtres
-Object.values(filters).forEach(filter => {
-    filter.addEventListener('change', updateMarkers);
-});
-
-// Fonction pour ajouter un marqueur
-function addMarker(location, type) {
-    const marker = L.marker([location.lat, location.lng])
-        .bindPopup(`
-            <h3>${location.name}</h3>
-            <p>Type: ${type}</p>
-            <p>Statut: ${location.status}</p>
-        `)
-        .addTo(map);
-    return marker;
-}
-
-// Fonction de recherche dans la liste des emplacements
-document.querySelector('input[type="text"]').addEventListener('input', (e) => {
-    const searchTerm = e.target.value.toLowerCase();
-    // Logique de filtrage de la liste selon le terme de recherche
-});
-
-
-// Fonction de filtrage
-function filterLocations(filters) {
-    map.eachLayer((layer) => {
-        if (layer instanceof L.Marker) {
-            const properties = layer.properties;
-            const visible = 
-                (!filters.type || properties.type === filters.type) &&
-                (!filters.status || properties.status === filters.status) &&
-                (!filters.commune || properties.commune === filters.commune);
-            
-            if (visible) {
-                layer.addTo(map);
-            } else {
-                map.removeLayer(layer);
-            }
-        }
-    });
-}
-
-// Écouteurs d'événements pour les filtres
-document.querySelectorAll('.filter-control').forEach(control => {
-    control.addEventListener('change', () => {
-        const filters = {
-            type: document.getElementById('type-filter').value,
-            status: document.getElementById('status-filter').value,
-            commune: document.getElementById('commune-filter').value
-        };
-        filterLocations(filters);
-    });
-});
-
-
-function updateLocationsList(locations) {
-    const tableBody = document.getElementById('locations-table-body');
-    tableBody.innerHTML = '';
-    
-    locations.forEach(location => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${location.id}</td>
-            <td>${location.type}</td>
-            <td>${location.address}</td>
-            <td>${location.status}</td>
-            <td>
-                <button class="locate-btn" data-id="${location.id}">
-                    Localiser
-                </button>
-            </td>
-        `;
-        tableBody.appendChild(row);
-    });
-    
-    // Ajouter les écouteurs pour la synchronisation
-    document.querySelectorAll('.locate-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const locationId = btn.dataset.id;
-            const location = locations.find(loc => loc.id === locationId);
-            if (location) {
-                map.setView(location.coordinates, 16);
-                // Ouvrir le popup du marqueur correspondant
-                map.eachLayer((layer) => {
-                    if (layer instanceof L.Marker && layer.properties.id === locationId) {
-                        layer.openPopup();
-                    }
-                });
-            }
-        });
-    });
-}

@@ -179,18 +179,18 @@ header nav a.active::after {
 
 
 /* Styles pour le bouton Retour en haut */
-#back-to-top {
+#backToTop {
     transform: translateY(100px);
     z-index: 99;
     cursor: pointer;
 }
 
-#back-to-top.visible {
+#backToTop.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-#back-to-top:hover {
+#backToTop:hover {
     animation: bounce 0.5s ease infinite;
 }
 

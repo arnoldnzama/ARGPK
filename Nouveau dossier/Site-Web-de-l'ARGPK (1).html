@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARGPK - Agence de Régulation de la Publicité à Kinshasa</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#003366',secondary:'#FFCC00'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-section {
+            background-image: url('https://readdy.ai/api/search-image?query=A%20panoramic%20view%20of%20Kinshasa%20city%20with%20modern%20buildings%20and%20advertising%20billboards%20under%20a%20clear%20blue%20sky.%20The%20image%20shows%20a%20vibrant%20urban%20landscape%20with%20well-designed%20outdoor%20advertising%20that%20blends%20harmoniously%20with%20the%20cityscape.%20The%20left%20side%20of%20the%20image%20has%20a%20smooth%20gradient%20to%20lighter%20colors%20to%20accommodate%20text%20overlay&width=1600&height=800&seq=1&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="bg-primary text-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center">
+                <div class="text-2xl font-['Pacifico'] mr-10">ARGPK</div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#" class="font-medium hover:text-secondary transition-colors">Accueil</a>
+                    <a href="#" class="font-medium hover:text-secondary transition-colors">À propos</a>
+                    <a href="#" class="font-medium hover:text-secondary transition-colors">Missions</a>
+                    <a href="#" class="font-medium hover:text-secondary transition-colors">Réglementation</a>
+                    <a href="#" class="font-medium hover:text-secondary transition-colors">E-services</a>
+                    <a href="#" class="font-medium hover:text-secondary transition-colors">Emplacements</a>
+                    <a href="#" class="font-medium hover:text-secondary transition-colors">Actualités</a>
+                    <a href="#" class="font-medium hover:text-secondary transition-colors">Contact</a>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="flex items-center border border-white/30 rounded-full overflow-hidden">
+                    <button class="px-3 py-1 bg-white/20 text-white">FR</button>
+                    <button class="px-3 py-1 text-white/70 hover:text-white">EN</button>
+                </div>
+                <button class="md:hidden w-10 h-10 flex items-center justify-center">
+                    <i class="ri-menu-line ri-lg"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section relative">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"></div>
+        <div class="container mx-auto px-4 py-24 relative z-10">
+            <div class="max-w-2xl text-white">
+                <h1 class="playfair text-4xl md:text-5xl font-bold mb-6">Agence de Régulation de la Publicité à Kinshasa</h1>
+                <p class="text-lg mb-8">Nous veillons à l'application des normes publicitaires pour un environnement urbain harmonieux et respectueux. Notre mission est de promouvoir une publicité responsable et conforme aux réglementations en vigueur.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="bg-secondary text-primary font-semibold px-6 py-3 !rounded-button whitespace-nowrap hover:bg-secondary/90 transition-colors">Soumettre une demande</button>
+                    <button class="bg-white/10 backdrop-blur-sm border border-white/30 text-white font-semibold px-6 py-3 !rounded-button whitespace-nowrap hover:bg-white/20 transition-colors">En savoir plus</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="playfair text-3xl font-bold text-gray-900 mb-4">Notre Engagement pour Kinshasa</h2>
+                <p class="text-gray-700">L'ARGPK est l'autorité officielle chargée de réguler la publicité extérieure dans la ville de Kinshasa. Nous travaillons à créer un équilibre entre les besoins commerciaux et l'esthétique urbaine.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded shadow-md hover:shadow-lg transition-shadow">
+                    <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-government-line ri-lg text-primary"></i>
+                    </div>
+                    <h3 class="playfair text-xl font-semibold mb-3">Autorité Officielle</h3>
+                    <p class="text-gray-600">Mandatée par le gouvernement provincial pour assurer la conformité des supports publicitaires dans l'espace public.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded shadow-md hover:shadow-lg transition-shadow">
+                    <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-shield-check-line ri-lg text-primary"></i>
+                    </div>
+                    <h3 class="playfair text-xl font-semibold mb-3">Contrôle Qualité</h3>
+                    <p class="text-gray-600">Nous veillons à ce que tous les affichages publicitaires respectent les normes de sécurité et d'esthétique urbaine.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded shadow-md hover:shadow-lg transition-shadow">
+                    <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-community-line ri-lg text-primary"></i>
+                    </div>
+                    <h3 class="playfair text-xl font-semibold mb-3">Développement Urbain</h3>
+                    <p class="text-gray-600">Nous contribuons à l'embellissement de Kinshasa en harmonisant les espaces publicitaires avec l'environnement urbain.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="playfair text-3xl font-bold text-gray-900 mb-4">Nos Services</h2>
+                <p class="text-gray-700">Découvrez comment l'ARGPK peut vous accompagner dans vos projets publicitaires à Kinshasa.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white border border-gray-100 rounded-lg shadow-sm overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=A%20professional%20meeting%20between%20advertising%20agency%20representatives%20and%20regulatory%20officials%20discussing%20billboard%20placement%20in%20an%20office%20setting%20with%20maps%20and%20documents%20on%20the%20table.%20The%20image%20shows%20a%20collaborative%20atmosphere%20with%20diverse%20professionals%20in%20business%20attire.%20The%20scene%20depicts%20a%20formal%20regulatory%20approval%20process%20for%20outdoor%20advertising&width=600&height=400&seq=2&orientation=landscape" alt="Autorisations publicitaires" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="playfair text-xl font-semibold mb-3">Autorisations Publicitaires</h3>
+                        <p class="text-gray-600 mb-4">Obtenez rapidement vos autorisations pour l'installation de panneaux publicitaires, enseignes et autres supports dans l'espace public kinois.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-1 rounded">Panneaux</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-1 rounded">Enseignes</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-1 rounded">Affichages temporaires</span>
+                        </div>
+                        <button class="text-primary font-medium flex items-center !rounded-button whitespace-nowrap">
+                            Faire une demande
+                            <i class="ri-arrow-right-line ri-lg ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white border border-gray-100 rounded-lg shadow-sm overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=A%20city%20inspector%20in%20professional%20attire%20examining%20a%20large%20billboard%20in%20an%20urban%20setting%2C%20making%20notes%20on%20a%20clipboard.%20The%20scene%20shows%20a%20thorough%20inspection%20process%20with%20measurement%20tools%20and%20safety%20equipment.%20The%20background%20shows%20a%20busy%20Kinshasa%20street%20with%20modern%20buildings%20and%20pedestrians&width=600&height=400&seq=3&orientation=landscape" alt="Contrôle et conformité" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="playfair text-xl font-semibold mb-3">Contrôle et Conformité</h3>
+                        <p class="text-gray-600 mb-4">Nos équipes d'inspecteurs veillent au respect des réglementations et assurent des contrôles réguliers pour garantir la sécurité publique.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-1 rounded">Inspections</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-1 rounded">Conformité</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-1 rounded">Sécurité</span>
+                        </div>
+                        <button class="text-primary font-medium flex items-center !rounded-button whitespace-nowrap">
+                            Consulter le calendrier
+                            <i class="ri-arrow-right-line ri-lg ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- E-Services Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="playfair text-3xl font-bold text-gray-900 mb-4">E-Services</h2>
+                <p class="text-gray-700">Effectuez vos démarches en ligne pour gagner du temps et suivre l'avancement de vos dossiers.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                        <i class="ri-file-list-3-line ri-lg text-primary"></i>
+                    </div>
+                    <h3 class="playfair text-lg font-semibold mb-2">Demande d'autorisation</h3>
+                    <p class="text-gray-600 mb-4">Soumettez votre dossier en ligne et recevez une confirmation immédiate.</p>
+                    <button class="text-primary font-medium flex items-center !rounded-button whitespace-nowrap">
+                        Commencer
+                        <i class="ri-arrow-right-line ri-lg ml-1"></i>
+                    </button>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                        <i class="ri-bank-card-line ri-lg text-primary"></i>
+                    </div>
+                    <h3 class="playfair text-lg font-semibold mb-2">Paiement en ligne</h3>
+                    <p class="text-gray-600 mb-4">Réglez vos frais administratifs de manière sécurisée via notre plateforme.</p>
+                    <button class="text-primary font-medium flex items-center !rounded-button whitespace-nowrap">
+                        Payer maintenant
+                        <i class="ri-arrow-right-line ri-lg ml-1"></i>
+                    </button>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                        <i class="ri-search-line ri-lg text-primary"></i>
+                    </div>
+                    <h3 class="playfair text-lg font-semibold mb-2">Suivi de dossier</h3>
+                    <p class="text-gray-600 mb-4">Consultez l'état d'avancement de votre demande avec votre numéro de référence.</p>
+                    <div class="flex items-center gap-2">
+                        <input type="text" placeholder="N° de référence" class="border border-gray-300 rounded-button px-3 py-2 text-sm w-full focus:outline-none focus:border-primary">
+                        <button class="bg-primary text-white px-4 py-2 !rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors">
+                            Vérifier
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="playfair text-3xl font-bold text-gray-900 mb-4">Emplacements Publicitaires</h2>
+                <p class="text-gray-700">Consultez la carte interactive des emplacements disponibles et autorisés dans la ville de Kinshasa.</p>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+                    <div class="w-full md:w-1/3 p-6 border-r border-gray-100">
+                        <h3 class="playfair text-xl font-semibold mb-4">Filtrer par zone</h3>
+                        
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-medium mb-2">Commune</label>
+                            <div class="relative">
+                                <select class="appearance-none bg-gray-50 border border-gray-300 text-gray-700 py-2 px-3 pr-8 rounded-button w-full focus:outline-none focus:border-primary">
+                                    <option>Toutes les communes</option>
+                                    <option>Gombe</option>
+                                    <option>Lingwala</option>
+                                    <option>Barumbu</option>
+                                    <option>Kinshasa</option>
+                                    <option>Kintambo</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-medium mb-2">Type de support</label>
+                            <div class="space-y-2">
+                                <div class="flex items-center">
+                                    <div class="relative w-4 h-4 mr-2">
+                                        <input type="checkbox" id="type1" class="opacity-0 absolute w-4 h-4">
+                                        <div class="border border-gray-300 rounded w-4 h-4 flex flex-shrink-0 justify-center items-center">
+                                            <div class="hidden bg-primary w-2 h-2 rounded-sm pointer-events-none"></div>
+                                        </div>
+                                    </div>
+                                    <label for="type1" class="text-sm text-gray-700">Panneaux 4x3</label>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <div class="relative w-4 h-4 mr-2">
+                                        <input type="checkbox" id="type2" class="opacity-0 absolute w-4 h-4">
+                                        <div class="border border-gray-300 rounded w-4 h-4 flex flex-shrink-0 justify-center items-center">
+                                            <div class="hidden bg-primary w-2 h-2 rounded-sm pointer-events-none"></div>
+                                        </div>
+                                    </div>
+                                    <label for="type2" class="text-sm text-gray-700">Panneaux digitaux</label>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <div class="relative w-4 h-4 mr-2">
+                                        <input type="checkbox" id="type3" class="opacity-0 absolute w-4 h-4">
+                                        <div class="border border-gray-300 rounded w-4 h-4 flex flex-shrink-0 justify-center items-center">
+                                            <div class="hidden bg-primary w-2 h-2 rounded-sm pointer-events-none"></div>
+                                        </div>
+                                    </div>
+                                    <label for="type3" class="text-sm text-gray-700">Abris-bus</label>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <div class="relative w-4 h-4 mr-2">
+                                        <input type="checkbox" id="type4" class="opacity-0 absolute w-4 h-4">
+                                        <div class="border border-gray-300 rounded w-4 h-4 flex flex-shrink-0 justify-center items-center">
+                                            <div class="hidden bg-primary w-2 h-2 rounded-sm pointer-events-none"></div>
+                                        </div>
+                                    </div>
+                                    <label for="type4" class="text-sm text-gray-700">Enseignes</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-medium mb-2">Statut</label>
+                            <div class="relative">
+                                <select class="appearance-none bg-gray-50 border border-gray-300 text-gray-700 py-2 px-3 pr-8 rounded-button w-full focus:outline-none focus:border-primary">
+                                    <option>Tous les statuts</option>
+                                    <option>Disponible</option>
+                                    <option>Occupé</option>
+                                    <option>En maintenance</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="bg-primary text-white w-full py-2 !rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors">
+                            Appliquer les filtres
+                        </button>
+                    </div>
+                    
+                    <div class="w-full md:w-2/3 h-[500px] relative">
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png')"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="bg-white/80 backdrop-blur-sm p-4 rounded-lg shadow-lg">
+                                <p class="text-gray-800 font-medium">Cliquez sur un marqueur pour voir les détails de l'emplacement</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="playfair text-3xl font-bold text-gray-900 mb-4">Témoignages</h2>
+                <p class="text-gray-700">Découvrez ce que nos partenaires et utilisateurs disent de nos services.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="text-secondary">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"Le processus d'obtention d'autorisation a été simplifié et rapide. Les agents de l'ARGPK sont professionnels et réactifs. Notre campagne publicitaire a pu être lancée dans les délais prévus."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mr-3">
+                            <i class="ri-user-line text-gray-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-900">Jean-Pierre Mutombo</h4>
+                            <p class="text-sm text-gray-600">Directeur Marketing, Vodacom Congo</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="text-secondary">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-fill"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"La plateforme en ligne est intuitive et nous permet de suivre facilement nos demandes. Les conseils fournis par l'équipe technique nous ont aidés à optimiser notre visibilité tout en respectant les réglementations."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mr-3">
+                            <i class="ri-user-line text-gray-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-900">Claudine Mbala</h4>
+                            <p class="text-sm text-gray-600">Responsable Communication, Bralima</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="text-secondary">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-line"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"L'ARGPK a transformé le paysage publicitaire de Kinshasa. En tant qu'agence de communication, nous apprécions la transparence des procédures et l'effort pour maintenir un environnement visuel harmonieux dans la ville."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mr-3">
+                            <i class="ri-user-line text-gray-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-900">François Lukusa</h4>
+                            <p class="text-sm text-gray-600">Directeur, Créa-Vision</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- News Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="playfair text-3xl font-bold text-gray-900 mb-4">Actualités</h2>
+                <p class="text-gray-700">Restez informé des dernières nouvelles et réglementations concernant la publicité à Kinshasa.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=A%20formal%20press%20conference%20with%20government%20officials%20announcing%20new%20advertising%20regulations%20in%20Kinshasa.%20The%20scene%20shows%20officials%20in%20formal%20attire%20at%20a%20podium%20with%20microphones%2C%20journalists%20taking%20notes%2C%20and%20presentation%20screens%20showing%20regulatory%20information.%20The%20setting%20is%20professional%20with%20national%20flags%20and%20official%20branding%20visible&width=600&height=400&seq=4&orientation=landscape" alt="Nouvelle réglementation" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <i class="ri-calendar-line mr-2"></i>
+                            <span>09 mai 2025</span>
+                        </div>
+                        <h3 class="playfair text-xl font-semibold mb-3">Nouvelle réglementation sur les panneaux digitaux</h3>
+                        <p class="text-gray-600 mb-4">L'ARGPK annonce de nouvelles directives concernant la luminosité et la fréquence de changement des affichages digitaux dans les zones résidentielles.</p>
+                        <button class="text-primary font-medium flex items-center !rounded-button whitespace-nowrap">
+                            Lire plus
+                            <i class="ri-arrow-right-line ri-lg ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=A%20workshop%20or%20training%20session%20about%20advertising%20regulations%20with%20diverse%20participants%20in%20a%20modern%20conference%20room.%20The%20scene%20shows%20a%20presenter%20at%20the%20front%20with%20presentation%20slides%2C%20attendees%20taking%20notes%2C%20and%20interactive%20discussion.%20The%20setting%20is%20professional%20with%20training%20materials%20visible%20on%20tables&width=600&height=400&seq=5&orientation=landscape" alt="Atelier de formation" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <i class="ri-calendar-line mr-2"></i>
+                            <span>28 avril 2025</span>
+                        </div>
+                        <h3 class="playfair text-xl font-semibold mb-3">Atelier de formation pour les agences publicitaires</h3>
+                        <p class="text-gray-600 mb-4">L'ARGPK organise une série d'ateliers pour familiariser les professionnels avec les nouvelles procédures de demande d'autorisation en ligne.</p>
+                        <button class="text-primary font-medium flex items-center !rounded-button whitespace-nowrap">
+                            Lire plus
+                            <i class="ri-arrow-right-line ri-lg ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=City%20workers%20removing%20illegal%20or%20non-compliant%20billboards%20in%20an%20urban%20setting.%20The%20scene%20shows%20workers%20in%20safety%20gear%20using%20equipment%20to%20take%20down%20unauthorized%20advertising%20structures.%20The%20background%20shows%20a%20busy%20Kinshasa%20street%20with%20buildings%20and%20traffic.%20The%20image%20depicts%20enforcement%20of%20advertising%20regulations&width=600&height=400&seq=6&orientation=landscape" alt="Campagne de sensibilisation" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <i class="ri-calendar-line mr-2"></i>
+                            <span>15 avril 2025</span>
+                        </div>
+                        <h3 class="playfair text-xl font-semibold mb-3">Campagne contre l'affichage sauvage</h3>
+                        <p class="text-gray-600 mb-4">Lancement d'une campagne de sensibilisation et d'actions contre l'affichage non autorisé qui dégrade l'espace public dans plusieurs communes.</p>
+                        <button class="text-primary font-medium flex items-center !rounded-button whitespace-nowrap">
+                            Lire plus
+                            <i class="ri-arrow-right-line ri-lg ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <button class="border border-primary text-primary font-medium px-6 py-3 !rounded-button whitespace-nowrap hover:bg-primary/5 transition-colors">
+                    Voir toutes les actualités
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="playfair text-3xl font-bold text-gray-900 mb-4">Contactez-nous</h2>
+                <p class="text-gray-700">Notre équipe est à votre disposition pour répondre à vos questions et vous accompagner dans vos démarches.</p>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+                    <div class="w-full md:w-1/2 p-8">
+                        <h3 class="playfair text-xl font-semibold mb-6">Envoyez-nous un message</h3>
+                        
+                        <form>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-medium mb-2">Nom</label>
+                                    <input type="text" class="border border-gray-300 rounded-button px-3 py-2 w-full focus:outline-none focus:border-primary">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-medium mb-2">Prénom</label>
+                                    <input type="text" class="border border-gray-300 rounded-button px-3 py-2 w-full focus:outline-none focus:border-primary">
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Email</label>
+                                <input type="email" class="border border-gray-300 rounded-button px-3 py-2 w-full focus:outline-none focus:border-primary">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Sujet</label>
+                                <select class="appearance-none border border-gray-300 rounded-button px-3 py-2 w-full focus:outline-none focus:border-primary pr-8">
+                                    <option>Demande d'information</option>
+                                    <option>Problème technique</option>
+                                    <option>Signalement</option>
+                                    <option>Autre</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Message</label>
+                                <textarea rows="4" class="border border-gray-300 rounded-button px-3 py-2 w-full focus:outline-none focus:border-primary"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="bg-primary text-white font-medium px-6 py-3 !rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors">
+                                Envoyer le message
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="w-full md:w-1/2 bg-gray-100 p-8">
+                        <h3 class="playfair text-xl font-semibold mb-6">Nos coordonnées</h3>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-3 mt-1">
+                                    <i class="ri-map-pin-line text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900">Adresse</h4>
+                                    <p class="text-gray-600">123 Boulevard du 30 Juin, Commune de la Gombe, Kinshasa, RDC</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-3 mt-1">
+                                    <i class="ri-phone-line text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900">Téléphone</h4>
+                                    <p class="text-gray-600">+243 81 234 5678</p>
+                                    <p class="text-gray-600">+243 99 876 5432</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-3 mt-1">
+                                    <i class="ri-mail-line text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900">Email</h4>
+                                    <p class="text-gray-600">contact@argpk.cd</p>
+                                    <p class="text-gray-600">info@argpk.cd</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-3 mt-1">
+                                    <i class="ri-time-line text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900">Horaires d'ouverture</h4>
+                                    <p class="text-gray-600">Lundi - Vendredi: 8h00 - 16h00</p>
+                                    <p class="text-gray-600">Samedi: 9h00 - 12h00</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h4 class="font-medium text-gray-900 mb-3">Suivez-nous</h4>
+                        <div class="flex space-x-3">
+                            <a href="#" class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full hover:bg-primary/20 transition-colors">
+                                <i class="ri-facebook-fill text-primary"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full hover:bg-primary/20 transition-colors">
+                                <i class="ri-twitter-fill text-primary"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full hover:bg-primary/20 transition-colors">
+                                <i class="ri-linkedin-fill text-primary"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full hover:bg-primary/20 transition-colors">
+                                <i class="ri-youtube-fill text-primary"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-12 bg-primary">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="text-white">
+                    <h2 class="playfair text-2xl font-bold mb-2">Restez informé</h2>
+                    <p>Abonnez-vous à notre newsletter pour recevoir les dernières actualités et informations.</p>
+                </div>
+                <div class="w-full md:w-auto flex flex-col sm:flex-row gap-3">
+                    <input type="email" placeholder="Votre adresse email" class="border-none rounded-button px-4 py-3 w-full sm:w-64 focus:outline-none">
+                    <button class="bg-secondary text-primary font-medium px-6 py-3 !rounded-button whitespace-nowrap hover:bg-secondary/90 transition-colors">
+                        S'abonner
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="text-2xl font-['Pacifico'] mb-4">ARGPK</div>
+                    <p class="text-gray-400 mb-4">Agence de Régulation de la Publicité à Kinshasa. Nous veillons à l'application des normes publicitaires pour un environnement urbain harmonieux.</p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700 transition-colors">
+                            <i class="ri-facebook-fill text-gray-400"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700 transition-colors">
+                            <i class="ri-twitter-fill text-gray-400"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700 transition-colors">
+                            <i class="ri-linkedin-fill text-gray-400"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700 transition-colors">
+                            <i class="ri-youtube-fill text-gray-400"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Accueil</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">À propos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Missions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Réglementation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">E-services</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Demande d'autorisation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Paiement en ligne</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Suivi de dossier</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Signalement</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="ri-map-pin-line mr-2 mt-1"></i>
+                            <span class="text-gray-400">123 Boulevard du 30 Juin, Commune de la Gombe, Kinshasa</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-phone-line mr-2 mt-1"></i>
+                            <span class="text-gray-400">+243 81 234 5678</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-mail-line mr-2 mt-1"></i>
+                            <span class="text-gray-400">contact@argpk.cd</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-time-line mr-2 mt-1"></i>
+                            <span class="text-gray-400">Lun - Ven: 8h00 - 16h00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2025 ARGPK - Agence de Régulation de la Publicité à Kinshasa. Tous droits réservés.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-500 text-sm hover:text-white transition-colors">Politique de confidentialité</a>
+                    <a href="#" class="text-gray-500 text-sm hover:text-white transition-colors">Conditions d'utilisation</a>
+                    <a href="#" class="text-gray-500 text-sm hover:text-white transition-colors">Mentions légales</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Checkbox functionality
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    const indicator = this.nextElementSibling.querySelector('div');
+                    if (this.checked) {
+                        indicator.classList.remove('hidden');
+                    } else {
+                        indicator.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

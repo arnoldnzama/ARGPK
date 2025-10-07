@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualités - ARGPK - Agence de Régulation de la Publicité à Kinshasa</title>
+    <link rel="icon" href="assets/images/icons/argpk.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#003366',secondary:'#FFCC00'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-section {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .mobile-menu {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease-in-out;
+            }
+            .mobile-menu.active {
+                transform: translateX(0);
+            }
+            .mobile-menu nav a {
+                position: relative;
+            }
+            .mobile-menu nav a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: #FFC107; /* Couleur secondaire directement définie */
+            transition: width 0.3s ease;
+        }
+        
+        .mobile-menu nav a:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="bg-primary text-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html">
+                    <img src="assets/images/logo/whrite1.png" alt="ARGPK Logo" class="h-16 mr-8">
+                </a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="index.html" class="hover:text-secondary transition duration-300 font-medium">Accueil</a>
+                    <a href="about.html" class="hover:text-secondary transition duration-300 font-medium">À propos</a>
+                    <a href="missions.html" class="hover:text-secondary transition duration-300 font-medium">Missions</a>
+                    <a href="reglementation.html" class="hover:text-secondary transition duration-300 font-medium">Réglementation</a>
+                    <a href="e-services.html" class="hover:text-secondary transition duration-300 font-medium">E-services</a>
+                    <a href="emplacements.html" class="hover:text-secondary transition duration-300 font-medium">Emplacements</a>
+                    <a href="actualites.html" class="hover:text-secondary transition duration-300 font-medium">Actualités</a>
+                    <a href="contact.html" class="hover:text-secondary transition duration-300 font-medium">Contact</a>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button id="open-menu" class="md:hidden w-10 h-10 flex items-center justify-center">
+                    <i class="ri-menu-line ri-lg"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Menu Mobile -->
+    <div class="mobile-menu fixed top-0 left-0 w-full h-screen bg-primary z-50 flex flex-col p-6 hidden">
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-2xl font-['Pacifico'] text-white">ARGPK</h1>
+            <button id="close-menu" class="w-10 h-10 flex items-center justify-center text-white">
+                <i class="ri-close-line ri-lg"></i>
+            </button>
+        </div>
+        <nav class="flex flex-col space-y-4">
+            <a href="index.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Accueil</a>
+            <a href="about.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">À propos</a>
+            <a href="missions.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Missions</a>
+            <a href="reglementation.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Réglementation</a>
+            <a href="e-services.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">E-services</a>
+            <a href="emplacements.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Emplacements</a>
+            <a href="actualites.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Actualités</a>
+            <a href="contact.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Contact</a>
+        </nav>
+</div>
+
+    <!-- Hero Section -->
+    <section class="hero-section relative min-h-[400px] flex items-center" style="background-image: url('https://readdy.ai/api/search-image?query=Kinshasa%20city%20news%20and%20media%20concept%2C%20newspapers%20and%20digital%20news%20about%20advertising%20regulations%2C%20professional%20photography&width=1920&height=600&seq=1&orientation=landscape');">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-2xl text-white">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Actualités</h1>
+                <p class="text-lg mb-8">Restez informé des dernières nouvelles, événements et communiqués officiels de l'ARGPK.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">Dernières Actualités</h2>
+                <p class="text-gray-700 text-lg">Découvrez les dernières informations concernant la régulation publicitaire à Kinshasa.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- News Article 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://readdy.ai/api/search-image?query=Officials%20from%20advertising%20regulation%20agency%20at%20a%20press%20conference%2C%20announcing%20new%20regulations%20for%20outdoor%20advertising%20in%20Kinshasa%2C%20professional%20setting%20with%20government%20officials%20and%20press%2C%20clean%20modern%20conference%20room&width=600&height=400&seq=6&orientation=landscape" alt="Nouvelle réglementation" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-sm text-gray-500">15 Juin 2023</span>
+                            <span class="bg-primary/10 text-primary px-2 py-1 rounded text-xs font-medium">Réglementation</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Nouvelle réglementation sur les panneaux publicitaires numériques</h3>
+                        <p class="text-gray-700 mb-4">L'ARGPK annonce la mise en place d'une nouvelle réglementation concernant les panneaux publicitaires numériques dans la ville de Kinshasa, visant à limiter la pollution lumineuse et à améliorer la sécurité routière.</p>
+                        <a href="#" class="text-primary font-medium hover:underline">Lire la suite →</a>
+                    </div>
+                </div>
+                
+                <!-- News Article 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://readdy.ai/api/search-image?query=A%20workshop%20session%20on%20advertising%20standards%20with%20professionals%20seated%20in%20a%20conference%20room%2C%20with%20presentation%20slides%20visible%20showing%20advertising%20regulations%2C%20professional%20business%20setting%20with%20diverse%20participants&width=600&height=400&seq=7&orientation=landscape" alt="Campagne de sensibilisation" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-sm text-gray-500">28 Mai 2023</span>
+                            <span class="bg-secondary/10 text-secondary px-2 py-1 rounded text-xs font-medium">Événement</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Lancement de la campagne de sensibilisation sur la publicité responsable</h3>
+                        <p class="text-gray-700 mb-4">L'ARGPK lance une campagne de sensibilisation auprès des entreprises et des agences de publicité pour promouvoir des pratiques publicitaires responsables et respectueuses de l'environnement urbain.</p>
+                        <a href="#" class="text-primary font-medium hover:underline">Lire la suite →</a>
+                    </div>
+                </div>
+                
+                <!-- News Article 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://readdy.ai/api/search-image?query=Officials%20removing%20illegal%20billboards%20in%20Kinshasa%2C%20with%20regulation%20enforcement%20officers%20in%20uniform%2C%20professional%20operation%20with%20trucks%20and%20equipment%2C%20showing%20enforcement%20of%20advertising%20regulations%20in%20urban%20setting&width=600&height=400&seq=8&orientation=landscape" alt="Formation professionnelle" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-sm text-gray-500">10 Mai 2023</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-medium">Formation</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Programme de formation pour les professionnels de la publicité</h3>
+                        <p class="text-gray-700 mb-4">L'ARGPK annonce le lancement d'un programme de formation destiné aux professionnels de la publicité pour les aider à se conformer aux normes et réglementations en vigueur à Kinshasa.</p>
+                        <a href="#" class="text-primary font-medium hover:underline">Lire la suite →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Official Communications Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">Communiqués Officiels</h2>
+                <p class="text-gray-700 text-lg">Consultez les derniers communiqués officiels émis par l'ARGPK.</p>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="divide-y divide-gray-200">
+                    <!-- Communiqué 1 -->
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-sm text-gray-500">20 Juin 2023</span>
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs font-medium">Urgent</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Rappel sur les délais de régularisation des installations publicitaires</h3>
+                        <p class="text-gray-700 mb-4">L'ARGPK rappelle à tous les propriétaires d'installations publicitaires non conformes que la date limite pour la régularisation est fixée au 30 juillet 2023. Passé ce délai, des sanctions seront appliquées.</p>
+                        <a href="#" class="text-primary font-medium hover:underline">Télécharger le communiqué (PDF)</a>
+                    </div>
+                    
+                    <!-- Communiqué 2 -->
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-sm text-gray-500">5 Juin 2023</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium">Information</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Nouveaux tarifs pour les autorisations publicitaires</h3>
+                        <p class="text-gray-700 mb-4">L'ARGPK informe le public que de nouveaux tarifs pour les autorisations d'affichage publicitaire entreront en vigueur à partir du 1er septembre 2023. Consultez le document ci-joint pour plus de détails.</p>
+                        <a href="#" class="text-primary font-medium hover:underline">Télécharger le communiqué (PDF)</a>
+                    </div>
+                    
+                    <!-- Communiqué 3 -->
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-sm text-gray-500">15 Mai 2023</span>
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs font-medium">Nomination</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Nomination du nouveau Directeur Général de l'ARGPK</h3>
+                        <p class="text-gray-700 mb-4">Par arrêté ministériel, M. Jean-Pierre Mukendi a été nommé Directeur Général de l'Autorité de Régulation et de Gestion de Publicité de Kinshasa (ARGPK) pour un mandat de 5 ans.</p>
+                        <a href="#" class="text-primary font-medium hover:underline">Télécharger le communiqué (PDF)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">Événements à Venir</h2>
+                <p class="text-gray-700 text-lg">Découvrez les prochains événements organisés par l'ARGPK.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Event 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row">
+                    <div class="bg-primary text-white p-6 text-center md:w-1/3 flex flex-col justify-center">
+                        <span class="text-3xl font-bold">25</span>
+                        <span class="text-xl">Juillet</span>
+                        <span>2023</span>
+                    </div>
+                    <div class="p-6 md:w-2/3">
+                        <h3 class="text-xl font-semibold mb-3">Forum sur la publicité digitale</h3>
+                        <p class="text-gray-700 mb-4">Un forum réunissant les acteurs du secteur de la publicité digitale pour discuter des enjeux et des opportunités dans ce domaine en pleine expansion.</p>
+                        <div class="flex items-center text-gray-600">
+                            <i class="ri-map-pin-line mr-2"></i>
+                            <span>Hôtel Pullman, Kinshasa</span>
+                        </div>
+                        <a href="#" class="mt-4 inline-block bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-opacity-90 transition duration-300">S'inscrire</a>
+                    </div>
+                </div>
+                
+                <!-- Event 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row">
+                    <div class="bg-primary text-white p-6 text-center md:w-1/3 flex flex-col justify-center">
+                        <span class="text-3xl font-bold">10</span>
+                        <span class="text-xl">Août</span>
+                        <span>2023</span>
+                    </div>
+                    <div class="p-6 md:w-2/3">
+                        <h3 class="text-xl font-semibold mb-3">Atelier sur les normes publicitaires</h3>
+                        <p class="text-gray-700 mb-4">Un atelier pratique destiné aux professionnels de la publicité pour comprendre et appliquer les normes en vigueur à Kinshasa.</p>
+                        <div class="flex items-center text-gray-600">
+                            <i class="ri-map-pin-line mr-2"></i>
+                            <span>Siège de l'ARGPK, Kinshasa</span>
+                        </div>
+                        <a href="#" class="mt-4 inline-block bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-opacity-90 transition duration-300">S'inscrire</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+  <!-- Footer -->
+      <footer class="bg-primary text-white pt-16 pb-8">
+          <div class="container mx-auto px-4">
+              <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                  <div>
+                    <a href="index.html">
+                        <img src="assets/images/logo/whrite1.png" alt="ARGPK Logo" class="h-18 mb-6">
+                    </a>
+                      
+                      <p class="text-gray-300 mb-6">L'Agence de Régulation de la Publicité à Kinshasa œuvre pour un environnement publicitaire responsable et harmonieux dans la ville-province de Kinshasa.</p>
+                      <div class="flex space-x-4">
+                          <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
+                              <i class="ri-facebook-fill text-white"></i>
+                          </a>
+                          <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
+                              <i class="ri-twitter-x-fill text-white"></i>
+                          </a>
+                          <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
+                              <i class="ri-instagram-fill text-white"></i>
+                          </a>
+                          <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
+                              <i class="ri-linkedin-fill text-white"></i>
+                          </a>
+                      </div>
+                  </div>
+                  
+                  <div>
+                      <h3 class="text-lg font-semibold mb-6">Liens rapides</h3>
+                      <ul class="space-y-3">
+                          <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Accueil</a></li>
+                          <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">À propos</a></li>
+                          <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Missions</a></li>
+                          <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Réglementation</a></li>
+                          <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">E-services</a></li>
+                          <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Emplacements</a></li>
+                          <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Actualités</a></li>
+                          <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Contact</a></li>
+                      </ul>
+                  </div>
+                  
+                  <div>
+                      <h3 class="text-lg font-semibold mb-6">Services</h3>
+                      <ul class="space-y-3">
+                          <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Demande d'autorisation</a></li>
+                          <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Suivi de dossier</a></li>
+                          <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Paiement en ligne</a></li>
+                          <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Calendrier des inspections</a></li>
+                          <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Signalement d'infractions</a></li>
+                          <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Consultation de la réglementation</a></li>
+                      </ul>
+                  </div>
+                  
+                  <div>
+                      <h3 class="text-lg font-semibold mb-6">Newsletter</h3>
+                      <p class="text-gray-300 mb-4">Abonnez-vous à notre newsletter pour recevoir les dernières actualités et mises à jour.</p>
+                      <form class="mb-4">
+                          <div class="flex">
+                              <input type="email" placeholder="Votre email" class="px-4 py-2 rounded-l-md w-full focus:outline-none text-gray-800">
+                              <button type="submit" class="bg-secondary text-primary px-4 py-2 rounded-r-md font-medium hover:bg-opacity-90 transition duration-300 whitespace-nowrap">S'abonner</button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+              
+              <div class="border-t border-white/20 pt-8">
+                  <div class="flex flex-col md:flex-row justify-between items-center">
+                      <p class="text-gray-300 text-sm mb-4 md:mb-0">© 2025 ARGPK - Agence de Régulation de la Publicité à Kinshasa. Tous droits réservés.</p>
+                      <div class="flex space-x-6">
+                          <a href="#" class="text-gray-300 hover:text-white text-sm transition duration-300">Politique de confidentialité</a>
+                          <a href="#" class="text-gray-300 hover:text-white text-sm transition duration-300">Conditions d'utilisation</a>
+                          <a href="#" class="text-gray-300 hover:text-white text-sm transition duration-300">Mentions légales</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+            const openMenuBtn = document.getElementById('open-menu');
+            const closeMenuBtn = document.getElementById('close-menu');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            openMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.remove('hidden');
+                setTimeout(() => {
+                    mobileMenu.classList.add('active');
+                }, 10);
+            });
+            
+            closeMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                }, 300);
+            });
+        });
+</script>
+          <!-- Bouton retour en haut -->
+          <button id="backToTop" class="fixed bottom-4 right-4 bg-primary text-white p-3 rounded-full shadow-lg opacity-0 invisible hover:bg-secondary transition-all duration-300">
+            <i class="ri-arrow-up-line text-xl"></i>
+        </button>
+            
+</body>
+</html>

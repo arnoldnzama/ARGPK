@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nouvelle réglementation sur les panneaux numériques - ARGPK</title>
+    <link rel="icon" href="assets/images/icons/argpk.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#003366',secondary:'#FFCC00'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-section {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .mobile-menu {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease-in-out;
+            }
+            .mobile-menu.active {
+                transform: translateX(0);
+            }
+            .mobile-menu nav a {
+                position: relative;
+            }
+            .mobile-menu nav a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: #FFC107; /* Couleur secondaire directement définie */
+            transition: width 0.3s ease;
+        }
+        
+        .mobile-menu nav a:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="../index.html" class="flex items-center space-x-3">
+                    <img src="../assets/images/logo/argpk.png" alt="ARGPK Logo" class="h-10">
+                    <span class="text-xl font-bold text-primary">ARGPK</span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="text-gray-700 hover:text-primary">Accueil</a>
+                    <a href="../about.html" class="text-gray-700 hover:text-primary">À propos</a>
+                    <a href="../missions.html" class="text-gray-700 hover:text-primary">Missions</a>
+                    <a href="../reglementation.html" class="text-gray-700 hover:text-primary">Réglementation</a>
+                    <a href="../actualites.html" class="text-gray-700 hover:text-primary">Actualités</a>
+                    <a href="../contact.html" class="text-gray-700 hover:text-primary">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-700 hover:text-primary" id="mobile-menu-button">
+                    <i class="ri-menu-line ri-2x"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="py-4 space-y-4">
+                    <a href="../index.html" class="block text-gray-700 hover:text-primary">Accueil</a>
+                    <a href="../about.html" class="block text-gray-700 hover:text-primary">À propos</a>
+                    <a href="../missions.html" class="block text-gray-700 hover:text-primary">Missions</a>
+                    <a href="../reglementation.html" class="block text-gray-700 hover:text-primary">Réglementation</a>
+                    <a href="../actualites.html" class="block text-gray-700 hover:text-primary">Actualités</a>
+                    <a href="../contact.html" class="block text-gray-700 hover:text-primary">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Article Content -->
+    <article class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8">
+                <h1 class="text-4xl font-bold text-primary mb-6">Nouvelle réglementation sur les panneaux numériques</h1>
+                
+                <div class="prose max-w-none">
+                    <p class="text-gray-600 mb-6">Date de publication : 15 février 2024</p>
+
+                    <img src="https://readdy.ai/api/search-image?query=Digital%20billboard%20regulations%20in%20urban%20environment%20professional%20photo&width=800&height=400" alt="Panneaux numériques" class="w-full rounded-lg mb-8">
+
+                    <h2 class="text-2xl font-semibold text-primary mb-4">Introduction</h2>
+                    <p class="mb-6">L'ARGPK annonce la mise en place d'une nouvelle réglementation concernant les panneaux publicitaires numériques dans la ville de Kinshasa. Cette initiative vise à encadrer l'utilisation croissante des écrans LED et autres dispositifs d'affichage numérique.</p>
+
+                    <h2 class="text-2xl font-semibold text-primary mb-4">Points clés de la réglementation</h2>
+                    <ul class="list-disc pl-6 mb-6">
+                        <li class="mb-2">Limitation de la luminosité des écrans selon les heures de la journée</li>
+                        <li class="mb-2">Distances minimales entre les panneaux numériques</li>
+                        <li class="mb-2">Normes techniques pour la qualité d'affichage</li>
+                        <li class="mb-2">Restrictions sur le contenu animé</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-semibold text-primary mb-4">Mise en application</h2>
+                    <p class="mb-6">La nouvelle réglementation entrera en vigueur le 1er mars 2024. Les propriétaires de panneaux existants disposeront d'un délai de 6 mois pour se conformer aux nouvelles normes.</p>
+
+                    <h2 class="text-2xl font-semibold text-primary mb-4">Contact</h2>
+                    <p>Pour plus d'informations, contactez notre service technique :</p>
+                    <p>Email : technique@argpk.cd</p>
+                    <p>Téléphone : +243 XX XXX XXXX</p>
+                </div>
+
+                <div class="mt-8 pt-8 border-t">
+                    <a href="../index.html" class="text-primary hover:text-secondary flex items-center">
+                        <i class="ri-arrow-left-line mr-2"></i>
+                        Retour à l'accueil
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="../index.html">
+                        <img src="../assets/images/logo/kinshasay_argpk.png" alt="ARGPK Logo" class="h-18 mb-6">
+                    </a>
+                    <p class="text-gray-300 mb-6">L'Agence de Régulation de la Publicité à Kinshasa œuvre pour un environnement publicitaire responsable et harmonieux dans la ville-province de Kinshasa.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
+                            <i class="ri-facebook-fill text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
+                            <i class="ri-twitter-x-fill text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
+                            <i class="ri-instagram-fill text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Liens Rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../about.html" class="text-gray-300 hover:text-white">À propos</a></li>
+                        <li><a href="../missions.html" class="text-gray-300 hover:text-white">Nos missions</a></li>
+                        <li><a href="../actualites.html" class="text-gray-300 hover:text-white">Actualités</a></li>
+                        <li><a href="../contact.html" class="text-gray-300 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../e-services.html" class="text-gray-300 hover:text-white">E-Services</a></li>
+                        <li><a href="../reglementation.html" class="text-gray-300 hover:text-white">Réglementation</a></li>
+                        <li><a href="../emplacements.html" class="text-gray-300 hover:text-white">Emplacements</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start space-x-3">
+                            <i class="ri-map-pin-line mt-1"></i>
+                            <span class="text-gray-300">123 Avenue de la Justice<br>Gombe, Kinshasa<br>République Démocratique du Congo</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="ri-phone-line"></i>
+                            <span class="text-gray-300">+243 123 456 789</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="ri-mail-line"></i>
+                            <span class="text-gray-300">contact@argpk.cd</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8">
+                <div class="text-center text-gray-400">
+                    <p>&copy; 2024 ARGPK - Agence de Régulation de la Publicité à Kinshasa. Tous droits réservés.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

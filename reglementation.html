@@ -4,496 +4,446 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Réglementation - ARGPK - Agence de Régulation de la Publicité à Kinshasa</title>
+    <meta name="description" content="Découvrez le cadre réglementaire de la publicité à Kinshasa : lois, décrets, arrêtés et normes en vigueur.">
+    
     <link rel="icon" href="assets/images/icons/argpk.ico" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <script>tailwind.config={theme:{extend:{colors:{primary:'#003366',secondary:'#FFCC00'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Fonts - Style Gouvernemental RDC -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-    <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js"></script>
-    <style>
-        :where([class^="ri-"])::before { content: "\f3c2"; }
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
-        }
-        .hero-section {
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-        .mobile-menu {
-                transform: translateX(-100%);
-                transition: transform 0.3s ease-in-out;
-            }
-            .mobile-menu.active {
-                transform: translateX(0);
-            }
-            .mobile-menu nav a {
-                position: relative;
-            }
-            .mobile-menu nav a::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 0;
-            height: 2px;
-            background-color: #FFC107; /* Couleur secondaire directement définie */
-            transition: width 0.3s ease;
-        }
-        
-        .mobile-menu nav a:hover::after {
-            width: 100%;
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/main.css">
 </head>
-<body class="bg-white">
+<body class="bg-neutral-50">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded-lg z-[1000]">Aller au contenu principal</a>
+
     <!-- Header -->
-    <header class="bg-primary text-white shadow-md">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center">
-                <a href="index.html">
-                    <img src="assets/images/logo/kinshasay_argpk.png" alt="ARGPK Logo" class="h-16 mr-8">
+    <header class="sticky top-0 z-50 bg-primary backdrop-blur-lg border-b border-primary-dark transition-all duration-300">
+        <div class="container">
+            <nav class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="assets/images/logo/kinshasay_argpk.png" alt="Logo ARGPK" class="logo-img h-16 w-auto transition-transform duration-300 group-hover:scale-105">
                 </a>
-                <nav class="hidden md:flex space-x-6">
-                    <a href="index.html" class="hover:text-secondary transition duration-300 font-medium">Accueil</a>
-                    <a href="about.html" class="hover:text-secondary transition duration-300 font-medium">À propos</a>
-                    <a href="missions.html" class="hover:text-secondary transition duration-300 font-medium">Missions</a>
-                    <a href="reglementation.html" class="hover:text-secondary transition duration-300 font-medium">Réglementation</a>
-                    <a href="e-services.html" class="hover:text-secondary transition duration-300 font-medium">E-services</a>
-                    <a href="emplacements.html" class="hover:text-secondary transition duration-300 font-medium">Emplacements</a>
-                    <a href="actualites.html" class="hover:text-secondary transition duration-300 font-medium">Actualités</a>
-                    <a href="contact.html" class="hover:text-secondary transition duration-300 font-medium">Contact</a>
-                </nav>
-            </div>
-            <div class="flex items-center space-x-4">
-                <div class="flex border border-white rounded-full overflow-hidden">
-                    <button class="bg-white text-primary px-3 py-1 font-medium">FR</button>
-                    <button class="text-white px-3 py-1 font-medium">EN</button>
+
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                    <div class="dropdown dropdown-mega">
+                        <a href="about.html" class="nav-link dropdown-toggle">À propos</a>
+                        <div class="dropdown-mega-menu">
+                            <div class="mega-menu-grid">
+                                <div class="mega-menu-column">
+                                    <h4>Organisation</h4>
+                                    <a href="about.html">À propos de l'ARGPK</a>
+                                    <a href="about.html#direction">Direction Générale</a>
+                                    <a href="contact.html">Nous contacter</a>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h4>Missions</h4>
+                                    <a href="missions.html">Nos missions</a>
+                                    <a href="missions.html#controle">Contrôle</a>
+                                    <a href="missions.html#promotion">Promotion</a>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h4>Réglementation</h4>
+                                    <a href="reglementation.html" class="active">Cadre réglementaire</a>
+                                    <a href="reglementation.html#lois">Lois et décrets</a>
+                                    <a href="reglementation.html#normes">Normes en vigueur</a>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h4>Services</h4>
+                                    <a href="e-services.html">E-services</a>
+                                    <a href="emplacements.html">Emplacements</a>
+                                    <a href="actualites.html">Actualités</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="actualites.html" class="nav-link">Actualités</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
                 </div>
-                <button id="open-menu" class="md:hidden w-10 h-10 flex items-center justify-center">
-                    <i class="ri-menu-line ri-lg"></i>
+
+                <div class="hidden lg:flex items-center space-x-6">
+                    <div class="flex bg-neutral-100 rounded-full p-1">
+                        <button class="bg-primary text-white px-4 py-1.5 rounded-full text-sm font-semibold">FR</button>
+                        <button class="text-neutral-600 hover:text-primary px-4 py-1.5 rounded-full text-sm font-semibold">EN</button>
+                    </div>
+                    <a href="e-services.html#demande" class="btn btn-secondary btn-sm">
+                        <i class="ri-file-list-3-line"></i>
+                        Faire une demande
+                    </a>
+                </div>
+
+                <button id="open-menu" class="lg:hidden w-10 h-10 flex items-center justify-center transition-colors">
+                    <i class="ri-menu-3-line text-2xl"></i>
                 </button>
-            </div>
+            </nav>
         </div>
     </header>
-    
-    <!-- Menu Mobile -->
-    <div class="mobile-menu fixed top-0 left-0 w-full h-screen bg-primary z-50 flex flex-col p-6 hidden">
-        <div class="flex justify-between items-center mb-8">
-            <h1 class="text-2xl font-['Pacifico'] text-white">ARGPK</h1>
-            <button id="close-menu" class="w-10 h-10 flex items-center justify-center text-white">
-                <i class="ri-close-line ri-lg"></i>
-            </button>
-        </div>
-        <nav class="flex flex-col space-y-4">
-            <a href="index.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Accueil</a>
-            <a href="about.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">À propos</a>
-            <a href="missions.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Missions</a>
-            <a href="reglementation.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Réglementation</a>
-            <a href="e-services.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">E-services</a>
-            <a href="emplacements.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Emplacements</a>
-            <a href="actualites.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Actualités</a>
-            <a href="contact.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Contact</a>
-        </nav>
-    <div class="mt-auto">
-        <div class="flex border border-white rounded-full overflow-hidden w-max mx-auto mt-8">
-            <button class="bg-white text-primary px-3 py-1 font-medium">FR</button>
-            <button class="text-white px-3 py-1 font-medium">EN</button>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="p-8 h-full flex flex-col">
+            <div class="flex justify-between items-center mb-12">
+                <img src="assets/images/logo/kinshasay_argpk.png" alt="Logo ARGPK" class="h-16 w-auto">
+                <button id="close-menu" class="w-10 h-10 flex items-center justify-center transition-colors">
+                    <i class="ri-close-line text-3xl"></i>
+                </button>
+            </div>
+
+            <nav class="flex-1">
+                <div class="flex flex-col">
+                    <a href="index.html" class="nav-link-mobile flex items-center gap-4 text-2xl font-semibold">
+                        <i class="ri-home-line text-xl opacity-60"></i> Accueil
+                    </a>
+                    
+                    <!-- Mobile Dropdown for À propos -->
+                    <div class="mobile-dropdown">
+                        <button class="nav-link-mobile flex items-center justify-between w-full text-2xl font-semibold" aria-expanded="false" aria-controls="mobile-about-menu">
+                            <span class="flex items-center gap-4">
+                                <i class="ri-information-line text-xl opacity-60"></i> À propos
+                            </span>
+                            <i class="ri-arrow-down-s-line text-xl transition-transform" id="mobile-dropdown-arrow"></i>
+                        </button>
+                        <div id="mobile-about-menu" class="mobile-dropdown-menu hidden pl-12 mt-2 space-y-2">
+                            <a href="about.html" class="nav-link-mobile-sub flex items-center gap-3 text-lg">
+                                <i class="ri-information-line opacity-60"></i> À propos de l'ARGPK
+                            </a>
+                            <a href="about.html#direction" class="nav-link-mobile-sub flex items-center gap-3 text-lg">
+                                <i class="ri-user-line opacity-60"></i> Direction Générale
+                            </a>
+                            <a href="missions.html" class="nav-link-mobile-sub flex items-center gap-3 text-lg">
+                                <i class="ri-flag-line opacity-60"></i> Missions
+                            </a>
+                            <a href="reglementation.html" class="nav-link-mobile-sub flex items-center gap-3 text-lg">
+                                <i class="ri-file-text-line opacity-60"></i> Réglementation
+                            </a>
+                            <a href="e-services.html" class="nav-link-mobile-sub flex items-center gap-3 text-lg">
+                                <i class="ri-computer-line opacity-60"></i> E-services
+                            </a>
+                            <a href="emplacements.html" class="nav-link-mobile-sub flex items-center gap-3 text-lg">
+                                <i class="ri-map-pin-line opacity-60"></i> Emplacements
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="actualites.html" class="nav-link-mobile flex items-center gap-4 text-2xl font-semibold">
+                        <i class="ri-newspaper-line text-xl opacity-60"></i> Actualités
+                    </a>
+                    <a href="contact.html" class="nav-link-mobile flex items-center gap-4 text-2xl font-semibold">
+                        <i class="ri-mail-line text-xl opacity-60"></i> Contact
+                    </a>
+                </div>
+            </nav>
+
+            <div class="pt-8 border-t border-neutral-200">
+                <div class="flex bg-neutral-100 rounded-full p-1 mx-auto w-max mb-6">
+                    <button class="bg-primary text-white px-6 py-2 rounded-full text-sm font-semibold">FR</button>
+                    <button class="text-neutral-600 hover:text-primary px-6 py-2 rounded-full text-sm font-semibold">EN</button>
+                </div>
+                <a href="e-services.html#demande" class="btn btn-secondary w-full">
+                    <i class="ri-file-list-3-line"></i> Faire une demande
+                </a>
+            </div>
         </div>
     </div>
-</div>
 
     <!-- Hero Section -->
-    <section class="hero-section relative min-h-[400px] flex items-center" style="background-image: url('https://readdy.ai/api/search-image?query=Legal%20documents%20and%20regulations%20for%20advertising%20in%20Kinshasa%2C%20showing%20official%20papers%20with%20stamps%20and%20signatures%2C%20alongside%20a%20gavel%20and%20law%20books%2C%20professional%20photography&width=1920&height=600&seq=3&orientation=landscape');">
-        <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"></div>
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="max-w-2xl text-white">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Réglementation Publicitaire</h1>
-                <p class="text-lg mb-8">Découvrez les textes et normes qui encadrent la publicité à Kinshasa pour assurer une communication visuelle responsable et conforme.</p>
+    <section class="hero-section bg-primary" style="min-height: auto;" aria-label="Réglementation">
+        <div class="container relative z-10">
+            <div class="max-w-3xl py-8 md:py-12">
+                <nav class="flex items-center gap-2 text-sm text-white/80 mb-4 animate-fade-in" aria-label="Fil d'Ariane">
+                    <a href="index.html" class="hover:text-white transition-colors">Accueil</a>
+                    <i class="ri-arrow-right-s-line"></i>
+                    <span class="text-white">Réglementation</span>
+                </nav>
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 animate-slide-up">Cadre Réglementaire</h1>
+                <p class="text-xl text-white/90 animate-slide-up" style="animation-delay: 0.1s;">Découvrez les lois, décrets et normes qui régissent la publicité à Kinshasa.</p>
             </div>
         </div>
     </section>
 
-    <!-- Legal Framework Section -->
-    <section class="py-16">
-        <div class="container mx-auto px-4">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-3xl font-bold text-primary mb-4">Cadre Juridique</h2>
-                <p class="text-gray-700 text-lg">L'ARGPK s'appuie sur un ensemble de textes législatifs et réglementaires pour encadrer l'affichage publicitaire dans la ville-province de Kinshasa.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                    <h3 class="text-xl font-semibold mb-3 text-primary">Lois et Ordonnances</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <div class="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4">
-                                <i class="ri-file-text-line text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium">Loi N°08/001 du 12 janvier 2008</h4>
-                                <p class="text-gray-600">Relative à la gestion des espaces publics et des affichages dans les zones urbaines.</p>
-                                <a href="#" class="text-primary hover:underline inline-flex items-center mt-2">
-                                    Télécharger <i class="ri-download-line ml-1"></i>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4">
-                                <i class="ri-file-text-line text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium">Ordonnance N°12/005 du 25 mars 2012</h4>
-                                <p class="text-gray-600">Portant création, organisation et fonctionnement de l'Agence de Régulation de la Publicité à Kinshasa.</p>
-                                <a href="#" class="text-primary hover:underline inline-flex items-center mt-2">
-                                    Télécharger <i class="ri-download-line ml-1"></i>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4">
-                                <i class="ri-file-text-line text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium">Loi N°15/023 du 31 décembre 2015</h4>
-                                <p class="text-gray-600">Modifiant et complétant la loi sur la publicité extérieure et l'affichage urbain.</p>
-                                <a href="#" class="text-primary hover:underline inline-flex items-center mt-2">
-                                    Télécharger <i class="ri-download-line ml-1"></i>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Introduction -->
+        <section class="section bg-white">
+            <div class="container">
+                <div class="max-w-4xl mx-auto text-center mb-12">
+                    <p class="text-xl text-neutral-600">
+                        Le cadre réglementaire de la publicité à Kinshasa vise à garantir un affichage publicitaire respectueux des normes urbaines, environnementales et éthiques.
+                    </p>
                 </div>
-                
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                    <h3 class="text-xl font-semibold mb-3 text-primary">Arrêtés et Décisions</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <div class="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4">
-                                <i class="ri-file-list-line text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium">Arrêté provincial N°SC/010/BGV/MINPAT/2018</h4>
-                                <p class="text-gray-600">Fixant les modalités d'octroi des autorisations d'affichage publicitaire à Kinshasa.</p>
-                                <a href="#" class="text-primary hover:underline inline-flex items-center mt-2">
-                                    Télécharger <i class="ri-download-line ml-1"></i>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4">
-                                <i class="ri-file-list-line text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium">Arrêté N°SC/042/BGV/MIN.ECO/2019</h4>
-                                <p class="text-gray-600">Portant sur les redevances et droits à payer pour l'installation des supports publicitaires.</p>
-                                <a href="#" class="text-primary hover:underline inline-flex items-center mt-2">
-                                    Télécharger <i class="ri-download-line ml-1"></i>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4">
-                                <i class="ri-file-list-line text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium">Décision N°ARGPK/DG/015/2022</h4>
-                                <p class="text-gray-600">Relative aux normes techniques et de sécurité des panneaux publicitaires dans la ville de Kinshasa.</p>
-                                <a href="#" class="text-primary hover:underline inline-flex items-center mt-2">
-                                    Télécharger <i class="ri-download-line ml-1"></i>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Technical Standards Section -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-3xl font-bold text-primary mb-4">Normes Techniques</h2>
-                <p class="text-gray-700">Les spécifications techniques à respecter pour l'installation des différents types de supports publicitaires.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
-                        <i class="ri-billboard-line ri-lg text-primary"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-center">Panneaux Grand Format</h3>
-                    <ul class="list-disc pl-5 text-gray-600 space-y-2">
-                        <li>Dimensions maximales: 12m × 4m</li>
-                        <li>Hauteur minimale du support: 2,5m</li>
-                        <li>Distance minimale entre deux panneaux: 100m</li>
-                        <li>Recul minimal par rapport à la chaussée: 1,5m</li>
-                        <li>Éclairage autorisé de 18h à 23h uniquement</li>
-                    </ul>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
-                        <i class="ri-advertisement-line ri-lg text-primary"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-center">Enseignes Commerciales</h3>
-                    <ul class="list-disc pl-5 text-gray-600 space-y-2">
-                        <li>Surface maximale: 6m²</li>
-                        <li>Saillie maximale: 0,8m</li>
-                        <li>Hauteur minimale sous enseigne: 2,2m</li>
-                        <li>Éclairage autorisé pendant les heures d'ouverture</li>
-                        <li>Matériaux résistants aux intempéries</li>
-                    </ul>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
-                        <i class="ri-projector-line ri-lg text-primary"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-center">Écrans Numériques</h3>
-                    <ul class="list-disc pl-5 text-gray-600 space-y-2">
-                        <li>Surface maximale: 8m²</li>
-                        <li>Luminosité maximale: 6000 cd/m²</li>
-                        <li>Fréquence de changement: min. 8 secondes</li>
-                        <li>Interdits à moins de 50m des feux tricolores</li>
-                        <li>Extinction obligatoire entre minuit et 6h</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="mt-12 text-center">
-                <a href="#" class="bg-primary text-white px-6 py-3 rounded-button font-semibold inline-flex items-center hover:bg-opacity-90 transition duration-300">
-                    Télécharger le guide complet <i class="ri-download-line ml-2"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="py-16">
-        <div class="container mx-auto px-4">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-3xl font-bold text-primary mb-4">Questions Fréquentes</h2>
-                <p class="text-gray-700">Retrouvez les réponses aux questions les plus courantes concernant la réglementation publicitaire à Kinshasa.</p>
-            </div>
-            
-            <div class="max-w-3xl mx-auto">
-                <div class="mb-6 border border-gray-200 rounded-lg overflow-hidden">
-                    <button class="flex justify-between items-center w-full p-5 text-left bg-white hover:bg-gray-50">
-                        <span class="font-medium">Quelles sont les démarches pour obtenir une autorisation d'affichage ?</span>
-                        <i class="ri-arrow-down-s-line text-primary"></i>
-                    </button>
-                    <div class="p-5 bg-gray-50 border-t border-gray-200">
-                        <p class="text-gray-600">Pour obtenir une autorisation d'affichage publicitaire, vous devez soumettre un dossier complet à l'ARGPK comprenant :</p>
-                        <ul class="list-disc pl-5 text-gray-600 mt-2">
-                            <li>Formulaire de demande dûment rempli</li>
-                            <li>Plan de situation de l'emplacement</li>
-                            <li>Maquette du visuel publicitaire</li>
-                            <li>Caractéristiques techniques du support</li>
-                            <li>Autorisation du propriétaire du terrain ou du bâtiment</li>
-                            <li>Preuve de paiement des frais d'étude de dossier</li>
-                        </ul>
-                        <p class="text-gray-600 mt-2">Le délai de traitement est généralement de 15 jours ouvrables.</p>
-                    </div>
-                </div>
-                
-                <div class="mb-6 border border-gray-200 rounded-lg overflow-hidden">
-                    <button class="flex justify-between items-center w-full p-5 text-left bg-white hover:bg-gray-50">
-                        <span class="font-medium">Quelles sont les zones où l'affichage publicitaire est interdit ?</span>
-                        <i class="ri-arrow-down-s-line text-primary"></i>
-                    </button>
-                    <div class="p-5 bg-gray-50 border-t border-gray-200">
-                        <p class="text-gray-600">L'affichage publicitaire est strictement interdit dans les zones suivantes :</p>
-                        <ul class="list-disc pl-5 text-gray-600 mt-2">
-                            <li>Monuments historiques et leurs abords (rayon de 100m)</li>
-                            <li>Parcs et jardins publics</li>
-                            <li>Zones résidentielles classées</li>
-                            <li>Carrefours et ronds-points (rayon de 25m)</li>
-                            <li>Établissements scolaires et hospitaliers (rayon de 50m)</li>
-                            <li>Édifices religieux et cimetières</li>
-                        </ul>
-                        <p class="text-gray-600 mt-2">Une carte détaillée des zones autorisées est disponible dans la section "Emplacements".</p>
-                    </div>
-                </div>
-                
-                <div class="mb-6 border border-gray-200 rounded-lg overflow-hidden">
-                    <button class="flex justify-between items-center w-full p-5 text-left bg-white hover:bg-gray-50">
-                        <span class="font-medium">Quelles sont les sanctions en cas de non-respect de la réglementation ?</span>
-                        <i class="ri-arrow-down-s-line text-primary"></i>
-                    </button>
-                    <div class="p-5 bg-gray-50 border-t border-gray-200">
-                        <p class="text-gray-600">Les sanctions pour non-respect de la réglementation publicitaire peuvent inclure :</p>
-                        <ul class="list-disc pl-5 text-gray-600 mt-2">
-                            <li>Mise en demeure avec délai de mise en conformité</li>
-                            <li>Amende administrative (de 500$ à 5000$ selon l'infraction)</li>
-                            <li>Retrait d'office du support aux frais du contrevenant</li>
-                            <li>Suspension temporaire ou définitive de l'autorisation</li>
-                            <li>Poursuites judiciaires pour les cas graves</li>
-                        </ul>
-                        <p class="text-gray-600 mt-2">L'ARGPK privilégie toutefois l'approche préventive et l'accompagnement vers la mise en conformité.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-8">
-                <a href="contact.html" class="text-primary hover:underline inline-flex items-center font-medium">
-                    Vous avez d'autres questions ? Contactez-nous <i class="ri-arrow-right-line ml-1"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-primary text-white pt-16 pb-8">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-                <div>
-                    <a href="index.html">
-                        <img src="assets/images/logo/kinshasay_argpk.png" alt="ARGPK Logo" class="h-18 mb-6">
-                    </a>
-                    <p class="text-gray-300 mb-6">L'Agence de Régulation de la Publicité à Kinshasa œuvre pour un environnement publicitaire responsable et harmonieux dans la ville-province de Kinshasa.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
-                            <i class="ri-facebook-fill text-white"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
-                            <i class="ri-twitter-x-fill text-white"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
-                            <i class="ri-instagram-fill text-white"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
-                            <i class="ri-linkedin-fill text-white"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-6">Liens rapides</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Accueil</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">À propos</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Missions</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Réglementation</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">E-services</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Emplacements</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Actualités</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-6">Services</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Demande d'autorisation</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Suivi de dossier</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Paiement en ligne</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Calendrier des inspections</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Signalement d'infractions</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Consultation de la réglementation</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-6">Newsletter</h3>
-                    <p class="text-gray-300 mb-4">Abonnez-vous à notre newsletter pour recevoir les dernières actualités et mises à jour.</p>
-                    <form class="mb-4">
-                        <div class="flex">
-                            <input type="email" placeholder="Votre email" class="px-4 py-2 rounded-l-md w-full focus:outline-none text-gray-800">
-                            <button type="submit" class="bg-secondary text-primary px-4 py-2 rounded-r-md font-medium hover:bg-opacity-90 transition duration-300 whitespace-nowrap">S'abonner</button>
+                <!-- Regulatory Framework -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Law 1 -->
+                    <div class="card animate-on-scroll">
+                        <div class="p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                                    <i class="ri-book-3-line text-xl text-primary"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-neutral-500 uppercase tracking-wider">Décret Provincial</span>
+                                    <h3 class="text-lg font-bold text-primary">Code de la Publicité</h3>
+                                </div>
+                            </div>
+                            <p class="text-neutral-600 text-sm mb-4">Texte fondamental établissant les règles générales de la publicité à Kinshasa.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-neutral-500">2018</span>
+                                <a href="#" class="text-primary text-sm font-medium flex items-center gap-1 hover:underline">
+                                    <i class="ri-download-line"></i> Télécharger
+                                </a>
+                            </div>
                         </div>
-                    </form>
-                    <div class="flex items-center space-x-4">
-                        <div class="flex items-center">
-                            <i class="ri-visa-fill text-2xl mr-1"></i>
-                            <i class="ri-mastercard-fill text-2xl mr-1"></i>
-                            <i class="ri-paypal-fill text-2xl"></i>
+                    </div>
+
+                    <!-- Law 2 -->
+                    <div class="card animate-on-scroll" style="animation-delay: 0.1s;">
+                        <div class="p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                                    <i class="ri-file-text-line text-xl text-primary"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-neutral-500 uppercase tracking-wider">Arrêté</span>
+                                    <h3 class="text-lg font-bold text-primary">Affichage Extérieur</h3>
+                                </div>
+                            </div>
+                            <p class="text-neutral-600 text-sm mb-4">Réglementation spécifique aux panneaux et enseigne publicitaire extérieur.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-neutral-500">2019</span>
+                                <a href="#" class="text-primary text-sm font-medium flex items-center gap-1 hover:underline">
+                                    <i class="ri-download-line"></i> Télécharger
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Law 3 -->
+                    <div class="card animate-on-scroll" style="animation-delay: 0.2s;">
+                        <div class="p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                                    <i class="ri-file-info-line text-xl text-primary"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-neutral-500 uppercase tracking-wider">Directive</span>
+                                    <h3 class="text-lg font-bold text-primary">Publicité Numérique</h3>
+                                </div>
+                            </div>
+                            <p class="text-neutral-600 text-sm mb-4">Normes pour les écrans et panneaux publicitaires numériques.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-neutral-500">2021</span>
+                                <a href="#" class="text-primary text-sm font-medium flex items-center gap-1 hover:underline">
+                                    <i class="ri-download-line"></i> Télécharger
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="border-t border-white/20 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-gray-300 text-sm mb-4 md:mb-0">© 2025 ARGPK - Agence de Régulation de la Publicité à Kinshasa. Tous droits réservés.</p>
-                    <div class="flex space-x-6">
-                        <a href="#" class="text-gray-300 hover:text-white text-sm transition duration-300">Politique de confidentialité</a>
-                        <a href="#" class="text-gray-300 hover:text-white text-sm transition duration-300">Conditions d'utilisation</a>
-                        <a href="#" class="text-gray-300 hover:text-white text-sm transition duration-300">Mentions légales</a>
+        </section>
+
+        <!-- Key Points -->
+        <section class="section bg-neutral-50">
+            <div class="container">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-primary mb-8 text-center">Points Clés de la Réglementation</h2>
+                    
+                    <div class="space-y-6">
+                        <!-- Point 1 -->
+                        <div class="bg-white rounded-xl p-6 shadow-md animate-on-scroll">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
+                                    <span class="font-bold text-primary">1</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-primary mb-2">Autorisation Préalable</h3>
+                                    <p class="text-neutral-600">Tout support publicitaire doit faire l'objet d'une autorisation préalable de l'ARGPK avant installation. La demande doit inclure les caractéristiques techniques, l'emplacement exact et les visuels du projet.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Point 2 -->
+                        <div class="bg-white rounded-xl p-6 shadow-md animate-on-scroll" style="animation-delay: 0.1s;">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
+                                    <span class="font-bold text-primary">2</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-primary mb-2">Zones Protégées</h3>
+                                    <p class="text-neutral-600"> Certaines zones sont totalement ou partiellement interdites à la publicité : monuments historiques, parks naturels, axes routiers principaux, proximité des établissements scolaires.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Point 3 -->
+                        <div class="bg-white rounded-xl p-6 shadow-md animate-on-scroll" style="animation-delay: 0.2s;">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
+                                    <span class="font-bold text-primary">3</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-primary mb-2">Normes Techniques</h3>
+                                    <p class="text-neutral-600">Les supports publicitaires doivent respecter des normes de sécurité, d'esthétique et d'intégration urbaine. Les dimensions maximales, les matériaux et les systèmes d'éclairage sont réglementés.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Point 4 -->
+                        <div class="bg-white rounded-xl p-6 shadow-md animate-on-scroll" style="animation-delay: 0.3s;">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
+                                    <span class="font-bold text-primary">4</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-primary mb-2">Contenu Responsable</h3>
+                                    <p class="text-neutral-600">La publicité doit respecter les principes éthiques : pas de contenus mensongers, discriminatoires ou contraires aux bonnes mœurs. Le message doit être véridique et respecte la dignité humaine.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section bg-neutral-50">
+            <div class="container">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-3xl font-bold text-primary mb-6">Vous avez des questions ?</h2>
+                    <p class="text-lg text-neutral-600 mb-8">Notre équipe est disponible pour vous guider dans vos démarches et vous informer sur la réglementation.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="contact.html" class="btn btn-primary btn-lg">
+                            <i class="ri-question-line"></i> Nous contacter
+                        </a>
+                        <a href="e-services.html" class="btn btn-outline btn-lg">
+                            <i class="ri-file-list-3-line"></i> Déposer une demande
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Style Gouvernemental -->
+    <footer class="bg-primary text-white" aria-labelledby="footer-heading">
+        <div class="container">
+            <!-- Main Footer Content -->
+            <div class="py-12 md:py-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12">
+                    <!-- Column 1: Logo & About -->
+                    <div class="lg:col-span-2">
+                        <a href="index.html" class="flex items-center gap-3 mb-6">
+                            <img src="assets/images/logo/kinshasay_argpk.png" 
+                                 alt="Logo ARGPK" 
+                                 class="logo-img"
+                                 width="220" height="80">
+                        </a>
+                        <p class="text-white/85 mb-6 max-w-lg text-sm leading-relaxed">
+                            L'Agence de Régulation de la Publicité à Kinshasa (ARGPK) est une institution publique chargée de réglementer, contrôler et promouvoir une publicité responsable dans la ville-province de Kinshasa.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="Facebook">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="Twitter">
+                                <i class="ri-twitter-x-line"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="LinkedIn">
+                                <i class="ri-linkedin-fill"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="YouTube">
+                                <i class="ri-youtube-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Services -->
+                    <div>
+                        <h3 class="text-base font-bold mb-5 text-secondary pb-2 border-b border-white/20">Services</h3>
+                        <ul class="space-y-2.5">
+                            <li><a href="e-services.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Demande d'autorisation</a></li>
+                            <li><a href="e-services.html#suivi" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Suivi de dossier</a></li>
+                            <li><a href="e-services.html#paiement" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Paiement en ligne</a></li>
+                            <li><a href="emplacements.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Emplacements</a></li>
+                            <li><a href="e-services.html#calendrier" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Calendrier inspections</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Documents -->
+                    <div>
+                        <h3 class="text-base font-bold mb-5 text-secondary pb-2 border-b border-white/20">Documents</h3>
+                        <ul class="space-y-2.5">
+                            <li><a href="reglementation.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> Réglementation</a></li>
+                            <li><a href="missions.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> Missions</a></li>
+                            <li><a href="actualites.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> Actualités</a></li>
+                            <li><a href="about.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> À propos</a></li>
+                            <li><a href="contact.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> Nous contacter</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Contact -->
+                    <div>
+                        <h3 class="text-base font-bold mb-5 text-secondary pb-2 border-b border-white/20">Contact</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3 text-sm">
+                                <i class="ri-map-pin-line text-secondary mt-0.5"></i>
+                                <span class="text-white/85">Avenue des Aviateurs,<br>Kinshasa, RDC</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="ri-phone-line text-secondary"></i>
+                                <a href="tel:+243815555555" class="text-white/85 hover:text-white transition-colors text-sm">+243 81 555 5555</a>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="ri-mail-line text-secondary"></i>
+                                <a href="mailto:contact@argpk.cd" class="text-white/85 hover:text-white transition-colors text-sm">contact@argpk.cd</a>
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <i class="ri-time-line text-secondary"></i>
+                                <span class="text-white/85">Lun - Ven: 8h00 - 17h00</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Links Banner -->
+            <div class="py-6 border-y border-white/10 bg-white/5">
+                <div class="flex flex-wrap justify-center gap-6 md:gap-10">
+                    <a href="reglementation.html#lois" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Lois & Décrets</a>
+                    <a href="reglementation.html#normes" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Normes en vigueur</a>
+                    <a href="actualites.html" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Actualités</a>
+                    <a href="emplacements.html" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Carte des emplacements</a>
+                    <a href="contact.html" class="text-white/70 hover:text-white text-sm font-medium transition-colors">FAQ</a>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="py-6">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-white/50 text-xs text-center md:text-left">
+                        © <span id="current-year">2024</span> ARGPK - Agence de Régulation de la Publicité à Kinshasa. Tous droits réservés.
+                    </p>
+                    <div class="flex items-center gap-4 text-xs">
+                        <a href="#" class="text-white/50 hover:text-white transition-colors">Mentions légales</a>
+                        <span class="text-white/20">|</span>
+                        <a href="#" class="text-white/50 hover:text-white transition-colors">Politique de confidentialité</a>
+                        <span class="text-white/20">|</span>
+                        <a href="#" class="text-white/50 hover:text-white transition-colors">Plan du site</a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Simple toggle for FAQ accordions
-        document.querySelectorAll('.mb-6 button').forEach(button => {
-            button.addEventListener('click', () => {
-                const content = button.nextElementSibling;
-                content.style.display = content.style.display === 'none' ? 'block' : 'none';
-                
-                // Toggle icon
-                const icon = button.querySelector('i');
-                if (icon.classList.contains('ri-arrow-down-s-line')) {
-                    icon.classList.remove('ri-arrow-down-s-line');
-                    icon.classList.add('ri-arrow-up-s-line');
-                } else {
-                    icon.classList.remove('ri-arrow-up-s-line');
-                    icon.classList.add('ri-arrow-down-s-line');
-                }
-            });
-        });
-            
-            // Custom checkbox functionality
-            const checkboxes = document.querySelectorAll('.custom-checkbox input[type="checkbox"]');
-            checkboxes.forEach(checkbox => {
-                checkbox.addEventListener('change', function() {
-                    // Checkbox change logic if needed
-                });
-            });
-            
-            // Custom switch functionality
-            const switches = document.querySelectorAll('.custom-switch input[type="checkbox"]');
-            switches.forEach(switchEl => {
-                switchEl.addEventListener('change', function() {
-                    // Switch change logic if needed
-                });
-            });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const openMenuBtn = document.getElementById('open-menu');
-            const closeMenuBtn = document.getElementById('close-menu');
-            const mobileMenu = document.querySelector('.mobile-menu');
-            
-            openMenuBtn.addEventListener('click', function() {
-                mobileMenu.classList.remove('hidden');
-                setTimeout(() => {
-                    mobileMenu.classList.add('active');
-                }, 10);
-            });
-            
-            closeMenuBtn.addEventListener('click', function() {
-                mobileMenu.classList.remove('active');
-                setTimeout(() => {
-                    mobileMenu.classList.add('hidden');
-                }, 300);
-            });
-        });
-        
-    </script>
-           <!-- Bouton retour en haut -->
-           <button id="backToTop" class="fixed bottom-4 right-4 bg-primary text-white p-3 rounded-full shadow-lg opacity-0 invisible hover:bg-secondary transition-all duration-300">
-            <i class="ri-arrow-up-line text-xl"></i>
-        </button>
-            
+    <button id="back-to-top" 
+            class="back-to-top"
+            aria-label="Retour en haut de la page">
+        <i class="ri-arrow-up-line text-xl"></i>
+    </button>
 </body>
 </html>
+

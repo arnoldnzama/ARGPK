@@ -3,342 +3,643 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nos Missions - ARGPK - Agence de Régulation de la Publicité à Kinshasa</title>
+    <title>Missions - ARGPK - Agence de Régulation de la Publicité à Kinshasa</title>
+    <meta name="description" content="Découvrez les missions principales de l'ARGPK : réglementation, contrôle et promotion d'une publicité responsable à Kinshasa.">
+    
+    <!-- Favicon -->
     <link rel="icon" href="assets/images/icons/argpk.ico" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <script>tailwind.config={theme:{extend:{colors:{primary:'#003366',secondary:'#FFCC00'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="js/main.js"></script>
-    <style>
-        :where([class^="ri-"])::before { content: "\f3c2"; }
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
-        }
-        .hero-section {
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-        .mobile-menu {
-                transform: translateX(-100%);
-                transition: transform 0.3s ease-in-out;
-            }
-            .mobile-menu.active {
-                transform: translateX(0);
-            }
-            .mobile-menu nav a {
-                position: relative;
-            }
-            .mobile-menu nav a::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 0;
-            height: 2px;
-            background-color: #FFC107; /* Couleur secondaire directement définie */
-            transition: width 0.3s ease;
-        }
-        
-        .mobile-menu nav a:hover::after {
-            width: 100%;
-        }
-    </style>
-</head>
-<body class="bg-white">
-        <!-- Header -->
-        <header class="bg-primary text-white shadow-md">
-            <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-                <div class="flex items-center">
-                    <a href="index.html">
-                        <img src="assets/images/logo/kinshasay_argpk.png" alt="ARGPK Logo" class="h-16 mr-8">
-                    </a>
-                    <nav class="hidden md:flex space-x-6">
-                        <a href="index.html" class="hover:text-secondary transition duration-300 font-medium">Accueil</a>
-                        <a href="about.html" class="hover:text-secondary transition duration-300 font-medium">À propos</a>
-                        <a href="missions.html" class="hover:text-secondary transition duration-300 font-medium active">Missions</a>
-                        <a href="reglementation.html" class="hover:text-secondary transition duration-300 font-medium">Réglementation</a>
-                        <a href="e-services.html" class="hover:text-secondary transition duration-300 font-medium">E-services</a>
-                        <a href="emplacements.html" class="hover:text-secondary transition duration-300 font-medium">Emplacements</a>
-                        <a href="actualites.html" class="hover:text-secondary transition duration-300 font-medium">Actualités</a>
-                        <a href="contact.html" class="hover:text-secondary transition duration-300 font-medium">Contact</a>
-                    </nav>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <div class="flex border border-white rounded-full overflow-hidden">
-                        <button class="bg-white text-primary px-3 py-1 font-medium">FR</button>
-                        <button class="text-white px-3 py-1 font-medium">EN</button>
-                    </div>
-                    <button id="open-menu" class="md:hidden w-10 h-10 flex items-center justify-center">
-                        <i class="ri-menu-line ri-lg"></i>
-                    </button>
-                </div>
-            </div>
-        </header>
+    <!-- Fonts - Style Gouvernemental RDC -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Menu Mobile -->
-    <div class="mobile-menu fixed top-0 left-0 w-full h-screen bg-primary z-50 flex flex-col p-6 hidden">
-        <div class="flex justify-between items-center mb-8">
-            <h1 class="text-2xl font-['Pacifico'] text-white">ARGPK</h1>
-            <button id="close-menu" class="w-10 h-10 flex items-center justify-center text-white">
-                <i class="ri-close-line ri-lg"></i>
-            </button>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="js/main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="bg-neutral-50">
+    <!-- Skip to content -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded-lg z-[1000]">
+        Aller au contenu principal
+    </a>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-primary backdrop-blur-lg border-b border-primary-dark transition-all duration-300">
+        <div class="container">
+            <nav class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 group" aria-label="Retour à l'accueil ARGPK">
+                    <img src="assets/images/logo/kinshasay_argpk.png" 
+                         alt="Logo ARGPK" 
+                         class="logo-img h-16 w-auto transition-transform duration-300 group-hover:scale-105"
+                         width="180" height="70">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                    <div class="dropdown dropdown-mega">
+                        <a href="about.html" class="nav-link dropdown-toggle">À propos</a>
+                        <div class="dropdown-mega-menu">
+                            <div class="mega-menu-grid">
+                                <div class="mega-menu-column">
+                                    <h4>Organisation</h4>
+                                    <a href="about.html">À propos de l'ARGPK</a>
+                                    <a href="about.html#direction">Direction Générale</a>
+                                    <a href="contact.html">Nous contacter</a>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h4>Missions</h4>
+                                    <a href="missions.html" class="active">Nos missions</a>
+                                    <a href="missions.html#controle">Contrôle</a>
+                                    <a href="missions.html#promotion">Promotion</a>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h4>Réglementation</h4>
+                                    <a href="reglementation.html">Cadre réglementaire</a>
+                                    <a href="reglementation.html#lois">Lois et décrets</a>
+                                    <a href="reglementation.html#normes">Normes en vigueur</a>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h4>Services</h4>
+                                    <a href="e-services.html">E-services</a>
+                                    <a href="emplacements.html">Emplacements</a>
+                                    <a href="actualites.html">Actualités</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="actualites.html" class="nav-link">Actualités</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+
+                <!-- Language & CTA -->
+                <div class="hidden lg:flex items-center space-x-6">
+                    <div class="flex bg-neutral-100 rounded-full p-1">
+                        <button class="bg-primary text-white px-4 py-1.5 rounded-full text-sm font-semibold">FR</button>
+                        <button class="text-neutral-600 hover:text-primary px-4 py-1.5 rounded-full text-sm font-semibold">EN</button>
+                    </div>
+                    <a href="e-services.html#demande" class="btn btn-secondary btn-sm">
+                        <i class="ri-file-list-3-line"></i>
+                        Faire une demande
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="open-menu" class="lg:hidden w-10 h-10 flex items-center justify-center transition-colors">
+                    <i class="ri-menu-3-line text-2xl"></i>
+                </button>
+            </nav>
         </div>
-        <nav class="flex flex-col space-y-4">
-            <a href="index.html" class="text-white text-lg font-medium py-2 border-b border-white/20">Accueil</a>
-            <a href="about.html" class="text-white text-lg font-medium py-2 border-b border-white/20">À propos</a>
-            <a href="missions.html" class="text-white text-lg font-medium py-2 border-b border-white/20">Missions</a>
-            <a href="reglementation.html" class="text-white text-lg font-medium py-2 border-b border-white/20">Réglementation</a>
-            <a href="e-services.html" class="text-white text-lg font-medium py-2 border-b border-white/20">E-services</a>
-            <a href="emplacements.html" class="text-white text-lg font-medium py-2 border-b border-white/20">Emplacements</a>
-            <a href="actualites.html" class="text-white text-lg font-medium py-2 border-b border-white/20">Actualités</a>
-            <a href="contact.html" class="text-white text-lg font-medium py-2 border-b border-white/20">Contact</a>
-        </nav>
-    <div class="mt-auto">
-        <div class="flex border border-white rounded-full overflow-hidden w-max mx-auto mt-8">
-            <button class="bg-white text-primary px-3 py-1 font-medium">FR</button>
-            <button class="text-white px-3 py-1 font-medium">EN</button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="p-8 h-full flex flex-col">
+            <div class="flex justify-between items-center mb-12">
+                <img src="assets/images/logo/kinshasay_argpk.png" alt="Logo ARGPK" class="h-16 w-auto">
+                <button id="close-menu" class="w-10 h-10 flex items-center justify-center transition-colors">
+                    <i class="ri-close-line text-3xl"></i>
+                </button>
+            </div>
+
+            <nav class="flex-1">
+                <div class="flex flex-col">
+                    <a href="index.html" class="nav-link-mobile flex items-center gap-4 text-2xl font-semibold">
+                        <i class="ri-home-line text-xl opacity-60"></i>
+                        Accueil
+                    </a>
+                    
+                    <!-- Mobile Dropdown for À propos -->
+                    <div class="mobile-dropdown">
+                        <button class="nav-link-mobile flex items-center justify-between w-full text-2xl font-semibold" aria-expanded="false" aria-controls="mobile-about-menu">
+                            <span class="flex items-center gap-4">
+                                <i class="ri-information-line text-xl opacity-60"></i>
+                                À propos
+                            </span>
+                            <i class="ri-arrow-down-s-line text-xl transition-transform" id="mobile-dropdown-arrow"></i>
+                        </button>
+                        <div id="mobile-about-menu" class="mobile-dropdown-menu hidden pl-12 mt-2 space-y-2">
+                            <a href="about.html" class="nav-link-mobile-sub flex items-center gap-3 text-lg">
+                                <i class="ri-information-line opacity-60"></i>
+                                À propos de l'ARGPK
+                            </a>
+                            <a href="about.html#direction" class="nav-link-mobile-sub flex items-center gap-3 text-lg">
+                                <i class="ri-user-line opacity-60"></i>
+                                Direction Générale
+                            </a>
+                            <a href="missions.html" class="nav-link-mobile-sub flex items-center gap-3 text-lg">
+                                <i class="ri-flag-line opacity-60"></i>
+                                Missions
+                            </a>
+                            <a href="reglementation.html" class="nav-link-mobile-sub flex items-center gap-3 text-lg">
+                                <i class="ri-file-text-line opacity-60"></i>
+                                Réglementation
+                            </a>
+                            <a href="e-services.html" class="nav-link-mobile-sub flex items-center gap-3 text-lg">
+                                <i class="ri-computer-line opacity-60"></i>
+                                E-services
+                            </a>
+                            <a href="emplacements.html" class="nav-link-mobile-sub flex items-center gap-3 text-lg">
+                                <i class="ri-map-pin-line opacity-60"></i>
+                                Emplacements
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="actualites.html" class="nav-link-mobile flex items-center gap-4 text-2xl font-semibold">
+                        <i class="ri-newspaper-line text-xl opacity-60"></i>
+                        Actualités
+                    </a>
+                    <a href="contact.html" class="nav-link-mobile flex items-center gap-4 text-2xl font-semibold">
+                        <i class="ri-mail-line text-xl opacity-60"></i>
+                        Contact
+                    </a>
+                </div>
+            </nav>
+
+            <div class="pt-8 border-t border-neutral-200">
+                <div class="flex bg-neutral-100 rounded-full p-1 mx-auto w-max mb-6">
+                    <button class="bg-primary text-white px-6 py-2 rounded-full text-sm font-semibold">FR</button>
+                    <button class="text-neutral-600 hover:text-primary px-6 py-2 rounded-full text-sm font-semibold">EN</button>
+                </div>
+                <a href="e-services.html#demande" class="btn btn-secondary w-full">
+                    <i class="ri-file-list-3-line"></i>
+                    Faire une demande
+                </a>
+            </div>
         </div>
     </div>
-</div>
-
 
     <!-- Hero Section -->
-    <section class="hero-section relative min-h-[400px] flex items-center" style="background-image: url('https://readdy.ai/api/search-image?query=Professional%20team%20of%20advertising%20regulators%20reviewing%20billboards%20and%20advertising%20materials%20in%20Kinshasa%2C%20with%20city%20skyline%20in%20background%2C%20showing%20regulatory%20work%20in%20action&width=1920&height=600&seq=6&orientation=landscape');">
-        <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"></div>
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="max-w-2xl text-white">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Nos Missions</h1>
-                <p class="text-lg mb-8">Découvrez comment l'ARGPK œuvre pour une publicité responsable et un environnement urbain harmonieux à Kinshasa.</p>
+    <section class="hero-section bg-primary" style="min-height: auto;" aria-label="Missions">
+        <div class="container relative z-10">
+            <div class="max-w-3xl py-8 md:py-12">
+                <nav class="flex items-center gap-2 text-sm text-white/80 mb-4 animate-fade-in" aria-label="Fil d'Ariane">
+                    <a href="index.html" class="hover:text-white transition-colors">Accueil</a>
+                    <i class="ri-arrow-right-s-line"></i>
+                    <span class="text-white">Missions</span>
+                </nav>
+                
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 animate-slide-up">Nos Missions</h1>
+                <p class="text-xl text-white/90 animate-slide-up" style="animation-delay: 0.1s;">
+                    Découvrez les trois piliers fondamentaux de l'action de l'ARGPK pour une publicité responsable à Kinshasa.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Main Missions Section -->
-    <section class="py-16">
-        <div class="container mx-auto px-4">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-3xl font-bold text-primary mb-4">Notre Rôle dans la Ville-Province</h2>
-                <p class="text-gray-700 text-lg">L'ARGPK joue un rôle essentiel dans la régulation et la gestion de la publicité à Kinshasa, contribuant à l'embellissement urbain et au respect des normes publicitaires.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex flex-col">
-                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                        <i class="ri-government-line ri-lg text-primary"></i>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Introduction -->
+        <section class="section bg-white">
+            <div class="container">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div class="prose prose-lg mx-auto">
+                        <p class="lead text-xl text-neutral-700 mb-8">
+                            L'ARGPK articule son action autour de trois missions fondamentales qui structurent son intervention dans le paysage publicitaire kinois.
+                        </p>
+                        <p>
+                            Ces missions s'inscrivent dans une vision globale visant à concilier le développement économique, l'embellissement urbain et le respect des normes éthiques dans le domaine de la publicité à Kinshasa.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Réglementation</h3>
-                    <p class="text-gray-600 mb-4">Nous élaborons et mettons en œuvre les textes réglementaires qui régissent l'affichage publicitaire dans la ville-province de Kinshasa.</p>
-                    <ul class="list-disc pl-5 text-gray-600 space-y-2 mb-4">
-                        <li>Définition des normes techniques pour les supports publicitaires</li>
-                        <li>Établissement des zones autorisées et restreintes</li>
-                        <li>Fixation des redevances et droits publicitaires</li>
-                        <li>Élaboration des procédures d'autorisation</li>
-                    </ul>
-                </div>
-                
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex flex-col">
-                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                        <i class="ri-search-eye-line ri-lg text-primary"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Contrôle et Surveillance</h3>
-                    <p class="text-gray-600 mb-4">Nous assurons une surveillance continue des supports publicitaires pour garantir leur conformité aux normes établies.</p>
-                    <ul class="list-disc pl-5 text-gray-600 space-y-2 mb-4">
-                        <li>Inspections régulières des panneaux et affichages</li>
-                        <li>Vérification des autorisations et permis</li>
-                        <li>Contrôle du contenu publicitaire</li>
-                        <li>Identification des installations non conformes</li>
-                    </ul>
-                </div>
-                
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex flex-col">
-                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                        <i class="ri-award-line ri-lg text-primary"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Promotion de la Publicité Responsable</h3>
-                    <p class="text-gray-600 mb-4">Nous encourageons les pratiques publicitaires innovantes et responsables pour un environnement urbain harmonieux.</p>
-                    <ul class="list-disc pl-5 text-gray-600 space-y-2 mb-4">
-                        <li>Organisation de campagnes de sensibilisation</li>
-                        <li>Promotion des meilleures pratiques publicitaires</li>
-                        <li>Soutien aux initiatives écologiques et durables</li>
-                        <li>Reconnaissance des acteurs exemplaires du secteur</li>
-                    </ul>
-                </div>
-                
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex flex-col">
-                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                        <i class="ri-shield-check-line ri-lg text-primary"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Protection du Cadre de Vie</h3>
-                    <p class="text-gray-600 mb-4">Nous veillons à ce que la publicité contribue positivement à l'esthétique urbaine et au bien-être des citoyens.</p>
-                    <ul class="list-disc pl-5 text-gray-600 space-y-2 mb-4">
-                        <li>Lutte contre la pollution visuelle</li>
-                        <li>Préservation du patrimoine architectural</li>
-                        <li>Intégration harmonieuse des supports publicitaires</li>
-                        <li>Garantie de la sécurité des installations</li>
-                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Strategic Objectives Section -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-3xl font-bold text-primary mb-4">Nos Objectifs Stratégiques</h2>
-                <p class="text-gray-700">Les axes prioritaires qui guident nos actions pour une gestion efficace de la publicité à Kinshasa.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-t-4 border-primary">
-                    <h3 class="text-xl font-semibold mb-3">Modernisation du Cadre Réglementaire</h3>
-                    <p class="text-gray-600">Adapter continuellement la réglementation aux évolutions technologiques et aux besoins de la ville.</p>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-t-4 border-primary">
-                    <h3 class="text-xl font-semibold mb-3">Digitalisation des Procédures</h3>
-                    <p class="text-gray-600">Simplifier les démarches administratives grâce à des solutions numériques accessibles à tous les acteurs.</p>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-t-4 border-primary">
-                    <h3 class="text-xl font-semibold mb-3">Renforcement des Contrôles</h3>
-                    <p class="text-gray-600">Intensifier les inspections et améliorer les méthodes de surveillance pour garantir le respect des normes.</p>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-t-4 border-primary">
-                    <h3 class="text-xl font-semibold mb-3">Sensibilisation des Acteurs</h3>
-                    <p class="text-gray-600">Informer et éduquer les annonceurs, agences et propriétaires sur leurs droits et obligations.</p>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-t-4 border-primary">
-                    <h3 class="text-xl font-semibold mb-3">Valorisation des Espaces Publicitaires</h3>
-                    <p class="text-gray-600">Optimiser la gestion des emplacements pour maximiser les revenus tout en préservant l'esthétique urbaine.</p>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-t-4 border-primary">
-                    <h3 class="text-xl font-semibold mb-3">Coopération Internationale</h3>
-                    <p class="text-gray-600">Développer des partenariats avec d'autres autorités de régulation pour échanger les meilleures pratiques.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-     <!-- Footer -->
-     <footer class="bg-primary text-white pt-16 pb-8">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-                <div>
-                    <a href="index.html">
-                        <img src="assets/images/logo/kinshasay_argpk.png" alt="ARGPK Logo" class="h-18 mb-6">
-                    </a>
-                    <p class="text-gray-300 mb-6">L'Agence de Régulation de la Publicité à Kinshasa œuvre pour un environnement publicitaire responsable et harmonieux dans la ville-province de Kinshasa.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
-                            <i class="ri-facebook-fill text-white"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
-                            <i class="ri-twitter-x-fill text-white"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
-                            <i class="ri-instagram-fill text-white"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
-                            <i class="ri-linkedin-fill text-white"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-6">Liens rapides</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Accueil</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">À propos</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Missions</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Réglementation</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">E-services</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Emplacements</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Actualités</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-6">Services</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Demande d'autorisation</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Suivi de dossier</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Paiement en ligne</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Calendrier des inspections</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Signalement d'infractions</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Consultation de la réglementation</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-6">Newsletter</h3>
-                    <p class="text-gray-300 mb-4">Abonnez-vous à notre newsletter pour recevoir les dernières actualités et mises à jour.</p>
-                    <form class="mb-4">
-                        <div class="flex">
-                            <input type="email" placeholder="Votre email" class="px-4 py-2 rounded-l-md w-full focus:outline-none text-gray-800">
-                            <button type="submit" class="bg-secondary text-primary px-4 py-2 rounded-r-md font-medium hover:bg-opacity-90 transition duration-300 whitespace-nowrap">S'abonner</button>
+        <!-- Mission Cards -->
+        <section class="section bg-neutral-50">
+            <div class="container">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Mission 1: Réglementation -->
+                    <div class="card animate-on-scroll">
+                        <div class="card-icon">
+                            <i class="ri-government-line"></i>
                         </div>
-                    </form>
-                    <div class="flex items-center space-x-4">
-                        <div class="flex items-center">
-                            <i class="ri-visa-fill text-2xl mr-1"></i>
-                            <i class="ri-mastercard-fill text-2xl mr-1"></i>
-                            <i class="ri-paypal-fill text-2xl"></i>
+                        <div class="card-body">
+                            <span class="badge badge-primary mb-4">Mission 1</span>
+                            <h2 class="text-2xl font-bold text-primary mb-4">Réglementation</h2>
+                            <p class="text-neutral-600 mb-6">
+                                Élaboration et mise en œuvre du cadre juridique régissant l'affichage publicitaire à Kinshasa.
+                            </p>
+                            
+                            <div class="space-y-4 mb-8">
+                                <div>
+                                    <h3 class="font-bold text-neutral-800 mb-2">Objectifs</h3>
+                                    <ul class="text-sm text-neutral-600 space-y-2">
+                                        <li class="flex items-start gap-2">
+                                            <i class="ri-check-line text-secondary mt-1"></i>
+                                            <span>Définir des normes claires pour l'affichage publicitaire</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <i class="ri-check-line text-secondary mt-1"></i>
+                                            <span>Adapter la réglementation au développement urbain</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <i class="ri-check-line text-secondary mt-1"></i>
+                                            <span>Protéger le patrimoine visuel de la ville</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <h3 class="font-bold text-neutral-800 mb-2">Actions</h3>
+                                    <ul class="text-sm text-neutral-600 space-y-2">
+                                        <li class="flex items-start gap-2">
+                                            <i class="ri-file-text-line text-secondary mt-1"></i>
+                                            <span>Élaboration du Code de la Publicité</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <i class="ri-scale-3-line text-secondary mt-1"></i>
+                                            <span>Mise à jour régulière des normes</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <i class="ri-group-line text-secondary mt-1"></i>
+                                            <span>Consultation des parties prenantes</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <a href="reglementation.html" class="btn btn-primary w-full">
+                                <i class="ri-book-open-line"></i>
+                                Consulter la réglementation
+                            </a>
                         </div>
                     </div>
+
+                    <!-- Mission 2: Contrôle -->
+                    <div id="controle" class="card animate-on-scroll" style="animation-delay: 0.1s;">
+                        <div class="card-icon">
+                            <i class="ri-search-eye-line"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="badge badge-primary mb-4">Mission 2</span>
+                            <h2 class="text-2xl font-bold text-primary mb-4">Contrôle</h2>
+                            <p class="text-neutral-600 mb-6">
+                                Surveillance et inspection des supports publicitaires pour garantir leur conformité aux normes établies.
+                            </p>
+                            
+                            <div class="space-y-4 mb-8">
+                                <div>
+                                    <h3 class="font-bold text-neutral-800 mb-2">Méthodes</h3>
+                                    <ul class="text-sm text-neutral-600 space-y-2">
+                                        <li class="flex items-start gap-2">
+                                            <i class="ri-check-line text-secondary mt-1"></i>
+                                            <span>Inspections régulières sur le terrain</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <i class="ri-check-line text-secondary mt-1"></i>
+                                            <span>Utilisation de technologies de surveillance</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <i class="ri-check-line text-secondary mt-1"></i>
+                                            <span>Collaboration avec les services municipaux</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <h3 class="font-bold text-neutral-800 mb-2">Résultats</h3>
+                                    <ul class="text-sm text-neutral-600 space-y-2">
+                                        <li class="flex items-start gap-2">
+                                            <i class="ri-chart-line text-secondary mt-1"></i>
+                                            <span>Taux de conformité en augmentation</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <i class="ri-alert-line text-secondary mt-1"></i>
+                                            <span>Signalement rapide des infractions</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <i class="ri-award-line text-secondary mt-1"></i>
+                                            <span>Amélioration continue des pratiques</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <a href="emplacements.html" class="btn btn-primary w-full">
+                                <i class="ri-map-pin-line"></i>
+                                Voir les contrôles en cours
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Mission 3: Promotion -->
+                    <div id="promotion" class="card animate-on-scroll" style="animation-delay: 0.2s;">
+                        <div class="card-icon">
+                            <i class="ri-award-line"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="badge badge-primary mb-4">Mission 3</span>
+                            <h2 class="text-2xl font-bold text-primary mb-4">Promotion</h2>
+                            <p class="text-neutral-600 mb-6">
+                                Encouragement des pratiques publicitaires innovantes et responsables pour un environnement urbain harmonieux.
+                            </p>
+                            
+                            <div class="space-y-4 mb-8">
+                                <div>
+                                    <h3 class="font-bold text-neutral-800 mb-2">Initiatives</h3>
+                                    <ul class="text-sm text-neutral-600 space-y-2">
+                                        <li class="flex items-start gap-2">
+                                            <i class="ri-check-line text-secondary mt-1"></i>
+                                            <span>Formation des professionnels du secteur</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <i class="ri-check-line text-secondary mt-1"></i>
+                                            <span>Promotion de la publicité numérique</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <i class="ri-check-line text-secondary mt-1"></i>
+                                            <span>Soutien aux innovations responsables</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <h3 class="font-bold text-neutral-800 mb-2">Programmes</h3>
+                                    <ul class="text-sm text-neutral-600 space-y-2">
+                                        <li class="flex items-start gap-2">
+                                            <i class="ri-star-line text-secondary mt-1"></i>
+                                            <span>Label "Publicité Responsable"</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <i class="ri-trophy-line text-secondary mt-1"></i>
+                                            <span>Concours des meilleures campagnes</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <i class="ri-lightbulb-flash-line text-secondary mt-1"></i>
+                                            <span>Ateliers d'innovation publicitaire</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <a href="actualites.html" class="btn btn-primary w-full">
+                                <i class="ri-newspaper-line"></i>
+                                Découvrir nos initiatives
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <div class="border-t border-white/20 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-gray-300 text-sm mb-4 md:mb-0">© 2025 ARGPK - Agence de Régulation de la Publicité à Kinshasa. Tous droits réservés.</p>
-                    <div class="flex space-x-6">
-                        <a href="#" class="text-gray-300 hover:text-white text-sm transition duration-300">Politique de confidentialité</a>
-                        <a href="#" class="text-gray-300 hover:text-white text-sm transition duration-300">Conditions d'utilisation</a>
-                        <a href="#" class="text-gray-300 hover:text-white text-sm transition duration-300">Mentions légales</a>
+        </section>
+
+        <!-- Strategic Approach -->
+        <section class="section bg-white">
+            <div class="container">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold text-primary mb-6">Notre Approche Stratégique</h2>
+                        <p class="text-lg text-neutral-600">
+                            Une méthode intégrée pour une régulation efficace et proactive.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Approach 1 -->
+                        <div class="bg-neutral-50 rounded-2xl p-8 animate-on-scroll">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                                    <i class="ri-user-voice-line text-xl text-primary"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-primary">Collaboration</h3>
+                            </div>
+                            <p class="text-neutral-600">
+                                Nous travaillons en étroite collaboration avec tous les acteurs du secteur publicitaire : annonceurs, agences, autorités municipales et citoyens pour développer des solutions adaptées.
+                            </p>
+                        </div>
+
+                        <!-- Approach 2 -->
+                        <div class="bg-neutral-50 rounded-2xl p-8 animate-on-scroll" style="animation-delay: 0.1s;">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                                    <i class="ri-lightbulb-flash-line text-xl text-primary"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-primary">Innovation</h3>
+                            </div>
+                            <p class="text-neutral-600">
+                                Nous encourageons et adoptons les innovations technologiques pour améliorer nos processus de régulation et promouvoir des pratiques publicitaires modernes et responsables.
+                            </p>
+                        </div>
+
+                        <!-- Approach 3 -->
+                        <div class="bg-neutral-50 rounded-2xl p-8 animate-on-scroll" style="animation-delay: 0.2s;">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                                    <i class="ri-shield-check-line text-xl text-primary"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-primary">Transparence</h3>
+                            </div>
+                            <p class="text-neutral-600">
+                                Toutes nos décisions et actions sont guidées par des principes de transparence, de redevabilité et d'équité pour garantir la confiance de toutes les parties prenantes.
+                            </p>
+                        </div>
+
+                        <!-- Approach 4 -->
+                        <div class="bg-neutral-50 rounded-2xl p-8 animate-on-scroll" style="animation-delay: 0.3s;">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                                    <i class="ri-line-chart-line text-xl text-primary"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-primary">Amélioration Continue</h3>
+                            </div>
+                            <p class="text-neutral-600">
+                                Nous évaluons régulièrement nos actions et adaptons nos stratégies pour répondre aux évolutions du paysage publicitaire et aux besoins de la ville de Kinshasa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results & Impact -->
+        <section class="section bg-primary text-white">
+            <div class="container">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold mb-6">Résultats & Impact</h2>
+                    <p class="text-xl text-white/90">
+                        Les réalisations concrètes de l'ARGPK depuis sa création.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <!-- Stat 1 -->
+                    <div class="text-center">
+                        <div class="text-4xl md:text-5xl font-bold text-white mb-2 counter" data-target="1500">0</div>
+                        <p class="text-white/80">Demandes traitées</p>
+                    </div>
+
+                    <!-- Stat 2 -->
+                    <div class="text-center">
+                        <div class="text-4xl md:text-5xl font-bold text-white mb-2 counter" data-target="95">0</div>
+                        <p class="text-white/80">% de conformité</p>
+                    </div>
+
+                    <!-- Stat 3 -->
+                    <div class="text-center">
+                        <div class="text-4xl md:text-5xl font-bold text-white mb-2 counter" data-target="50">0</div>
+                        <p class="text-white/80">Partenariats</p>
+                    </div>
+
+                    <!-- Stat 4 -->
+                    <div class="text-center">
+                        <div class="text-4xl md:text-5xl font-bold text-white mb-2 counter" data-target="12">0</div>
+                        <p class="text-white/80">Formations organisées</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section bg-white">
+            <div class="container">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-3xl font-bold text-primary mb-6">Contribuez à notre mission</h2>
+                    <p class="text-lg text-neutral-600 mb-8">
+                        Chaque acteur du secteur publicitaire a un rôle à jouer dans la construction d'une publicité plus responsable à Kinshasa.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="e-services.html" class="btn btn-primary btn-lg">
+                            <i class="ri-file-list-3-line"></i>
+                            Déposer une demande
+                        </a>
+                        <a href="contact.html" class="btn btn-outline btn-lg">
+                            <i class="ri-question-line"></i>
+                            Poser une question
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Style Gouvernemental -->
+    <footer class="bg-primary text-white" aria-labelledby="footer-heading">
+        <div class="container">
+            <!-- Main Footer Content -->
+            <div class="py-12 md:py-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12">
+                    <!-- Column 1: Logo & About -->
+                    <div class="lg:col-span-2">
+                        <a href="index.html" class="flex items-center gap-3 mb-6">
+                            <img src="assets/images/logo/kinshasay_argpk.png" 
+                                 alt="Logo ARGPK" 
+                                 class="logo-img"
+                                 width="220" height="80">
+                        </a>
+                        <p class="text-white/85 mb-6 max-w-lg text-sm leading-relaxed">
+                            L'Agence de Régulation de la Publicité à Kinshasa (ARGPK) est une institution publique chargée de réglementer, contrôler et promouvoir une publicité responsable dans la ville-province de Kinshasa.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="Facebook">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="Twitter">
+                                <i class="ri-twitter-x-line"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="LinkedIn">
+                                <i class="ri-linkedin-fill"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="YouTube">
+                                <i class="ri-youtube-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Services -->
+                    <div>
+                        <h3 class="text-base font-bold mb-5 text-secondary pb-2 border-b border-white/20">Services</h3>
+                        <ul class="space-y-2.5">
+                            <li><a href="e-services.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Demande d'autorisation</a></li>
+                            <li><a href="e-services.html#suivi" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Suivi de dossier</a></li>
+                            <li><a href="e-services.html#paiement" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Paiement en ligne</a></li>
+                            <li><a href="emplacements.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Emplacements</a></li>
+                            <li><a href="e-services.html#calendrier" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Calendrier inspections</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Documents -->
+                    <div>
+                        <h3 class="text-base font-bold mb-5 text-secondary pb-2 border-b border-white/20">Documents</h3>
+                        <ul class="space-y-2.5">
+                            <li><a href="reglementation.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> Réglementation</a></li>
+                            <li><a href="missions.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> Missions</a></li>
+                            <li><a href="actualites.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> Actualités</a></li>
+                            <li><a href="about.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> À propos</a></li>
+                            <li><a href="contact.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> Nous contacter</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Contact -->
+                    <div>
+                        <h3 class="text-base font-bold mb-5 text-secondary pb-2 border-b border-white/20">Contact</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3 text-sm">
+                                <i class="ri-map-pin-line text-secondary mt-0.5"></i>
+                                <span class="text-white/85">Avenue des Aviateurs,<br>Kinshasa, RDC</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="ri-phone-line text-secondary"></i>
+                                <a href="tel:+243815555555" class="text-white/85 hover:text-white transition-colors text-sm">+243 81 555 5555</a>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="ri-mail-line text-secondary"></i>
+                                <a href="mailto:contact@argpk.cd" class="text-white/85 hover:text-white transition-colors text-sm">contact@argpk.cd</a>
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <i class="ri-time-line text-secondary"></i>
+                                <span class="text-white/85">Lun - Ven: 8h00 - 17h00</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Links Banner -->
+            <div class="py-6 border-y border-white/10 bg-white/5">
+                <div class="flex flex-wrap justify-center gap-6 md:gap-10">
+                    <a href="reglementation.html#lois" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Lois & Décrets</a>
+                    <a href="reglementation.html#normes" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Normes en vigueur</a>
+                    <a href="actualites.html" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Actualités</a>
+                    <a href="emplacements.html" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Carte des emplacements</a>
+                    <a href="contact.html" class="text-white/70 hover:text-white text-sm font-medium transition-colors">FAQ</a>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="py-6">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-white/50 text-xs text-center md:text-left">
+                        © <span id="current-year">2024</span> ARGPK - Agence de Régulation de la Publicité à Kinshasa. Tous droits réservés.
+                    </p>
+                    <div class="flex items-center gap-4 text-xs">
+                        <a href="#" class="text-white/50 hover:text-white transition-colors">Mentions légales</a>
+                        <span class="text-white/20">|</span>
+                        <a href="#" class="text-white/50 hover:text-white transition-colors">Politique de confidentialité</a>
+                        <span class="text-white/20">|</span>
+                        <a href="#" class="text-white/50 hover:text-white transition-colors">Plan du site</a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-            const openMenuBtn = document.getElementById('open-menu');
-            const closeMenuBtn = document.getElementById('close-menu');
-            const mobileMenu = document.querySelector('.mobile-menu');
-            
-            openMenuBtn.addEventListener('click', function() {
-                mobileMenu.classList.remove('hidden');
-                setTimeout(() => {
-                    mobileMenu.classList.add('active');
-                }, 10);
-            });
-            
-            closeMenuBtn.addEventListener('click', function() {
-                mobileMenu.classList.remove('active');
-                setTimeout(() => {
-                    mobileMenu.classList.add('hidden');
-                }, 300);
-            });
-        });
-    </script>
-           <!-- Bouton retour en haut -->
-           <button id="backToTop" class="fixed bottom-4 right-4 bg-primary text-white p-3 rounded-full shadow-lg opacity-0 invisible hover:bg-secondary transition-all duration-300">
-            <i class="ri-arrow-up-line text-xl"></i>
-        </button>
-            
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" 
+            class="back-to-top"
+            aria-label="Retour en haut de la page">
+        <i class="ri-arrow-up-line text-xl"></i>
+    </button>
 </body>
 </html>
+

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% page_title %} - ARGPK</title>
+    <meta name="description" content="{% page_description %}">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/icons/argpk.ico" type="image/x-icon">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonts - Style Gouvernemental RDC -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="js/main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="bg-neutral-50">
+    <!-- Skip to content -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded-lg z-[1000]">
+        Aller au contenu principal
+    </a>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-primary backdrop-blur-lg border-b border-primary-dark transition-all duration-300">
+        <div class="container">
+            <nav class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 group" aria-label="Retour à l'accueil ARGPK">
+                    <img src="assets/images/logo/kinshasay_argpk.png" 
+                         alt="Logo ARGPK" 
+                         class="logo-img h-16 w-auto transition-transform duration-300 group-hover:scale-105"
+                         width="180" height="70">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                    <a href="about.html" class="nav-link">À propos</a>
+                    <a href="missions.html" class="nav-link">Missions</a>
+                    <a href="reglementation.html" class="nav-link">Réglementation</a>
+                    <a href="e-services.html" class="nav-link">E-services</a>
+                    <a href="emplacements.html" class="nav-link">Emplacements</a>
+                    <a href="actualites.html" class="nav-link">Actualités</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+
+                <!-- Language & CTA -->
+                <div class="hidden lg:flex items-center space-x-6">
+                    <div class="flex bg-neutral-100 rounded-full p-1">
+                        <button class="bg-primary text-white px-4 py-1.5 rounded-full text-sm font-semibold">FR</button>
+                        <button class="text-neutral-600 hover:text-primary px-4 py-1.5 rounded-full text-sm font-semibold">EN</button>
+                    </div>
+                    <a href="e-services.html#demande" class="btn btn-secondary btn-sm">
+                        <i class="ri-file-list-3-line"></i>
+                        Faire une demande
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="open-menu" class="lg:hidden w-10 h-10 flex items-center justify-center text-neutral-700 hover:text-primary transition-colors">
+                    <i class="ri-menu-3-line text-2xl"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="p-8 h-full flex flex-col">
+            <div class="flex justify-between items-center mb-12">
+                <img src="assets/images/logo/kinshasay_argpk.png" alt="Logo ARGPK" class="h-10 w-auto">
+                <button id="close-menu" class="w-10 h-10 flex items-center justify-center text-neutral-700 hover:text-primary transition-colors">
+                    <i class="ri-close-line text-3xl"></i>
+                </button>
+            </div>
+
+            <nav class="flex-1 space-y-6">
+                <a href="index.html" class="flex items-center gap-4 text-2xl font-semibold text-primary">
+                    <i class="ri-home-line text-xl opacity-60"></i>
+                    Accueil
+                </a>
+                <a href="about.html" class="flex items-center gap-4 text-2xl font-semibold text-neutral-700 hover:text-primary">
+                    <i class="ri-information-line text-xl opacity-60"></i>
+                    À propos
+                </a>
+                <a href="missions.html" class="flex items-center gap-4 text-2xl font-semibold text-neutral-700 hover:text-primary">
+                    <i class="ri-flag-line text-xl opacity-60"></i>
+                    Missions
+                </a>
+                <a href="reglementation.html" class="flex items-center gap-4 text-2xl font-semibold text-neutral-700 hover:text-primary">
+                    <i class="ri-file-text-line text-xl opacity-60"></i>
+                    Réglementation
+                </a>
+                <a href="e-services.html" class="flex items-center gap-4 text-2xl font-semibold text-neutral-700 hover:text-primary">
+                    <i class="ri-computer-line text-xl opacity-60"></i>
+                    E-services
+                </a>
+                <a href="emplacements.html" class="flex items-center gap-4 text-2xl font-semibold text-neutral-700 hover:text-primary">
+                    <i class="ri-map-pin-line text-xl opacity-60"></i>
+                    Emplacements
+                </a>
+                <a href="actualites.html" class="flex items-center gap-4 text-2xl font-semibold text-neutral-700 hover:text-primary">
+                    <i class="ri-newspaper-line text-xl opacity-60"></i>
+                    Actualités
+                </a>
+                <a href="contact.html" class="flex items-center gap-4 text-2xl font-semibold text-neutral-700 hover:text-primary">
+                    <i class="ri-mail-line text-xl opacity-60"></i>
+                    Contact
+                </a>
+            </nav>
+
+            <div class="pt-8 border-t border-neutral-200">
+                <div class="flex bg-neutral-100 rounded-full p-1 mx-auto w-max mb-6">
+                    <button class="bg-primary text-white px-6 py-2 rounded-full text-sm font-semibold">FR</button>
+                    <button class="text-neutral-600 hover:text-primary px-6 py-2 rounded-full text-sm font-semibold">EN</button>
+                </div>
+                <a href="e-services.html#demande" class="btn btn-secondary w-full">
+                    <i class="ri-file-list-3-line"></i>
+                    Faire une demande
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <div class="bg-primary text-white">
+        <div class="container py-12 md:py-16">
+            <div class="max-w-3xl">
+                <nav class="flex items-center gap-2 text-sm text-white/80 mb-4" aria-label="Fil d'Ariane">
+                    <a href="index.html" class="hover:text-white transition-colors">Accueil</a>
+                    <i class="ri-arrow-right-s-line"></i>
+                    <span class="text-white">{% page_title %}</span>
+                </nav>
+                
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">{% page_title %}</h1>
+                <p class="text-xl text-white/90">{% page_description %}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="section">
+        <div class="container">
+            <!-- Page specific content goes here -->
+            {% page_content %}
+        </div>
+    </main>
+
+    <!-- Footer Style Gouvernemental -->
+    <footer class="bg-primary text-white" aria-labelledby="footer-heading">
+        <div class="container">
+            <!-- Main Footer Content -->
+            <div class="py-12 md:py-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12">
+                    <!-- Column 1: Logo & About -->
+                    <div class="lg:col-span-2">
+                        <a href="index.html" class="flex items-center gap-3 mb-6">
+                            <img src="assets/images/logo/kinshasay_argpk.png" 
+                                 alt="Logo ARGPK" 
+                                 class="h-14 w-auto"
+                                 width="160" height="60">
+                        </a>
+                        <p class="text-white/85 mb-6 max-w-lg text-sm leading-relaxed">
+                            L'Agence de Régulation de la Publicité à Kinshasa (ARGPK) est une institution publique chargée de réglementer, contrôler et promouvoir une publicité responsable dans la ville-province de Kinshasa.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="Facebook">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="Twitter">
+                                <i class="ri-twitter-x-line"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="LinkedIn">
+                                <i class="ri-linkedin-fill"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="YouTube">
+                                <i class="ri-youtube-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Services -->
+                    <div>
+                        <h3 class="text-base font-bold mb-5 text-secondary pb-2 border-b border-white/20">Services</h3>
+                        <ul class="space-y-2.5">
+                            <li><a href="e-services.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Demande d'autorisation</a></li>
+                            <li><a href="e-services.html#suivi" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Suivi de dossier</a></li>
+                            <li><a href="e-services.html#paiement" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Paiement en ligne</a></li>
+                            <li><a href="emplacements.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Emplacements</a></li>
+                            <li><a href="e-services.html#calendrier" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Calendrier inspections</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Documents -->
+                    <div>
+                        <h3 class="text-base font-bold mb-5 text-secondary pb-2 border-b border-white/20">Documents</h3>
+                        <ul class="space-y-2.5">
+                            <li><a href="reglementation.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> Réglementation</a></li>
+                            <li><a href="missions.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> Missions</a></li>
+                            <li><a href="actualites.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> Actualités</a></li>
+                            <li><a href="about.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> À propos</a></li>
+                            <li><a href="contact.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> Nous contacter</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Contact -->
+                    <div>
+                        <h3 class="text-base font-bold mb-5 text-secondary pb-2 border-b border-white/20">Contact</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3 text-sm">
+                                <i class="ri-map-pin-line text-secondary mt-0.5"></i>
+                                <span class="text-white/85">Avenue des Aviateurs,<br>Kinshasa, RDC</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="ri-phone-line text-secondary"></i>
+                                <a href="tel:+243815555555" class="text-white/85 hover:text-white transition-colors text-sm">+243 81 555 5555</a>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="ri-mail-line text-secondary"></i>
+                                <a href="mailto:contact@argpk.cd" class="text-white/85 hover:text-white transition-colors text-sm">contact@argpk.cd</a>
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <i class="ri-time-line text-secondary"></i>
+                                <span class="text-white/85">Lun - Ven: 8h00 - 17h00</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Links Banner -->
+            <div class="py-6 border-y border-white/10 bg-white/5">
+                <div class="flex flex-wrap justify-center gap-6 md:gap-10">
+                    <a href="reglementation.html#lois" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Lois & Décrets</a>
+                    <a href="reglementation.html#normes" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Normes en vigueur</a>
+                    <a href="actualites.html" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Actualités</a>
+                    <a href="emplacements.html" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Carte des emplacements</a>
+                    <a href="contact.html" class="text-white/70 hover:text-white text-sm font-medium transition-colors">FAQ</a>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="py-6">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-white/50 text-xs text-center md:text-left">
+                        © <span id="current-year">2024</span> ARGPK - Agence de Régulation de la Publicité à Kinshasa. Tous droits réservés.
+                    </p>
+                    <div class="flex items-center gap-4 text-xs">
+                        <a href="#" class="text-white/50 hover:text-white transition-colors">Mentions légales</a>
+                        <span class="text-white/20">|</span>
+                        <a href="#" class="text-white/50 hover:text-white transition-colors">Politique de confidentialité</a>
+                        <span class="text-white/20">|</span>
+                        <a href="#" class="text-white/50 hover:text-white transition-colors">Plan du site</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="ri-arrow-up-line text-xl"></i>
+    </button>
+</body>
+</html>

@@ -3,426 +3,398 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - ARGPK - Agence de Régulation de la Publicité à Kinshasa</title>
+    <title>Contact - ARGPK - Nous Contacter</title>
+    <meta name="description" content="Contactez l'ARGPK : formulaire de contact, coordonnées, horaires d'ouverture et plan d'accès.">
+    
     <link rel="icon" href="assets/images/icons/argpk.ico" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <script>tailwind.config={theme:{extend:{colors:{primary:'#003366',secondary:'#FFCC00'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <!-- Fonts - Style Gouvernemental RDC -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-    <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js"></script>
-    <style>
-        :where([class^="ri-"])::before { content: "\f3c2"; }
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
-        }
-        .hero-section {
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-        .map-container {
-            height: 400px;
-            width: 100%;
-        }
-        .mobile-menu {
-                transform: translateX(-100%);
-                transition: transform 0.3s ease-in-out;
-            }
-            .mobile-menu.active {
-                transform: translateX(0);
-            }
-            .mobile-menu nav a {
-                position: relative;
-            }
-            .mobile-menu nav a::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 0;
-            height: 2px;
-            background-color: #FFC107; /* Couleur secondaire directement définie */
-            transition: width 0.3s ease;
-        }
-        
-        .mobile-menu nav a:hover::after {
-            width: 100%;
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/main.css">
 </head>
-<body class="bg-white">
-    <!-- Header -->
-    <header class="bg-primary text-white shadow-md">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center">
-                <a href="index.html">
-                    <img src="assets/images/logo/kinshasay_argpk.png" alt="ARGPK Logo" class="h-16 mr-8">
+<body class="bg-neutral-50">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute bg-primary text-white px-4 py-2 rounded-lg">Aller au contenu</a>
+
+    <header class="sticky top-0 z-50 bg-primary backdrop-blur-lg border-b border-primary-dark transition-all duration-300">
+        <div class="container">
+            <nav class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="assets/images/logo/kinshasay_argpk.png" alt="Logo ARGPK" class="logo-img h-16 w-auto transition-transform duration-300 group-hover:scale-105">
                 </a>
-                <nav class="hidden md:flex space-x-6">
-                    <a href="index.html" class="hover:text-secondary transition duration-300 font-medium">Accueil</a>
-                    <a href="about.html" class="hover:text-secondary transition duration-300 font-medium">À propos</a>
-                    <a href="missions.html" class="hover:text-secondary transition duration-300 font-medium">Missions</a>
-                    <a href="reglementation.html" class="hover:text-secondary transition duration-300 font-medium">Réglementation</a>
-                    <a href="e-services.html" class="hover:text-secondary transition duration-300 font-medium">E-services</a>
-                    <a href="emplacements.html" class="hover:text-secondary transition duration-300 font-medium">Emplacements</a>
-                    <a href="actualites.html" class="hover:text-secondary transition duration-300 font-medium">Actualités</a>
-                    <a href="contact.html" class="hover:text-secondary transition duration-300 font-medium">Contact</a>
-                </nav>
-            </div>
-            <div class="flex items-center space-x-4">
-                <div class="flex border border-white rounded-full overflow-hidden">
-                    <button class="bg-white text-primary px-3 py-1 font-medium">FR</button>
-                    <button class="text-white px-3 py-1 font-medium">EN</button>
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                    <div class="dropdown dropdown-mega">
+                        <a href="about.html" class="nav-link dropdown-toggle">À propos</a>
+                        <div class="dropdown-mega-menu">
+                            <div class="mega-menu-grid">
+                                <div class="mega-menu-column">
+                                    <h4>Organisation</h4>
+                                    <a href="about.html">À propos de l'ARGPK</a>
+                                    <a href="about.html#direction">Direction Générale</a>
+                                    <a href="contact.html">Nous contacter</a>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h4>Missions</h4>
+                                    <a href="missions.html">Nos missions</a>
+                                    <a href="missions.html#controle">Contrôle</a>
+                                    <a href="missions.html#promotion">Promotion</a>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h4>Réglementation</h4>
+                                    <a href="reglementation.html">Cadre réglementaire</a>
+                                    <a href="reglementation.html#lois">Lois et décrets</a>
+                                    <a href="reglementation.html#normes">Normes en vigueur</a>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h4>Services</h4>
+                                    <a href="e-services.html">E-services</a>
+                                    <a href="emplacements.html">Emplacements</a>
+                                    <a href="actualites.html">Actualités</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="actualites.html" class="nav-link">Actualités</a>
+                    <a href="contact.html" class="nav-link active" aria-current="page">Contact</a>
                 </div>
-                <button id="open-menu" class="md:hidden w-10 h-10 flex items-center justify-center">
-                    <i class="ri-menu-line ri-lg"></i>
+
+                <!-- Language & CTA -->
+                <div class="hidden lg:flex items-center space-x-6">
+                    <div class="flex bg-neutral-100 rounded-full p-1" role="group" aria-label="Sélection de la langue">
+                        <button class="bg-primary text-white px-4 py-1.5 rounded-full text-sm font-semibold shadow-sm transition-all" aria-pressed="true">FR</button>
+                        <button class="text-neutral-600 hover:text-primary px-4 py-1.5 rounded-full text-sm font-semibold transition-all" aria-pressed="false">EN</button>
+                    </div>
+                    <a href="e-services.html#demande" class="btn btn-secondary btn-sm">
+                        <i class="ri-file-list-3-line"></i>
+                        Faire une demande
+                    </a>
+                </div>
+
+                <button id="open-menu" class="lg:hidden w-10 h-10 flex items-center justify-center transition-colors">
+                    <i class="ri-menu-3-line text-2xl"></i>
                 </button>
-            </div>
+            </nav>
         </div>
     </header>
-    
-    <!-- Menu Mobile -->
-    <div class="mobile-menu fixed top-0 left-0 w-full h-screen bg-primary z-50 flex flex-col p-6 hidden">
-        <div class="flex justify-between items-center mb-8">
-            <h1 class="text-2xl font-['Pacifico'] text-white">ARGPK</h1>
-            <button id="close-menu" class="w-10 h-10 flex items-center justify-center text-white">
-                <i class="ri-close-line ri-lg"></i>
-            </button>
-        </div>
-        <nav class="flex flex-col space-y-4">
-            <a href="index.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Accueil</a>
-            <a href="about.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">À propos</a>
-            <a href="missions.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Missions</a>
-            <a href="reglementation.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Réglementation</a>
-            <a href="e-services.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">E-services</a>
-            <a href="emplacements.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Emplacements</a>
-            <a href="actualites.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Actualités</a>
-            <a href="contact.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Contact</a>
-        </nav>
-    <div class="mt-auto">
-        <div class="flex border border-white rounded-full overflow-hidden w-max mx-auto mt-8">
-            <button class="bg-white text-primary px-3 py-1 font-medium">FR</button>
-            <button class="text-white px-3 py-1 font-medium">EN</button>
+
+    <!-- Mobile Menu Backdrop -->
+    <div id="mobile-menu-backdrop" class="mobile-menu-backdrop"></div>
+
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="p-8 h-full flex flex-col">
+            <div class="flex justify-between items-center mb-12">
+                <img src="assets/images/logo/kinshasay_argpk.png" alt="Logo" class="h-12 w-auto">
+                <button id="close-menu" class="w-10 h-10 flex items-center justify-center transition-colors">
+                    <i class="ri-close-line text-3xl"></i>
+                </button>
+            </div>
+            <nav class="flex-1 space-y-4">
+                <a href="index.html" class="text-xl font-semibold text-neutral-700 hover:text-primary transition-colors">Accueil</a>
+                
+                <!-- Mobile Dropdown for À propos -->
+                <div class="mobile-dropdown">
+                    <button class="flex items-center justify-between w-full text-xl font-semibold text-neutral-700 hover:text-primary transition-colors" aria-expanded="false" aria-controls="mobile-about-menu">
+                        <span>À propos</span>
+                        <i class="ri-arrow-down-s-line" id="mobile-dropdown-arrow"></i>
+                    </button>
+                    <div id="mobile-about-menu" class="mobile-dropdown-menu hidden pl-8 mt-4 space-y-3">
+                        <a href="about.html" class="text-lg text-neutral-600 hover:text-primary transition-colors">À propos de l'ARGPK</a>
+                        <a href="missions.html" class="text-lg text-neutral-600 hover:text-primary transition-colors">Missions</a>
+                        <a href="reglementation.html" class="text-lg text-neutral-600 hover:text-primary transition-colors">Réglementation</a>
+                        <a href="e-services.html" class="text-lg text-neutral-600 hover:text-primary transition-colors">E-services</a>
+                        <a href="emplacements.html" class="text-lg text-neutral-600 hover:text-primary transition-colors">Emplacements</a>
+                        <a href="actualites.html" class="text-lg text-neutral-600 hover:text-primary transition-colors">Actualités</a>
+                    </div>
+                </div>
+                
+                <a href="actualites.html" class="text-xl font-semibold text-neutral-700 hover:text-primary transition-colors">Actualités</a>
+                <a href="contact.html" class="text-xl font-semibold text-primary hover:text-primary-light transition-colors">Contact</a>
+            </nav>
         </div>
     </div>
-</div>
 
     <!-- Hero Section -->
-    <section class="hero-section relative min-h-[400px] flex items-center" style="background-image: url('https://readdy.ai/api/search-image?query=Kinshasa%20city%20office%20building%20modern%20architecture%2C%20government%20institution%20exterior%2C%20professional%20photography&width=1920&height=600&seq=1&orientation=landscape');">
-        <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"></div>
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="max-w-2xl text-white">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Contactez-nous</h1>
-                <p class="text-lg mb-8">Nous sommes à votre disposition pour répondre à vos questions et vous accompagner dans vos démarches.</p>
+    <section class="hero-section bg-primary" style="min-height: auto;" aria-label="Contact">
+        <div class="container relative z-10">
+            <div class="max-w-3xl py-12 md:py-16">
+                <nav class="flex items-center gap-2 text-sm text-white/80 mb-4 animate-fade-in">
+                    <a href="index.html" class="hover:text-white">Accueil</a>
+                    <i class="ri-arrow-right-s-line"></i>
+                    <span class="text-white">Contact</span>
+                </nav>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight animate-slide-up">
+                    Contactez-<span class="text-secondary">nous</span>
+                </h1>
+                <p class="text-xl text-white/90 max-w-2xl animate-slide-up" style="animation-delay: 0.1s;">
+                    Une question ? Une préoccupation ? N'hésitez pas à nous contacter. Notre équipe est disponible pour vous répondre.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Information Section -->
-    <section class="py-16">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- Contact Form -->
-                <div>
-                    <h2 class="text-3xl font-bold text-primary mb-8">Envoyez-nous un message</h2>
-                    <form class="space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="nom" class="block text-gray-700 mb-2">Nom *</label>
-                                <input type="text" id="nom" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
-                            </div>
-                            <div>
-                                <label for="prenom" class="block text-gray-700 mb-2">Prénom *</label>
-                                <input type="text" id="prenom" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
-                            </div>
-                        </div>
-                        <div>
-                            <label for="email" class="block text-gray-700 mb-2">Email *</label>
-                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
-                        </div>
-                        <div>
-                            <label for="telephone" class="block text-gray-700 mb-2">Téléphone</label>
-                            <input type="tel" id="telephone" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary">
-                        </div>
-                        <div>
-                            <label for="sujet" class="block text-gray-700 mb-2">Sujet *</label>
-                            <select id="sujet" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
-                                <option value="">Sélectionnez</option>
-                                <option value="demande">Demande d'information</option>
-                                <option value="reclamation">Réclamation</option>
-                                <option value="suggestion">Suggestion</option>
-                                <option value="autre">Autre</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="message" class="block text-gray-700 mb-2">Message *</label>
-                            <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required></textarea>
-                        </div>
-                        <div class="flex items-center">
-                            <input type="checkbox" id="privacy" class="mr-2" required>
-                            <label for="privacy" class="text-gray-700">J'accepte que mes données soient traitées conformément à la <a href="#" class="text-primary hover:underline">politique de confidentialité</a>.</label>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="bg-primary text-white px-8 py-3 rounded-button font-semibold hover:bg-opacity-90 transition duration-300">Envoyer le message</button>
-                        </div>
-                    </form>
-                </div>
-                
-                <!-- Contact Information -->
-                <div>
-                    <h2 class="text-3xl font-bold text-primary mb-8">Nos coordonnées</h2>
-                    <div class="space-y-8">
-                        <div class="flex items-start">
-                            <div class="bg-primary text-white p-3 rounded-full mr-4">
-                                <i class="ri-map-pin-line ri-lg"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold mb-2">Adresse</h3>
-                                <p class="text-gray-700">123 Avenue de la Libération<br>Commune de la Gombe<br>Kinshasa, République Démocratique du Congo</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="bg-primary text-white p-3 rounded-full mr-4">
-                                <i class="ri-phone-line ri-lg"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold mb-2">Téléphone</h3>
-                                <p class="text-gray-700">+243 XX XXX XXXX</p>
-                                <p class="text-gray-700">+243 XX XXX XXXX</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="bg-primary text-white p-3 rounded-full mr-4">
-                                <i class="ri-mail-line ri-lg"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold mb-2">Email</h3>
-                                <p class="text-gray-700">contact@argpk.gouv.cd</p>
-                                <p class="text-gray-700">info@argpk.gouv.cd</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="bg-primary text-white p-3 rounded-full mr-4">
-                                <i class="ri-time-line ri-lg"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold mb-2">Horaires d'ouverture</h3>
-                                <p class="text-gray-700">Lundi - Vendredi: 8h00 - 16h00</p>
-                                <p class="text-gray-700">Samedi: 9h00 - 12h00</p>
-                                <p class="text-gray-700">Dimanche: Fermé</p>
-                            </div>
+    <main id="main-content">
+        <section class="section">
+            <div class="container">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div>
+                        <div class="bg-white rounded-2xl shadow-lg p-8">
+                            <h2 class="text-2xl font-bold text-primary mb-6">Envoyez-nous un message</h2>
+                            
+                            <form class="space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="form-label">Nom *</label>
+                                        <input type="text" class="form-control" required placeholder="Votre nom">
+                                    </div>
+                                    <div>
+                                        <label class="form-label">Prénom *</label>
+                                        <input type="text" class="form-control" required placeholder="Votre prénom">
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label class="form-label">Email *</label>
+                                    <input type="email" class="form-control" required placeholder="votre@email.com">
+                                </div>
+                                
+                                <div>
+                                    <label class="form-label">Téléphone</label>
+                                    <input type="tel" class="form-control" placeholder="+243 81 555 5555">
+                                </div>
+                                
+                                <div>
+                                    <label class="form-label">Sujet *</label>
+                                    <select class="form-control" required>
+                                        <option value="">Sélectionnez un sujet</option>
+                                        <option>Demande d'information</option>
+                                        <option>Demande d'autorisation</option>
+                                        <option>Réclamation</option>
+                                        <option>Partenariat</option>
+                                        <option>Autre</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label class="form-label">Message *</label>
+                                    <textarea class="form-control" rows="5" required placeholder="Votre message..."></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary w-full">
+                                    <i class="ri-send-plane-line"></i> Envoyer le message
+                                </button>
+                            </form>
                         </div>
                     </div>
-                    
-                    <div class="mt-8">
-                        <h3 class="text-xl font-semibold mb-4">Suivez-nous</h3>
-                        <div class="flex space-x-4">
-                            <a href="#" class="bg-primary text-white p-3 rounded-full hover:bg-opacity-90 transition duration-300">
-                                <i class="ri-facebook-fill ri-lg"></i>
-                            </a>
-                            <a href="#" class="bg-primary text-white p-3 rounded-full hover:bg-opacity-90 transition duration-300">
-                                <i class="ri-twitter-fill ri-lg"></i>
-                            </a>
-                            <a href="#" class="bg-primary text-white p-3 rounded-full hover:bg-opacity-90 transition duration-300">
-                                <i class="ri-instagram-fill ri-lg"></i>
-                            </a>
-                            <a href="#" class="bg-primary text-white p-3 rounded-full hover:bg-opacity-90 transition duration-300">
-                                <i class="ri-linkedin-fill ri-lg"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Map Section -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-3xl font-bold text-primary mb-4">Notre localisation</h2>
-                <p class="text-gray-700 text-lg">Retrouvez nos bureaux au cœur de Kinshasa</p>
-            </div>
-            
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <div class="map-container">
-                    <!-- Map will be loaded here -->
-                    <img src="https://readdy.ai/api/search-image?query=Map%20of%20Kinshasa%20city%20center%20satellite%20view%20with%20pin%20location%20marked%2C%20professional%20cartography&width=1200&height=400&seq=1" alt="Carte de localisation ARGPK" class="w-full h-full object-cover">
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- FAQ Section -->
-    <section class="py-16">
-        <div class="container mx-auto px-4">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-3xl font-bold text-primary mb-4">Questions fréquentes</h2>
-                <p class="text-gray-700 text-lg">Retrouvez les réponses aux questions les plus courantes</p>
-            </div>
-            
-            <div class="max-w-3xl mx-auto space-y-6">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <button class="flex justify-between items-center w-full px-6 py-4 text-left font-semibold">
-                        <span>Quels sont les délais de traitement d'une demande d'autorisation ?</span>
-                        <i class="ri-arrow-down-s-line ri-lg"></i>
-                    </button>
-                    <div class="px-6 py-4 border-t">
-                        <p class="text-gray-700">Le délai standard de traitement d'une demande d'autorisation publicitaire est de 15 jours ouvrables à compter de la réception du dossier complet. Ce délai peut varier en fonction de la complexité du projet et du volume de demandes en cours de traitement.</p>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <button class="flex justify-between items-center w-full px-6 py-4 text-left font-semibold">
-                        <span>Comment puis-je vérifier l'état d'avancement de mon dossier ?</span>
-                        <i class="ri-arrow-down-s-line ri-lg"></i>
-                    </button>
-                    <div class="px-6 py-4 border-t">
-                        <p class="text-gray-700">Vous pouvez suivre l'état d'avancement de votre dossier en utilisant le numéro de référence qui vous a été communiqué lors du dépôt de votre demande. Rendez-vous dans la section "Suivi de dossier" de notre site web ou contactez directement notre service client.</p>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <button class="flex justify-between items-center w-full px-6 py-4 text-left font-semibold">
-                        <span>Quels sont les documents nécessaires pour une demande d'autorisation ?</span>
-                        <i class="ri-arrow-down-s-line ri-lg"></i>
-                    </button>
-                    <div class="px-6 py-4 border-t">
-                        <p class="text-gray-700">Les documents requis pour une demande d'autorisation publicitaire comprennent généralement : le formulaire de demande complété, une copie de la pièce d'identité du demandeur, un plan de situation, un visuel du support publicitaire, l'autorisation du propriétaire du terrain ou du bâtiment, et la preuve de paiement des frais de dossier.</p>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <button class="flex justify-between items-center w-full px-6 py-4 text-left font-semibold">
-                        <span>Comment signaler une publicité non conforme ?</span>
-                        <i class="ri-arrow-down-s-line ri-lg"></i>
-                    </button>
-                    <div class="px-6 py-4 border-t">
-                        <p class="text-gray-700">Pour signaler une publicité non conforme, vous pouvez utiliser le formulaire de contact de notre site web en sélectionnant "Réclamation" comme sujet, ou nous contacter directement par téléphone. Veuillez fournir l'emplacement précis de la publicité et, si possible, une photo.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-      <!-- Footer -->
-      <footer class="bg-primary text-white pt-16 pb-8">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-                <div>
-                    <a href="index.html">
-                        <img src="assets/images/logo/kinshasay_argpk.png" alt="ARGPK Logo" class="h-18 mb-6">
-                    </a>
-                    <p class="text-gray-300 mb-6">L'Agence de Régulation de la Publicité à Kinshasa œuvre pour un environnement publicitaire responsable et harmonieux dans la ville-province de Kinshasa.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
-                            <i class="ri-facebook-fill text-white"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
-                            <i class="ri-twitter-x-fill text-white"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
-                            <i class="ri-instagram-fill text-white"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
-                            <i class="ri-linkedin-fill text-white"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-6">Liens rapides</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Accueil</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">À propos</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Missions</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Réglementation</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">E-services</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Emplacements</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Actualités</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-6">Services</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Demande d'autorisation</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Suivi de dossier</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Paiement en ligne</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Calendrier des inspections</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Signalement d'infractions</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Consultation de la réglementation</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-6">Newsletter</h3>
-                    <p class="text-gray-300 mb-4">Abonnez-vous à notre newsletter pour recevoir les dernières actualités et mises à jour.</p>
-                    <form class="mb-4">
-                        <div class="flex">
-                            <input type="email" placeholder="Votre email" class="px-4 py-2 rounded-l-md w-full focus:outline-none text-gray-800">
-                            <button type="submit" class="bg-secondary text-primary px-4 py-2 rounded-r-md font-medium hover:bg-opacity-90 transition duration-300 whitespace-nowrap">S'abonner</button>
+                    <!-- Contact Info -->
+                    <div class="space-y-6">
+                        <!-- Contact Cards -->
+                        <div class="bg-white rounded-2xl shadow-lg p-8">
+                            <h2 class="text-2xl font-bold text-primary mb-6">Nos coordonnées</h2>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                                        <i class="ri-map-pin-line text-xl text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-neutral-800 mb-1">Adresse</h3>
+                                        <p class="text-neutral-600">Avenue des Aviateurs<br>Gombe, Kinshasa<br>République Démocratique du Congo</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                                        <i class="ri-phone-line text-xl text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-neutral-800 mb-1">Téléphone</h3>
+                                        <p class="text-neutral-600">
+                                            <a href="tel:+243815555555" class="hover:text-primary">+243 81 555 5555</a>
+                                        </p>
+                                        <p class="text-neutral-500 text-sm">Lun - Ven: 8h00 - 17h00</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                                        <i class="ri-mail-line text-xl text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-neutral-800 mb-1">Email</h3>
+                                        <p class="text-neutral-600">
+                                            <a href="mailto:contact@argpk.cd" class="hover:text-primary">contact@argpk.cd</a>
+                                        </p>
+                                        <p class="text-neutral-500 text-sm">Réponse sous 24-48h</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </form>
-                    <div class="flex items-center space-x-4">
-                        <div class="flex items-center">
-                            <i class="ri-visa-fill text-2xl mr-1"></i>
-                            <i class="ri-mastercard-fill text-2xl mr-1"></i>
-                            <i class="ri-paypal-fill text-2xl"></i>
+
+                        <!-- Hours -->
+                        <div class="bg-white rounded-2xl shadow-lg p-8">
+                            <h3 class="text-xl font-bold text-primary mb-4">Horaires d'ouverture</h3>
+                            <div class="space-y-3">
+                                <div class="flex justify-between">
+                                    <span class="text-neutral-600">Lundi - Vendredi</span>
+                                    <span class="font-semibold">8h00 - 17h00</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-neutral-600">Samedi</span>
+                                    <span class="font-semibold text-neutral-400">Fermé</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-neutral-600">Dimanche</span>
+                                    <span class="font-semibold text-neutral-400">Fermé</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social -->
+                        <div class="bg-white rounded-2xl shadow-lg p-8">
+                            <h3 class="text-xl font-bold text-primary mb-4">Suivez-nous</h3>
+                            <div class="flex gap-4">
+                                <a href="#" class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                                    <i class="ri-facebook-fill text-xl"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                                    <i class="ri-twitter-x-line text-xl"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                                    <i class="ri-linkedin-fill text-xl"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                                    <i class="ri-youtube-fill text-xl"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="border-t border-white/20 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-gray-300 text-sm mb-4 md:mb-0">© 2025 ARGPK - Agence de Régulation de la Publicité à Kinshasa. Tous droits réservés.</p>
-                    <div class="flex space-x-6">
-                        <a href="#" class="text-gray-300 hover:text-white text-sm transition duration-300">Politique de confidentialité</a>
-                        <a href="#" class="text-gray-300 hover:text-white text-sm transition duration-300">Conditions d'utilisation</a>
-                        <a href="#" class="text-gray-300 hover:text-white text-sm transition duration-300">Mentions légales</a>
+        </section>
+    </main>
+
+    <!-- Footer Style Gouvernemental -->
+    <footer class="bg-primary text-white" aria-labelledby="footer-heading">
+        <div class="container">
+            <!-- Main Footer Content -->
+            <div class="py-12 md:py-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12">
+                    <!-- Column 1: Logo & About -->
+                    <div class="lg:col-span-2">
+                        <a href="index.html" class="flex items-center gap-3 mb-6">
+                            <img src="assets/images/logo/kinshasay_argpk.png" 
+                                 alt="Logo ARGPK" 
+                                 class="logo-img"
+                                 width="220" height="80">
+                        </a>
+                        <p class="text-white/85 mb-6 max-w-lg text-sm leading-relaxed">
+                            L'Agence de Régulation de la Publicité à Kinshasa (ARGPK) est une institution publique chargée de réglementer, contrôler et promouvoir une publicité responsable dans la ville-province de Kinshasa.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="Facebook">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="Twitter">
+                                <i class="ri-twitter-x-line"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="LinkedIn">
+                                <i class="ri-linkedin-fill"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="YouTube">
+                                <i class="ri-youtube-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Services -->
+                    <div>
+                        <h3 class="text-base font-bold mb-5 text-secondary pb-2 border-b border-white/20">Services</h3>
+                        <ul class="space-y-2.5">
+                            <li><a href="e-services.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Demande d'autorisation</a></li>
+                            <li><a href="e-services.html#suivi" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Suivi de dossier</a></li>
+                            <li><a href="e-services.html#paiement" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Paiement en ligne</a></li>
+                            <li><a href="emplacements.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Emplacements</a></li>
+                            <li><a href="e-services.html#calendrier" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Calendrier inspections</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Documents -->
+                    <div>
+                        <h3 class="text-base font-bold mb-5 text-secondary pb-2 border-b border-white/20">Documents</h3>
+                        <ul class="space-y-2.5">
+                            <li><a href="reglementation.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> Réglementation</a></li>
+                            <li><a href="missions.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> Missions</a></li>
+                            <li><a href="actualites.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> Actualités</a></li>
+                            <li><a href="about.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> À propos</a></li>
+                            <li><a href="contact.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> Nous contacter</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Contact -->
+                    <div>
+                        <h3 class="text-base font-bold mb-5 text-secondary pb-2 border-b border-white/20">Contact</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3 text-sm">
+                                <i class="ri-map-pin-line text-secondary mt-0.5"></i>
+                                <span class="text-white/85">Avenue des Aviateurs,<br>Kinshasa, RDC</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="ri-phone-line text-secondary"></i>
+                                <a href="tel:+243815555555" class="text-white/85 hover:text-white transition-colors text-sm">+243 81 555 5555</a>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="ri-mail-line text-secondary"></i>
+                                <a href="mailto:contact@argpk.cd" class="text-white/85 hover:text-white transition-colors text-sm">contact@argpk.cd</a>
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <i class="ri-time-line text-secondary"></i>
+                                <span class="text-white/85">Lun - Ven: 8h00 - 17h00</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Links Banner -->
+            <div class="py-6 border-y border-white/10 bg-white/5">
+                <div class="flex flex-wrap justify-center gap-6 md:gap-10">
+                    <a href="reglementation.html#lois" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Lois & Décrets</a>
+                    <a href="reglementation.html#normes" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Normes en vigueur</a>
+                    <a href="actualites.html" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Actualités</a>
+                    <a href="emplacements.html" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Carte des emplacements</a>
+                    <a href="contact.html" class="text-white/70 hover:text-white text-sm font-medium transition-colors">FAQ</a>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="py-6">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-white/50 text-xs text-center md:text-left">
+                        © <span id="current-year">2024</span> ARGPK - Agence de Régulation de la Publicité à Kinshasa. Tous droits réservés.
+                    </p>
+                    <div class="flex items-center gap-4 text-xs">
+                        <a href="#" class="text-white/50 hover:text-white transition-colors">Mentions légales</a>
+                        <span class="text-white/20">|</span>
+                        <a href="#" class="text-white/50 hover:text-white transition-colors">Politique de confidentialité</a>
+                        <span class="text-white/20">|</span>
+                        <a href="#" class="text-white/50 hover:text-white transition-colors">Plan du site</a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const openMenuBtn = document.getElementById('open-menu');
-            const closeMenuBtn = document.getElementById('close-menu');
-            const mobileMenu = document.querySelector('.mobile-menu');
-            
-            openMenuBtn.addEventListener('click', function() {
-                mobileMenu.classList.remove('hidden');
-                setTimeout(() => {
-                    mobileMenu.classList.add('active');
-                }, 10);
-            });
-            
-            closeMenuBtn.addEventListener('click', function() {
-                mobileMenu.classList.remove('active');
-                setTimeout(() => {
-                    mobileMenu.classList.add('hidden');
-                }, 300);
-            });
-        });
-    </script>
-              <!-- Bouton retour en haut -->
-    <button id="backToTop" class="fixed bottom-4 right-4 bg-primary text-white p-3 rounded-full shadow-lg opacity-0 invisible hover:bg-secondary transition-all duration-300">
+    <!-- Back to Top Button -->
+    <button id="back-to-top" 
+            class="back-to-top"
+            aria-label="Retour en haut de la page">
         <i class="ri-arrow-up-line text-xl"></i>
     </button>
-        
 </body>
 </html>

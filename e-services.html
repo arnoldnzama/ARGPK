@@ -3,582 +3,475 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Services - ARGPK - Agence de Régulation de la Publicité à Kinshasa</title>
+    <title>E-services - ARGPK - Services en Ligne</title>
+    <meta name="description" content="Accédez aux services en ligne de l'ARGPK : demande d'autorisation, suivi de dossier, paiement et plus.">
+    
     <link rel="icon" href="assets/images/icons/argpk.ico" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <script>tailwind.config={theme:{extend:{colors:{primary:'#003366',secondary:'#FFCC00'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Fonts - Style Gouvernemental RDC -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-    <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js"></script>
-    <style>
-        :where([class^="ri-"])::before { content: "\f3c2"; }
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
-        }
-        .hero-section {
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-        .mobile-menu {
-                transform: translateX(-100%);
-                transition: transform 0.3s ease-in-out;
-            }
-            .mobile-menu.active {
-                transform: translateX(0);
-            }
-            .mobile-menu nav a {
-                position: relative;
-            }
-            .mobile-menu nav a::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 0;
-            height: 2px;
-            background-color: #FFC107; /* Couleur secondaire directement définie */
-            transition: width 0.3s ease;
-        }
-        
-        .mobile-menu nav a:hover::after {
-            width: 100%;
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/main.css">
 </head>
-<body class="bg-white">
-    <!-- Header -->
-    <header class="bg-primary text-white shadow-md">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center">
-                <a href="index.html">
-                    <img src="assets/images/logo/kinshasay_argpk.png" alt="ARGPK Logo" class="h-16 mr-8">
+<body class="bg-neutral-50">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded-lg z-[1000]">Aller au contenu principal</a>
+
+    <header class="sticky top-0 z-50 bg-primary backdrop-blur-lg border-b border-primary-dark transition-all duration-300">
+        <div class="container">
+            <nav class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="assets/images/logo/kinshasay_argpk.png" alt="Logo ARGPK" class="logo-img h-16 w-auto transition-transform duration-300 group-hover:scale-105">
                 </a>
-                <nav class="hidden md:flex space-x-6">
-                    <a href="index.html" class="hover:text-secondary transition duration-300 font-medium">Accueil</a>
-                    <a href="about.html" class="hover:text-secondary transition duration-300 font-medium">À propos</a>
-                    <a href="missions.html" class="hover:text-secondary transition duration-300 font-medium">Missions</a>
-                    <a href="reglementation.html" class="hover:text-secondary transition duration-300 font-medium">Réglementation</a>
-                    <a href="e-services.html" class="hover:text-secondary transition duration-300 font-medium">E-services</a>
-                    <a href="emplacements.html" class="hover:text-secondary transition duration-300 font-medium">Emplacements</a>
-                    <a href="actualites.html" class="hover:text-secondary transition duration-300 font-medium">Actualités</a>
-                    <a href="contact.html" class="hover:text-secondary transition duration-300 font-medium">Contact</a>
-                </nav>
-            </div>
-            <div class="flex items-center space-x-4">
-                <div class="flex border border-white rounded-full overflow-hidden">
-                    <button class="bg-white text-primary px-3 py-1 font-medium">FR</button>
-                    <button class="text-white px-3 py-1 font-medium">EN</button>
+
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                    <div class="dropdown dropdown-mega">
+                        <a href="about.html" class="nav-link dropdown-toggle">À propos</a>
+                        <div class="dropdown-mega-menu">
+                            <div class="mega-menu-grid">
+                                <div class="mega-menu-column">
+                                    <h4>Organisation</h4>
+                                    <a href="about.html">À propos de l'ARGPK</a>
+                                    <a href="about.html#direction">Direction Générale</a>
+                                    <a href="contact.html">Nous contacter</a>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h4>Missions</h4>
+                                    <a href="missions.html">Nos missions</a>
+                                    <a href="missions.html#controle">Contrôle</a>
+                                    <a href="missions.html#promotion">Promotion</a>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h4>Réglementation</h4>
+                                    <a href="reglementation.html">Cadre réglementaire</a>
+                                    <a href="reglementation.html#lois">Lois et décrets</a>
+                                    <a href="reglementation.html#normes">Normes en vigueur</a>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h4>Services</h4>
+                                    <a href="e-services.html" class="active">E-services</a>
+                                    <a href="emplacements.html">Emplacements</a>
+                                    <a href="actualites.html">Actualités</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="actualites.html" class="nav-link">Actualités</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
                 </div>
-                <button id="open-menu" class="md:hidden w-10 h-10 flex items-center justify-center">
-                    <i class="ri-menu-line ri-lg"></i>
+
+                <div class="hidden lg:flex items-center space-x-6">
+                    <div class="flex bg-neutral-100 rounded-full p-1">
+                        <button class="bg-primary text-white px-4 py-1.5 rounded-full text-sm font-semibold">FR</button>
+                        <button class="text-neutral-600 hover:text-primary px-4 py-1.5 rounded-full text-sm font-semibold">EN</button>
+                    </div>
+                    <a href="#demande" class="btn btn-secondary btn-sm">
+                        <i class="ri-file-list-3-line"></i> Faire une demande
+                    </a>
+                </div>
+
+                <button id="open-menu" class="lg:hidden w-10 h-10 flex items-center justify-center transition-colors">
+                    <i class="ri-menu-3-line text-2xl"></i>
                 </button>
-            </div>
+            </nav>
         </div>
     </header>
-    
-    <!-- Menu Mobile -->
-    <div class="mobile-menu fixed top-0 left-0 w-full h-screen bg-primary z-50 flex flex-col p-6 hidden">
-        <div class="flex justify-between items-center mb-8">
-            <h1 class="text-2xl font-['Pacifico'] text-white">ARGPK</h1>
-            <button id="close-menu" class="w-10 h-10 flex items-center justify-center text-white">
-                <i class="ri-close-line ri-lg"></i>
-            </button>
-        </div>
-        <nav class="flex flex-col space-y-4">
-            <a href="index.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Accueil</a>
-            <a href="about.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">À propos</a>
-            <a href="missions.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Missions</a>
-            <a href="reglementation.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Réglementation</a>
-            <a href="e-services.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">E-services</a>
-            <a href="emplacements.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Emplacements</a>
-            <a href="actualites.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Actualités</a>
-            <a href="contact.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Contact</a>
-        </nav>
-    <div class="mt-auto">
-        <div class="flex border border-white rounded-full overflow-hidden w-max mx-auto mt-8">
-            <button class="bg-white text-primary px-3 py-1 font-medium">FR</button>
-            <button class="text-white px-3 py-1 font-medium">EN</button>
+
+    <!-- Mobile Menu Backdrop -->
+    <div id="mobile-menu-backdrop" class="mobile-menu-backdrop"></div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="p-8 h-full flex flex-col">
+            <div class="flex justify-between items-center mb-12">
+                <img src="assets/images/logo/kinshasay_argpk.png" alt="Logo" class="h-12 w-auto">
+                <button id="close-menu" class="w-10 h-10 flex items-center justify-center transition-colors">
+                    <i class="ri-close-line text-3xl"></i>
+                </button>
+            </div>
+            <nav class="flex-1 space-y-6">
+                <a href="index.html" class="flex items-center gap-4 text-2xl font-semibold text-neutral-700"><i class="ri-home-line opacity-60"></i> Accueil</a>
+                
+                <!-- Mobile Dropdown for À propos -->
+                <div class="mobile-dropdown">
+                    <button class="flex items-center justify-between w-full text-2xl font-semibold text-neutral-700 hover:text-primary transition-colors" aria-expanded="false" aria-controls="mobile-about-menu">
+                        <span class="flex items-center gap-4">
+                            <i class="ri-information-line opacity-60"></i> À propos
+                        </span>
+                        <i class="ri-arrow-down-s-line text-xl" id="mobile-dropdown-arrow"></i>
+                    </button>
+                    <div id="mobile-about-menu" class="mobile-dropdown-menu hidden pl-12 mt-4 space-y-4">
+                        <a href="about.html" class="flex items-center gap-2 text-lg text-neutral-600 hover:text-primary transition-colors">
+                            <i class="ri-information-line opacity-60"></i> À propos de l'ARGPK
+                        </a>
+                        <a href="missions.html" class="flex items-center gap-2 text-lg text-neutral-600 hover:text-primary transition-colors">
+                            <i class="ri-flag-line opacity-60"></i> Missions
+                        </a>
+                        <a href="reglementation.html" class="flex items-center gap-2 text-lg text-neutral-600 hover:text-primary transition-colors">
+                            <i class="ri-file-text-line opacity-60"></i> Réglementation
+                        </a>
+                        <a href="e-services.html" class="flex items-center gap-2 text-lg text-primary font-semibold hover:text-primary-light transition-colors">
+                            <i class="ri-computer-line opacity-60"></i> E-services
+                        </a>
+                        <a href="emplacements.html" class="flex items-center gap-2 text-lg text-neutral-600 hover:text-primary transition-colors">
+                            <i class="ri-map-pin-line opacity-60"></i> Emplacements
+                        </a>
+                    </div>
+                </div>
+                
+                <a href="actualites.html" class="flex items-center gap-4 text-2xl font-semibold text-neutral-700"><i class="ri-newspaper-line opacity-60"></i> Actualités</a>
+                <a href="contact.html" class="flex items-center gap-4 text-2xl font-semibold text-neutral-700"><i class="ri-mail-line opacity-60"></i> Contact</a>
+            </nav>
+            <div class="pt-8 border-t border-neutral-200">
+                <div class="flex bg-neutral-100 rounded-full p-1 mx-auto w-max mb-6">
+                    <button class="bg-primary text-white px-6 py-2 rounded-full text-sm font-semibold">FR</button>
+                    <button class="text-neutral-600 px-6 py-2 rounded-full text-sm font-semibold">EN</button>
+                </div>
+                <a href="#demande" class="btn btn-secondary w-full"><i class="ri-file-list-3-line"></i> Faire une demande</a>
+            </div>
         </div>
     </div>
-</div>
 
     <!-- Hero Section -->
-    <section class="hero-section relative min-h-[400px] flex items-center" style="background-image: url('https://readdy.ai/api/search-image?query=Digital%20services%20for%20advertising%20regulation%20in%20Kinshasa%2C%20showing%20people%20using%20computers%20and%20mobile%20devices%20to%20access%20online%20forms%20and%20services%2C%20professional%20photography&width=1920&height=600&seq=1&orientation=landscape');">
-        <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"></div>
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="max-w-2xl text-white">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Nos E-Services</h1>
-                <p class="text-lg mb-8">Effectuez vos démarches en ligne pour une gestion simplifiée et transparente de vos projets publicitaires à Kinshasa.</p>
+    <section class="hero-section bg-primary" style="min-height: auto;" aria-label="E-services">
+        <div class="container relative z-10">
+            <div class="max-w-3xl py-8 md:py-12">
+                <nav class="flex items-center gap-2 text-sm text-white/80 mb-4 animate-fade-in" aria-label="Fil d'Ariane">
+                    <a href="index.html" class="hover:text-white transition-colors">Accueil</a>
+                    <i class="ri-arrow-right-s-line"></i>
+                    <span class="text-white">E-services</span>
+                </nav>
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 animate-slide-up">Services en Ligne</h1>
+                <p class="text-xl text-white/90 animate-slide-up" style="animation-delay: 0.1s;">Simplifiez vos démarches administratives avec notre plateforme numérique sécurisée.</p>
             </div>
         </div>
     </section>
 
-    <!-- Services Overview Section -->
-    <section class="py-16">
-        <div class="container mx-auto px-4">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-3xl font-bold text-primary mb-4">Services en Ligne</h2>
-                <p class="text-gray-700 text-lg">L'ARGPK met à votre disposition une gamme de services numériques pour faciliter vos démarches administratives et le suivi de vos dossiers publicitaires.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                        <i class="ri-file-paper-2-line ri-lg text-primary"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Demande d'Autorisation</h3>
-                    <p class="text-gray-600 mb-6">Soumettez votre demande d'autorisation d'affichage publicitaire en ligne et suivez son traitement en temps réel.</p>
-                    <a href="#demande-autorisation" class="mt-auto bg-primary text-white px-6 py-2 rounded-button font-medium hover:bg-opacity-90 transition duration-300">Commencer</a>
-                </div>
-                
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                        <i class="ri-bank-card-line ri-lg text-primary"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Paiement en Ligne</h3>
-                    <p class="text-gray-600 mb-6">Réglez vos redevances et frais administratifs en toute sécurité via notre plateforme de paiement électronique.</p>
-                    <a href="#paiement" class="mt-auto bg-primary text-white px-6 py-2 rounded-button font-medium hover:bg-opacity-90 transition duration-300">Payer</a>
-                </div>
-                
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                        <i class="ri-search-line ri-lg text-primary"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Suivi de Dossier</h3>
-                    <p class="text-gray-600 mb-6">Consultez l'état d'avancement de votre demande et recevez des notifications à chaque étape du processus.</p>
-                    <a href="#suivi" class="mt-auto bg-primary text-white px-6 py-2 rounded-button font-medium hover:bg-opacity-90 transition duration-300">Suivre</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Application Form Section -->
-    <section id="demande-autorisation" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="max-w-3xl mx-auto">
-                <h2 class="text-3xl font-bold text-primary mb-8 text-center">Demande d'Autorisation</h2>
-                
-                <div class="bg-white p-8 rounded-lg shadow-md">
-                    <form>
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold mb-4">Informations du Demandeur</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div>
-                                    <label for="nom" class="block text-gray-700 mb-2">Nom / Raison sociale *</label>
-                                    <input type="text" id="nom" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
-                                </div>
-                                <div>
-                                    <label for="email" class="block text-gray-700 mb-2">Email *</label>
-                                    <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
-                                </div>
-                                <div>
-                                    <label for="telephone" class="block text-gray-700 mb-2">Téléphone *</label>
-                                    <input type="tel" id="telephone" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
-                                </div>
-                                <div>
-                                    <label for="adresse" class="block text-gray-700 mb-2">Adresse *</label>
-                                    <input type="text" id="adresse" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
-                                </div>
+    <main id="main-content">
+        <!-- Services Grid -->
+        <section class="section bg-white">
+            <div class="container">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Service 1 -->
+                    <div id="demande" class="card animate-on-scroll">
+                        <div class="p-6">
+                            <div class="w-14 h-14 rounded-xl bg-primary flex items-center justify-center mb-4">
+                                <i class="ri-file-list-3-line text-2xl text-white"></i>
                             </div>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold mb-4">Informations sur le Support Publicitaire</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <h3 class="text-xl font-bold text-primary mb-3">Demande d'autorisation</h3>
+                            <p class="text-neutral-600 text-sm mb-6">Soumettez votre demande pour l'installation de supports publicitaires.</p>
+                            
+                            <form class="space-y-4">
                                 <div>
-                                    <label for="type-support" class="block text-gray-700 mb-2">Type de support *</label>
-                                    <select id="type-support" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
-                                        <option value="">Sélectionnez</option>
-                                        <option value="panneau">Panneau grand format</option>
-                                        <option value="enseigne">Enseigne commerciale</option>
-                                        <option value="ecran">Écran numérique</option>
-                                        <option value="bache">Bâche publicitaire</option>
-                                        <option value="autre">Autre</option>
+                                    <label class="form-label">Type de demande</label>
+                                    <select class="form-control">
+                                        <option>Nouveau support</option>
+                                        <option>Renouvellement</option>
+                                        <option>Modification</option>
                                     </select>
                                 </div>
                                 <div>
-                                    <label for="dimensions" class="block text-gray-700 mb-2">Dimensions (m) *</label>
-                                    <input type="text" id="dimensions" placeholder="Largeur x Hauteur" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
+                                    <label class="form-label">Nom de l'entreprise</label>
+                                    <input type="text" class="form-control" placeholder="Votre entreprise">
                                 </div>
                                 <div>
-                                    <label for="emplacement" class="block text-gray-700 mb-2">Adresse d'installation *</label>
-                                    <input type="text" id="emplacement" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
-                                </div>
-                                <div>
-                                    <label for="duree" class="block text-gray-700 mb-2">Durée d'affichage *</label>
-                                    <select id="duree" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
-                                        <option value="">Sélectionnez</option>
-                                        <option value="1-mois">1 mois</option>
-                                        <option value="3-mois">3 mois</option>
-                                        <option value="6-mois">6 mois</option>
-                                        <option value="1-an">1 an</option>
-                                        <option value="permanent">Permanent</option>
+                                    <label class="form-label">Type de support</label>
+                                    <select class="form-control">
+                                        <option>Panneau publicitaire</option>
+                                        <option>Enseigne</option>
+                                        <option>Écran numérique</option>
+                                        <option> Bâche</option>
                                     </select>
                                 </div>
-                            </div>
+                                <button type="submit" class="btn btn-primary w-full">
+                                    <i class="ri-send-plane-line"></i> Soumettre la demande
+                                </button>
+                            </form>
                         </div>
-                        
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold mb-4">Documents à Joindre</h3>
-                            <div class="space-y-4">
-                                <div>
-                                    <label for="visuel" class="block text-gray-700 mb-2">Maquette du visuel publicitaire *</label>
-                                    <input type="file" id="visuel" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
-                                </div>
-                                <div>
-                                    <label for="plan" class="block text-gray-700 mb-2">Plan de situation *</label>
-                                    <input type="file" id="plan" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
-                                </div>
-                                <div>
-                                    <label for="autorisation" class="block text-gray-700 mb-2">Autorisation du propriétaire *</label>
-                                    <input type="file" id="autorisation" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center mb-6">
-                            <input type="checkbox" id="conditions" class="mr-2" required>
-                            <label for="conditions" class="text-gray-700">J'accepte les <a href="#" class="text-primary hover:underline">conditions générales</a> et certifie l'exactitude des informations fournies.</label>
-                        </div>
-                        
-                        <div class="text-center">
-                            <button type="submit" class="bg-primary text-white px-8 py-3 rounded-button font-semibold hover:bg-opacity-90 transition duration-300">Soumettre ma demande</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+                    </div>
 
-    <!-- Payment Section -->
-    <section id="paiement" class="py-16">
-        <div class="container mx-auto px-4">
-            <div class="max-w-3xl mx-auto">
-                <h2 class="text-3xl font-bold text-primary mb-8 text-center">Paiement en Ligne</h2>
-                
-                <div class="bg-white p-8 rounded-lg shadow-md">
-                    <div class="mb-8">
-                        <h3 class="text-xl font-semibold mb-4">Modes de Paiement Acceptés</h3>
-                        <div class="flex flex-wrap justify-center gap-6 mb-6">
-                            <div class="flex items-center justify-center w-24 h-16 bg-gray-100 rounded p-2">
-                                <img src="https://via.placeholder.com/80x40?text=Visa" alt="Visa" class="max-h-full">
+                    <!-- Service 2 -->
+                    <div id="suivi" class="card animate-on-scroll" style="animation-delay: 0.1s;">
+                        <div class="p-6">
+                            <div class="w-14 h-14 rounded-xl bg-primary flex items-center justify-center mb-4">
+                                <i class="ri-search-line text-2xl text-white"></i>
                             </div>
-                            <div class="flex items-center justify-center w-24 h-16 bg-gray-100 rounded p-2">
-                                <img src="https://via.placeholder.com/80x40?text=MasterCard" alt="MasterCard" class="max-h-full">
-                            </div>
-                            <div class="flex items-center justify-center w-24 h-16 bg-gray-100 rounded p-2">
-                                <img src="https://via.placeholder.com/80x40?text=M-Pesa" alt="M-Pesa" class="max-h-full">
-                            </div>
-                            <div class="flex items-center justify-center w-24 h-16 bg-gray-100 rounded p-2">
-                                <img src="https://via.placeholder.com/80x40?text=Orange Money" alt="Orange Money" class="max-h-full">
+                            <h3 class="text-xl font-bold text-primary mb-3">Suivi de dossier</h3>
+                            <p class="text-neutral-600 text-sm mb-6">Consultation de l'état d'avancement de votre demande en temps réel.</p>
+                            
+                            <form class="space-y-4">
+                                <div>
+                                    <label class="form-label">Numéro de dossier</label>
+                                    <input type="text" class="form-control" placeholder="ARG-2024-XXXXX">
+                                </div>
+                                <button type="submit" class="btn btn-primary w-full">
+                                    <i class="ri-search-eye-line"></i> Rechercher
+                                </button>
+                            </form>
+                            
+                            <div class="mt-6 p-4 bg-neutral-50 rounded-lg">
+                                <h4 class="font-bold text-neutral-700 mb-2">Exemple</h4>
+                                <p class="text-sm text-neutral-600">Entrez le numéro de dossier fourni lors de la soumission de votre demande.</p>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Service 3 -->
+                    <div id="paiement" class="card animate-on-scroll" style="animation-delay: 0.2s;">
+                        <div class="p-6">
+                            <div class="w-14 h-14 rounded-xl bg-primary flex items-center justify-center mb-4">
+                                <i class="ri-bank-card-line text-2xl text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-primary mb-3">Paiement en ligne</h3>
+                            <p class="text-neutral-600 text-sm mb-6">Effectuez le paiement des droits et redevances de manière sécurisée.</p>
+                            
+                            <form class="space-y-4">
+                                <div>
+                                    <label class="form-label">Numéro de référence</label>
+                                    <input type="text" class="form-control" placeholder="REF-XXXXX">
+                                </div>
+                                <div>
+                                    <label class="form-label">Montant (USD)</label>
+                                    <input type="number" class="form-control" placeholder="0.00" readonly>
+                                </div>
+                                <div class="flex gap-2">
+                                    <button type="button" class="btn btn-outline btn-sm flex-1">
+                                        <i class="ri-visa-fill"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-outline btn-sm flex-1">
+                                        <i class="ri-mastercard-fill"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-outline btn-sm flex-1">
+                                        <i class="ri-bank-card-fill"></i>
+                                    </button>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-full">
+                                    <i class="ri-lock-line"></i> Payer securely
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div id="calendrier" class="card animate-on-scroll" style="animation-delay: 0.3s;">
+                        <div class="p-6">
+                            <div class="w-14 h-14 rounded-xl bg-primary flex items-center justify-center mb-4">
+                                <i class="ri-calendar-check-line text-2xl text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-primary mb-3">Calendrier inspections</h3>
+                            <p class="text-neutral-600 text-sm mb-6">Consultation du planning des inspections programmées.</p>
+                            
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-center gap-3 p-3 bg-neutral-50 rounded-lg">
+                                    <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
+                                        <i class="ri-check-line text-green-600"></i>
+                                    </div>
+                                    <div class="text-sm">
+                                        <p class="font-semibold">15 Juillet 2026</p>
+                                        <p class="text-neutral-500">Zone Gombe</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3 p-3 bg-neutral-50 rounded-lg">
+                                    <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
+                                        <i class="ri-calendar-line text-blue-600"></i>
+                                    </div>
+                                    <div class="text-sm">
+                                        <p class="font-semibold">22 Juillet 2026</p>
+                                        <p class="text-neutral-500">Zone Limete</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <a href="#" class="btn btn-outline w-full">
+                                <i class="ri-calendar-line"></i> Voir le calendrier complet
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="section bg-neutral-50">
+            <div class="container">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-primary mb-8 text-center">Comment ça marche ?</h2>
                     
-                    <form>
-                        <div class="mb-6">
-                            <label for="reference" class="block text-gray-700 mb-2">Numéro de référence *</label>
-                            <input type="text" id="reference" placeholder="Entrez le numéro de référence de votre dossier" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
-                        </div>
+                    <div class="relative">
+                        <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-primary/20 hidden md:block"></div>
                         
-                        <div class="mb-6">
-                            <label for="montant" class="block text-gray-700 mb-2">Montant à payer *</label>
-                            <div class="relative">
-                                <span class="absolute left-3 top-2 text-gray-500">$</span>
-                                <input type="number" id="montant" class="w-full pl-8 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label for="mode-paiement" class="block text-gray-700 mb-2">Mode de paiement *</label>
-                            <select id="mode-paiement" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
-                                <option value="">Sélectionnez</option>
-                                <option value="carte">Carte bancaire</option>
-                                <option value="mobile">Mobile Money</option>
-                                <option value="virement">Virement bancaire</option>
-                            </select>
-                        </div>
-                        
-                        <div class="text-center">
-                            <button type="submit" class="bg-primary text-white px-8 py-3 rounded-button font-semibold hover:bg-opacity-90 transition duration-300">Procéder au paiement</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tracking Section -->
-    <section id="suivi" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="max-w-3xl mx-auto">
-                <h2 class="text-3xl font-bold text-primary mb-8 text-center">Suivi de Dossier</h2>
-                
-                <div class="bg-white p-8 rounded-lg shadow-md">
-                    <form class="mb-8">
-                        <div class="flex flex-col md:flex-row gap-4">
-                            <div class="flex-grow">
-                                <label for="reference-suivi" class="block text-gray-700 mb-2">Numéro de référence *</label>
-                                <input type="text" id="reference-suivi" placeholder="Entrez le numéro de référence de votre dossier" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
-                            </div>
-                            <div class="md:self-end">
-                                <button type="submit" class="w-full md:w-auto bg-primary text-white px-6 py-2 rounded-button font-medium hover:bg-opacity-90 transition duration-300">Rechercher</button>
-                            </div>
-                        </div>
-                    </form>
-                    
-                    <div class="border border-gray-200 rounded-lg p-6">
-                        <h3 class="text-xl font-semibold mb-4">Exemple de Statut de Dossier</h3>
-                        
-                        <div class="mb-6">
-                            <div class="flex justify-between mb-2">
-                                <span class="text-gray-700">Référence:</span>
-                                <span class="font-medium">PUB-2023-1458</span>
-                            </div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-gray-700">Type de support:</span>
-                                <span class="font-medium">Panneau grand format</span>
-                            </div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-gray-700">Date de soumission:</span>
-                                <span class="font-medium">15/06/2023</span>
-                            </div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-gray-700">Statut actuel:</span>
-                                <span class="font-medium text-yellow-600">En cours d'examen</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-6">
-                            <h4 class="font-semibold mb-3">Progression du dossier</h4>
-                            <div class="relative">
-                                <div class="absolute left-4 top-0 h-full w-0.5 bg-gray-200"></div>
-                                
-                                <div class="relative flex items-start mb-6">
-                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-500 flex items-center justify-center z-10">
-                                        <i class="ri-check-line text-white"></i>
-                                    </div>
-                                    <div class="ml-4">
-                                        <h5 class="font-medium">Soumission de la demande</h5>
-                                        <p class="text-sm text-gray-500">15/06/2023 à 10:23</p>
-                                        <p class="text-sm mt-1">Votre demande a été reçue et enregistrée dans notre système.</p>
-                                    </div>
+                        <div class="space-y-8">
+                            <div class="flex gap-6 animate-on-scroll">
+                                <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center flex-shrink-0 text-white font-bold text-xl">1</div>
+                                <div class="bg-white rounded-xl p-6 shadow-md flex-1">
+                                    <h3 class="text-xl font-bold text-primary mb-2">Créez votre compte</h3>
+                                    <p class="text-neutral-600">Inscrivez-vous sur la plateforme en quelques clics avec vos informations professionnelles.</p>
                                 </div>
-                                
-                                <div class="relative flex items-start mb-6">
-                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-500 flex items-center justify-center z-10">
-                                        <i class="ri-check-line text-white"></i>
-                                    </div>
-                                    <div class="ml-4">
-                                        <h5 class="font-medium">Vérification des documents</h5>
-                                        <p class="text-sm text-gray-500">16/06/2023 à 14:45</p>
-                                        <p class="text-sm mt-1">Les documents fournis ont été vérifiés et sont conformes.</p>
-                                    </div>
+                            </div>
+                            
+                            <div class="flex gap-6 animate-on-scroll" style="animation-delay: 0.1s;">
+                                <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center flex-shrink-0 text-white font-bold text-xl">2</div>
+                                <div class="bg-white rounded-xl p-6 shadow-md flex-1">
+                                    <h3 class="text-xl font-bold text-primary mb-2">Soumettez votre demande</h3>
+                                    <p class="text-neutral-600">Remplissez le formulaire en ligne et joignez les documents requis (plans, photos, autorisations).</p>
                                 </div>
-                                
-                                <div class="relative flex items-start mb-6">
-                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-yellow-500 flex items-center justify-center z-10">
-                                        <i class="ri-time-line text-white"></i>
-                                    </div>
-                                    <div class="ml-4">
-                                        <h5 class="font-medium">Analyse technique</h5>
-                                        <p class="text-sm text-gray-500">En cours</p>
-                                        <p class="text-sm mt-1">Notre équipe technique évalue la conformité de votre demande.</p>
-                                    </div>
+                            </div>
+                            
+                            <div class="flex gap-6 animate-on-scroll" style="animation-delay: 0.2s;">
+                                <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center flex-shrink-0 text-white font-bold text-xl">3</div>
+                                <div class="bg-white rounded-xl p-6 shadow-md flex-1">
+                                    <h3 class="text-xl font-bold text-primary mb-2">Suivez votre dossier</h3>
+                                    <p class="text-neutral-600">Consultez l'état d'avancement de votre demande en temps réel depuis votre espace personnel.</p>
                                 </div>
-                                
-                                <div class="relative flex items-start mb-6">
-                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center z-10">
-                                        <i class="ri-money-dollar-circle-line text-white"></i>
-                                    </div>
-                                    <div class="ml-4">
-                                        <h5 class="font-medium text-gray-500">Paiement des frais</h5>
-                                        <p class="text-sm text-gray-500">En attente</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="relative flex items-start">
-                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center z-10">
-                                        <i class="ri-file-paper-2-line text-white"></i>
-                                    </div>
-                                    <div class="ml-4">
-                                        <h5 class="font-medium text-gray-500">Délivrance de l'autorisation</h5>
-                                        <p class="text-sm text-gray-500">En attente</p>
-                                    </div>
+                            </div>
+                            
+                            <div class="flex gap-6 animate-on-scroll" style="animation-delay: 0.3s;">
+                                <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center flex-shrink-0 text-white font-bold text-xl">4</div>
+                                <div class="bg-white rounded-xl p-6 shadow-md flex-1">
+                                    <h3 class="text-xl font-bold text-primary mb-2">Recevez votre autorisation</h3>
+                                    <p class="text-neutral-600">Une fois validée, recevez votre autorisation par email et procédez au paiement en ligne.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FAQ Section -->
-    <section class="py-16">
-        <div class="container mx-auto px-4">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-3xl font-bold text-primary mb-4">Questions Fréquentes</h2>
-                <p class="text-gray-700 text-lg">Retrouvez les réponses aux questions les plus courantes concernant nos services en ligne.</p>
-            </div>
-            
-            <div class="max-w-3xl mx-auto">
-                <div class="mb-6 border-b border-gray-200 pb-6">
-                    <h3 class="text-xl font-semibold mb-3">Combien de temps prend le traitement d'une demande d'autorisation ?</h3>
-                    <p class="text-gray-700">Le délai de traitement standard est de 10 jours ouvrables à compter de la réception de votre dossier complet. Ce délai peut varier en fonction de la complexité de votre demande et du volume de dossiers en cours de traitement.</p>
-                </div>
-                
-                <div class="mb-6 border-b border-gray-200 pb-6">
-                    <h3 class="text-xl font-semibold mb-3">Quels sont les modes de paiement acceptés ?</h3>
-                    <p class="text-gray-700">Nous acceptons les paiements par carte bancaire (Visa, MasterCard), par mobile money (M-Pesa, Orange Money), ainsi que par virement bancaire. Les paiements en espèces sont également acceptés à nos guichets.</p>
-                </div>
-                
-                <div class="mb-6 border-b border-gray-200 pb-6">
-                    <h3 class="text-xl font-semibold mb-3">Comment puis-je modifier ma demande après soumission ?</h3>
-                    <p class="text-gray-700">Pour toute modification après soumission, veuillez contacter notre service client en précisant votre numéro de référence. Selon l'état d'avancement de votre dossier, certaines modifications pourront être effectuées sans avoir à soumettre une nouvelle demande.</p>
-                </div>
-                
-                <div class="mb-6 border-b border-gray-200 pb-6">
-                    <h3 class="text-xl font-semibold mb-3">Que faire si ma demande est rejetée ?</h3>
-                    <p class="text-gray-700">En cas de rejet, vous recevrez une notification détaillant les motifs du refus. Vous pourrez alors soumettre une nouvelle demande en tenant compte des observations formulées, ou introduire un recours dans un délai de 30 jours.</p>
-                </div>
-                
-                <div>
-                    <h3 class="text-xl font-semibold mb-3">Comment renouveler une autorisation existante ?</h3>
-                    <p class="text-gray-700">Le renouvellement d'une autorisation doit être initié au moins 30 jours avant sa date d'expiration. Connectez-vous à votre compte, sélectionnez l'autorisation à renouveler et suivez les instructions. Une procédure simplifiée s'applique aux renouvellements sans modification.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact CTA Section -->
-    <section class="py-16 bg-primary text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-6">Besoin d'assistance pour vos démarches en ligne ?</h2>
-            <p class="text-lg mb-8 max-w-2xl mx-auto">Notre équipe est disponible pour vous accompagner dans toutes vos démarches administratives liées à la publicité à Kinshasa.</p>
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="contact.html" class="bg-white text-primary px-8 py-3 rounded-button font-semibold hover:bg-opacity-90 transition duration-300">Contactez-nous</a>
-                <a href="tel:+243123456789" class="border border-white text-white px-8 py-3 rounded-button font-semibold hover:bg-white hover:text-primary transition duration-300">+243 123 456 789</a>
-            </div>
-        </div>
-    </section>
-
-     <!-- Footer -->
-     <footer class="bg-primary text-white pt-16 pb-8">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-                <div>
-                    <a href="index.html">
-                        <img src="assets/images/logo/kinshasay_argpk.png" alt="ARGPK Logo" class="h-18 mb-6">
-                    </a>
-                    <p class="text-gray-300 mb-6">L'Agence de Régulation de la Publicité à Kinshasa œuvre pour un environnement publicitaire responsable et harmonieux dans la ville-province de Kinshasa.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
-                            <i class="ri-facebook-fill text-white"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
-                            <i class="ri-twitter-x-fill text-white"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
-                            <i class="ri-instagram-fill text-white"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
-                            <i class="ri-linkedin-fill text-white"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-6">Liens rapides</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Accueil</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">À propos</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Missions</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Réglementation</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">E-services</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Emplacements</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Actualités</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-6">Services</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Demande d'autorisation</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Suivi de dossier</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Paiement en ligne</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Calendrier des inspections</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Signalement d'infractions</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Consultation de la réglementation</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-6">Newsletter</h3>
-                    <p class="text-gray-300 mb-4">Abonnez-vous à notre newsletter pour recevoir les dernières actualités et mises à jour.</p>
-                    <form class="mb-4">
-                        <div class="flex">
-                            <input type="email" placeholder="Votre email" class="px-4 py-2 rounded-l-md w-full focus:outline-none text-gray-800">
-                            <button type="submit" class="bg-secondary text-primary px-4 py-2 rounded-r-md font-medium hover:bg-opacity-90 transition duration-300 whitespace-nowrap">S'abonner</button>
-                        </div>
-                    </form>
-                    <div class="flex items-center space-x-4">
-                        <div class="flex items-center">
-                            <i class="ri-visa-fill text-2xl mr-1"></i>
-                            <i class="ri-mastercard-fill text-2xl mr-1"></i>
-                            <i class="ri-paypal-fill text-2xl"></i>
-                        </div>
+        <!-- CTA -->
+        <section class="section bg-neutral-50">
+            <div class="container">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-3xl font-bold text-primary mb-6">Besoin d'assistance ?</h2>
+                    <p class="text-xl text-neutral-600 mb-8">Notre équipe support est disponible pour vous aider dans vos démarches.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="contact.html" class="btn btn-primary btn-lg"><i class="ri-question-line"></i> Contacter le support</a>
+                        <a href="reglementation.html" class="btn btn-outline btn-lg"><i class="ri-book-open-line"></i> Consulter la réglementation</a>
                     </div>
                 </div>
             </div>
-            
-            <div class="border-t border-white/20 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-gray-300 text-sm mb-4 md:mb-0">© 2025 ARGPK - Agence de Régulation de la Publicité à Kinshasa. Tous droits réservés.</p>
-                    <div class="flex space-x-6">
-                        <a href="#" class="text-gray-300 hover:text-white text-sm transition duration-300">Politique de confidentialité</a>
-                        <a href="#" class="text-gray-300 hover:text-white text-sm transition duration-300">Conditions d'utilisation</a>
-                        <a href="#" class="text-gray-300 hover:text-white text-sm transition duration-300">Mentions légales</a>
+        </section>
+    </main>
+
+    <!-- Footer Style Gouvernemental -->
+    <footer class="bg-primary text-white" aria-labelledby="footer-heading">
+        <div class="container">
+            <!-- Main Footer Content -->
+            <div class="py-12 md:py-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12">
+                    <!-- Column 1: Logo & About -->
+                    <div class="lg:col-span-2">
+                        <a href="index.html" class="flex items-center gap-3 mb-6">
+                            <img src="assets/images/logo/kinshasay_argpk.png" 
+                                 alt="Logo ARGPK" 
+                                 class="logo-img"
+                                 width="220" height="80">
+                        </a>
+                        <p class="text-white/85 mb-6 max-w-lg text-sm leading-relaxed">
+                            L'Agence de Régulation de la Publicité à Kinshasa (ARGPK) est une institution publique chargée de réglementer, contrôler et promouvoir une publicité responsable dans la ville-province de Kinshasa.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="Facebook">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="Twitter">
+                                <i class="ri-twitter-x-line"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="LinkedIn">
+                                <i class="ri-linkedin-fill"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="YouTube">
+                                <i class="ri-youtube-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Services -->
+                    <div>
+                        <h3 class="text-base font-bold mb-5 text-secondary pb-2 border-b border-white/20">Services</h3>
+                        <ul class="space-y-2.5">
+                            <li><a href="e-services.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Demande d'autorisation</a></li>
+                            <li><a href="e-services.html#suivi" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Suivi de dossier</a></li>
+                            <li><a href="e-services.html#paiement" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Paiement en ligne</a></li>
+                            <li><a href="emplacements.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Emplacements</a></li>
+                            <li><a href="e-services.html#calendrier" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Calendrier inspections</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Documents -->
+                    <div>
+                        <h3 class="text-base font-bold mb-5 text-secondary pb-2 border-b border-white/20">Documents</h3>
+                        <ul class="space-y-2.5">
+                            <li><a href="reglementation.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> Réglementation</a></li>
+                            <li><a href="missions.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> Missions</a></li>
+                            <li><a href="actualites.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> Actualités</a></li>
+                            <li><a href="about.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> À propos</a></li>
+                            <li><a href="contact.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> Nous contacter</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Contact -->
+                    <div>
+                        <h3 class="text-base font-bold mb-5 text-secondary pb-2 border-b border-white/20">Contact</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3 text-sm">
+                                <i class="ri-map-pin-line text-secondary mt-0.5"></i>
+                                <span class="text-white/85">Avenue des Aviateurs,<br>Kinshasa, RDC</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="ri-phone-line text-secondary"></i>
+                                <a href="tel:+243815555555" class="text-white/85 hover:text-white transition-colors text-sm">+243 81 555 5555</a>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="ri-mail-line text-secondary"></i>
+                                <a href="mailto:contact@argpk.cd" class="text-white/85 hover:text-white transition-colors text-sm">contact@argpk.cd</a>
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <i class="ri-time-line text-secondary"></i>
+                                <span class="text-white/85">Lun - Ven: 8h00 - 17h00</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Links Banner -->
+            <div class="py-6 border-y border-white/10 bg-white/5">
+                <div class="flex flex-wrap justify-center gap-6 md:gap-10">
+                    <a href="reglementation.html#lois" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Lois & Décrets</a>
+                    <a href="reglementation.html#normes" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Normes en vigueur</a>
+                    <a href="actualites.html" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Actualités</a>
+                    <a href="emplacements.html" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Carte des emplacements</a>
+                    <a href="contact.html" class="text-white/70 hover:text-white text-sm font-medium transition-colors">FAQ</a>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="py-6">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-white/50 text-xs text-center md:text-left">
+                        © <span id="current-year">2024</span> ARGPK - Agence de Régulation de la Publicité à Kinshasa. Tous droits réservés.
+                    </p>
+                    <div class="flex items-center gap-4 text-xs">
+                        <a href="#" class="text-white/50 hover:text-white transition-colors">Mentions légales</a>
+                        <span class="text-white/20">|</span>
+                        <a href="#" class="text-white/50 hover:text-white transition-colors">Politique de confidentialité</a>
+                        <span class="text-white/20">|</span>
+                        <a href="#" class="text-white/50 hover:text-white transition-colors">Plan du site</a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const openMenuBtn = document.getElementById('open-menu');
-            const closeMenuBtn = document.getElementById('close-menu');
-            const mobileMenu = document.querySelector('.mobile-menu');
-            
-            openMenuBtn.addEventListener('click', function() {
-                mobileMenu.classList.remove('hidden');
-                setTimeout(() => {
-                    mobileMenu.classList.add('active');
-                }, 10);
-            });
-            
-            closeMenuBtn.addEventListener('click', function() {
-                mobileMenu.classList.remove('active');
-                setTimeout(() => {
-                    mobileMenu.classList.add('hidden');
-                }, 300);
-            });
-        });
-    </script>
-               <!-- Bouton retour en haut -->
-    <button id="backToTop" class="fixed bottom-4 right-4 bg-primary text-white p-3 rounded-full shadow-lg opacity-0 invisible hover:bg-secondary transition-all duration-300">
+    <!-- Back to Top Button -->
+    <button id="back-to-top" 
+            class="back-to-top"
+            aria-label="Retour en haut de la page">
         <i class="ri-arrow-up-line text-xl"></i>
     </button>
-        
 </body>
 </html>

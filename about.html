@@ -4,714 +4,708 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À propos - ARGPK - Agence de Régulation de la Publicité à Kinshasa</title>
+    <meta name="description" content="Découvrez l'Agence de Régulation de la Publicité à Kinshasa : notre histoire, notre mission, notre vision et notre équipe de direction.">
+    
+    <!-- Favicon -->
     <link rel="icon" href="assets/images/icons/argpk.ico" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    
+    <!-- Fonts - Style Gouvernemental RDC -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- Tailwind CSS -->
     <script src="js/main.js"></script>
-    <style>
-        :where([class^="ri-"])::before { content: "\f3c2"; }
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
-        }
-        .hero-about {
-            background-image: linear-gradient(to right, rgba(0, 51, 102, 0.9), rgba(0, 51, 102, 0.7) 50%, rgba(0, 51, 102, 0.5) 70%, rgba(0, 51, 102, 0.3) 85%, rgba(0, 51, 102, 0.1) 100%), url('https://readdy.ai/api/search-image?query=Professional%2520government%2520building%2520in%2520Kinshasa%252C%2520Congo%2520with%2520modern%2520architecture%2520and%2520official%2520flags%2520at%2520entrance.%2520Clean%2520and%2520well-maintained%2520exterior%2520with%2520glass%2520facade%2520reflecting%2520blue%2520sky.%2520High-quality%2520photorealistic%2520image%2520showing%2520the%2520headquarters%2520of%2520the%2520advertising%2520regulation%2520agency%2520with%2520people%2520entering%2520the%2520building&width=1200&height=600&seq=8&orientation=landscape');
-            background-size: cover;
-            background-position: center;
-        }
-        .timeline-item {
-            position: relative;
-        }
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: 15px;
-            top: 0;
-            height: 100%;
-            width: 2px;
-            background-color: #003366;
-        }
-        .timeline-item:last-child::before {
-            height: 50%;
-        }
-        .timeline-dot {
-            position: absolute;
-            left: 8px;
-            top: 24px;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background-color: #FFCC00;
-            border: 3px solid #003366;
-            z-index: 1;
-        }
-        .team-card:hover .team-overlay {
-            opacity: 1;
-        }
-        .language-switch {
-            position: relative;
-            display: inline-block;
-            width: 80px;
-            height: 32px;
-        }
-        .language-switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-        .language-slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            transition: .4s;
-            border-radius: 34px;
-        }
-        .language-slider:before {
-            position: absolute;
-            content: "FR";
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 24px;
-            width: 40px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            transition: .4s;
-            border-radius: 34px;
-            color: #003366;
-            font-weight: 600;
-            font-size: 12px;
-        }
-        input:checked + .language-slider {
-            background-color: #003366;
-        }
-        input:checked + .language-slider:before {
-            transform: translateX(32px);
-            content: "EN";
-        }
-        .mobile-menu {
-                transform: translateX(-100%);
-                transition: transform 0.3s ease-in-out;
-            }
-            .mobile-menu.active {
-                transform: translateX(0);
-            }
-            .mobile-menu nav a {
-                position: relative;
-            }
-            .mobile-menu nav a::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 0;
-            height: 2px;
-            background-color: #FFC107; /* Couleur secondaire directement définie */
-            transition: width 0.3s ease;
-        }
-        
-        .mobile-menu nav a:hover::after {
-            width: 100%;
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/main.css">
 </head>
-<body class="bg-white">
+<body class="bg-neutral-50">
+    <!-- Skip to content -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded-lg z-[1000]">
+        Aller au contenu principal
+    </a>
+
     <!-- Header -->
-    <header class="bg-primary text-white shadow-md">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center">
-                <a href="index.html">
-                    <img src="assets/images/logo/kinshasay_argpk.png" alt="ARGPK Logo" class="h-16 mr-8">
+    <header class="sticky top-0 z-50 bg-primary backdrop-blur-lg border-b border-primary-dark transition-all duration-300">
+        <div class="container">
+            <nav class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="assets/images/logo/kinshasay_argpk.png" 
+                         alt="Logo ARGPK" 
+                         class="logo-img h-16 w-auto transition-transform duration-300 group-hover:scale-105"
+                         width="180" height="70">
                 </a>
-                <nav class="hidden md:flex space-x-6">
-                    <a href="index.html" class="hover:text-secondary transition duration-300 font-medium">Accueil</a>
-                    <a href="about.html" class="hover:text-secondary transition duration-300 font-medium">À propos</a>
-                    <a href="missions.html" class="hover:text-secondary transition duration-300 font-medium">Missions</a>
-                    <a href="reglementation.html" class="hover:text-secondary transition duration-300 font-medium">Réglementation</a>
-                    <a href="e-services.html" class="hover:text-secondary transition duration-300 font-medium">E-services</a>
-                    <a href="emplacements.html" class="hover:text-secondary transition duration-300 font-medium">Emplacements</a>
-                    <a href="actualites.html" class="hover:text-secondary transition duration-300 font-medium">Actualités</a>
-                    <a href="contact.html" class="hover:text-secondary transition duration-300 font-medium">Contact</a>
-                </nav>
-            </div>
-            <div class="flex items-center space-x-4">
-                <div class="flex border border-white rounded-full overflow-hidden">
-                    <button class="bg-white text-primary px-3 py-1 font-medium">FR</button>
-                    <button class="text-white px-3 py-1 font-medium">EN</button>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                    <div class="dropdown dropdown-mega">
+                        <a href="about.html" class="nav-link dropdown-toggle">À propos</a>
+                        <div class="dropdown-mega-menu">
+                            <div class="mega-menu-grid">
+                                <div class="mega-menu-column">
+                                    <h4>Organisation</h4>
+                                    <a href="about.html">À propos de l'ARGPK</a>
+                                    <a href="about.html#direction">Direction Générale</a>
+                                    <a href="contact.html">Nous contacter</a>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h4>Missions</h4>
+                                    <a href="missions.html">Nos missions</a>
+                                    <a href="missions.html#controle">Contrôle</a>
+                                    <a href="missions.html#promotion">Promotion</a>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h4>Réglementation</h4>
+                                    <a href="reglementation.html">Cadre réglementaire</a>
+                                    <a href="reglementation.html#lois">Lois et décrets</a>
+                                    <a href="reglementation.html#normes">Normes en vigueur</a>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h4>Services</h4>
+                                    <a href="e-services.html">E-services</a>
+                                    <a href="emplacements.html">Emplacements</a>
+                                    <a href="actualites.html">Actualités</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="actualites.html" class="nav-link">Actualités</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
                 </div>
-                <button id="open-menu" class="md:hidden w-10 h-10 flex items-center justify-center">
-                    <i class="ri-menu-line ri-lg"></i>
+
+                <!-- Language & CTA -->
+                <div class="hidden lg:flex items-center space-x-6">
+                    <div class="flex bg-neutral-100 rounded-full p-1">
+                        <button class="bg-primary text-white px-4 py-1.5 rounded-full text-sm font-semibold">FR</button>
+                        <button class="text-neutral-600 hover:text-primary px-4 py-1.5 rounded-full text-sm font-semibold">EN</button>
+                    </div>
+                    <a href="e-services.html#demande" class="btn btn-secondary btn-sm">
+                        <i class="ri-file-list-3-line"></i>
+                        Faire une demande
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="open-menu" class="lg:hidden w-10 h-10 flex items-center justify-center transition-colors">
+                    <i class="ri-menu-3-line text-2xl"></i>
                 </button>
-            </div>
+            </nav>
         </div>
     </header>
-    
-    <!-- Menu Mobile -->
-    <div class="mobile-menu fixed top-0 left-0 w-full h-screen bg-primary z-50 flex flex-col p-6 hidden">
-        <div class="flex justify-between items-center mb-8">
-            <h1 class="text-2xl font-['Pacifico'] text-white">ARGPK</h1>
-            <button id="close-menu" class="w-10 h-10 flex items-center justify-center text-white">
-                <i class="ri-close-line ri-lg"></i>
-            </button>
-        </div>
-        <nav class="flex flex-col space-y-4">
-            <a href="index.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Accueil</a>
-            <a href="about.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">À propos</a>
-            <a href="missions.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Missions</a>
-            <a href="reglementation.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Réglementation</a>
-            <a href="e-services.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">E-services</a>
-            <a href="emplacements.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Emplacements</a>
-            <a href="actualites.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Actualités</a>
-            <a href="contact.html" class="text-white text-lg font-medium py-2 border-b border-white/20 hover:text-secondary transition duration-300">Contact</a>
-        </nav>
-    <div class="mt-auto">
-        <div class="flex border border-white rounded-full overflow-hidden w-max mx-auto mt-8">
-            <button class="bg-white text-primary px-3 py-1 font-medium">FR</button>
-            <button class="text-white px-3 py-1 font-medium">EN</button>
+
+    <!-- Mobile Menu Backdrop -->
+    <div id="mobile-menu-backdrop" class="mobile-menu-backdrop"></div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="p-8 h-full flex flex-col">
+            <div class="flex justify-between items-center mb-12">
+                <img src="assets/images/logo/kinshasay_argpk.png" alt="Logo ARGPK" class="h-12 w-auto">
+                <button id="close-menu" class="w-10 h-10 flex items-center justify-center transition-colors">
+                    <i class="ri-close-line text-3xl"></i>
+                </button>
+            </div>
+
+            <nav class="flex-1" aria-label="Navigation principale">
+                <div class="flex flex-col">
+                    <a href="index.html" class="nav-link-mobile flex items-center gap-4 text-2xl font-semibold">
+                        <i class="ri-home-line text-xl opacity-60"></i>
+                        Accueil
+                    </a>
+                    
+                    <!-- Mobile Dropdown for À propos -->
+                    <div class="mobile-dropdown">
+                        <button class="nav-link-mobile flex items-center justify-between w-full text-2xl font-semibold" aria-expanded="false" aria-controls="mobile-about-menu">
+                            <span class="flex items-center gap-4">
+                                <i class="ri-information-line text-xl opacity-60"></i>
+                                À propos
+                            </span>
+                            <i class="ri-arrow-down-s-line text-xl transition-transform" id="mobile-dropdown-arrow"></i>
+                        </button>
+                        <div id="mobile-about-menu" class="mobile-dropdown-menu hidden pl-12 mt-2 space-y-2">
+                            <a href="about.html" class="nav-link-mobile-sub flex items-center gap-3 text-lg">
+                                <i class="ri-information-line opacity-60"></i>
+                                À propos de l'ARGPK
+                            </a>
+                            <a href="about.html#direction" class="nav-link-mobile-sub flex items-center gap-3 text-lg">
+                                <i class="ri-user-line opacity-60"></i>
+                                Direction Générale
+                            </a>
+                            <a href="missions.html" class="nav-link-mobile-sub flex items-center gap-3 text-lg">
+                                <i class="ri-flag-line opacity-60"></i>
+                                Missions
+                            </a>
+                            <a href="reglementation.html" class="nav-link-mobile-sub flex items-center gap-3 text-lg">
+                                <i class="ri-file-text-line opacity-60"></i>
+                                Réglementation
+                            </a>
+                            <a href="e-services.html" class="nav-link-mobile-sub flex items-center gap-3 text-lg">
+                                <i class="ri-computer-line opacity-60"></i>
+                                E-services
+                            </a>
+                            <a href="emplacements.html" class="nav-link-mobile-sub flex items-center gap-3 text-lg">
+                                <i class="ri-map-pin-line opacity-60"></i>
+                                Emplacements
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="actualites.html" class="nav-link-mobile flex items-center gap-4 text-2xl font-semibold">
+                        <i class="ri-newspaper-line text-xl opacity-60"></i>
+                        Actualités
+                    </a>
+                    <a href="contact.html" class="nav-link-mobile flex items-center gap-4 text-2xl font-semibold">
+                        <i class="ri-mail-line text-xl opacity-60"></i>
+                        Contact
+                    </a>
+                </div>
+            </nav>
+
+            <!-- Mobile Footer -->
+            <div class="pt-8 border-t border-neutral-200">
+                <div class="flex bg-neutral-100 rounded-full p-1 mx-auto w-max mb-6">
+                    <button class="bg-primary text-white px-6 py-2 rounded-full text-sm font-semibold">FR</button>
+                    <button class="text-neutral-600 hover:text-primary px-6 py-2 rounded-full text-sm font-semibold">EN</button>
+                </div>
+                <a href="e-services.html#demande" class="btn btn-secondary w-full">
+                    <i class="ri-file-list-3-line"></i>
+                    Faire une demande
+                </a>
+            </div>
         </div>
     </div>
-</div>
+
     <!-- Hero Section -->
-    <section class="hero-about pt-24 min-h-[500px] flex items-center">
-        <div class="container mx-auto px-4 py-16">
-            <div class="max-w-2xl">
-                <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 font-playfair">À propos de l'ARGPK</h1>
-                <p class="text-lg text-white mb-8">Découvrez l'histoire, la mission et les valeurs de l'Agence de Régulation de la Publicité à Kinshasa, l'autorité chargée de promouvoir un environnement publicitaire éthique et esthétique dans la capitale congolaise.</p>
-                <a href="https://readdy.ai/home/22a38b4f-5fe2-4960-9441-65d00dba3bef/7cf81afb-ff22-4a58-913e-cef2803ee5f5" data-readdy="true" class="bg-white text-primary px-6 py-3 font-semibold rounded-button hover:bg-opacity-90 transition-all whitespace-nowrap">Retour à l'accueil</a>
+    <section class="hero-section bg-primary" style="min-height: auto;" aria-label="À propos">
+        <div class="container relative z-10">
+            <div class="max-w-3xl py-12 md:py-16">
+                <nav class="flex items-center gap-2 text-sm text-white/80 mb-4 animate-fade-in" aria-label="Fil d'Ariane">
+                    <a href="index.html" class="hover:text-white transition-colors">Accueil</a>
+                    <i class="ri-arrow-right-s-line"></i>
+                    <span class="text-white">À propos</span>
+                </nav>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight animate-slide-up">
+                    À propos de <span class="text-secondary">l'ARGPK</span>
+                </h1>
+                <p class="text-xl text-white/90 max-w-2xl animate-slide-up" style="animation-delay: 0.1s;">
+                    Découvrez l'Agence de Régulation de la Publicité à Kinshasa : notre histoire, notre mission, notre vision et notre équipe de direction.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Histoire Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-3xl font-bold text-primary mb-6 font-playfair">Notre Histoire</h2>
-                    <p class="text-lg text-gray-700 mb-6">L'Agence de Régulation de la Publicité à Kinshasa (ARGPK) a été créée en 2015 par décret présidentiel n°15/023 suite à la constatation d'une prolifération anarchique des supports publicitaires dans la ville-province de Kinshasa.</p>
-                    <p class="text-lg text-gray-700 mb-6">Face à la dégradation du paysage urbain et aux risques liés à l'installation non contrôlée de panneaux publicitaires, les autorités ont décidé de mettre en place une institution spécialisée pour réguler ce secteur en pleine expansion.</p>
-                    <p class="text-lg text-gray-700">Depuis sa création, l'ARGPK a développé un cadre réglementaire complet et mis en place des procédures transparentes pour l'attribution des emplacements publicitaires. Notre agence a contribué significativement à l'amélioration de l'esthétique urbaine tout en permettant au secteur publicitaire de se développer de manière ordonnée.</p>
-                </div>
-                <div>
-                    <img src="https://readdy.ai/api/search-image?query=Historical%2520photograph%2520of%2520Kinshasa%2520city%2520from%25202015%2520showing%2520urban%2520landscape%2520with%2520unregulated%2520billboards%2520and%2520advertising.%2520Documentary-style%2520image%2520capturing%2520the%2520chaotic%2520advertising%2520environment%2520before%2520regulation.%2520High-quality%2520photorealistic%2520image%2520with%2520vintage%2520feel%2520showing%2520multiple%2520overlapping%2520advertisements%2520on%2520buildings%2520and%2520streets&width=600&height=400&seq=9&orientation=landscape" alt="Histoire de l'ARGPK" class="w-full h-auto rounded-lg shadow-xl">
-                    <p class="text-sm text-gray-500 mt-2 italic">Kinshasa en 2015, avant la création de l'ARGPK - Une prolifération non régulée de supports publicitaires</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Timeline Section -->
-    <section class="py-16 bg-light">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-primary mb-12 text-center font-playfair">Notre Parcours</h2>
-            <div class="max-w-3xl mx-auto">
-                <div class="timeline-item pl-12 pb-10">
-                    <div class="timeline-dot"></div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold text-primary mb-2 font-playfair">2015</h3>
-                        <p class="text-gray-700">Création de l'ARGPK par décret présidentiel n°15/023 du 15 juin 2015 suite à la constatation d'une prolifération anarchique des supports publicitaires.</p>
-                    </div>
-                </div>
-                <div class="timeline-item pl-12 pb-10">
-                    <div class="timeline-dot"></div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold text-primary mb-2 font-playfair">2016</h3>
-                        <p class="text-gray-700">Élaboration du premier cadre réglementaire complet sur la publicité extérieure à Kinshasa et lancement des opérations de recensement des supports existants.</p>
-                    </div>
-                </div>
-                <div class="timeline-item pl-12 pb-10">
-                    <div class="timeline-dot"></div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold text-primary mb-2 font-playfair">2018</h3>
-                        <p class="text-gray-700">Mise en place de la plateforme numérique de gestion des autorisations publicitaires et lancement des premières campagnes de sensibilisation.</p>
-                    </div>
-                </div>
-                <div class="timeline-item pl-12 pb-10">
-                    <div class="timeline-dot"></div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold text-primary mb-2 font-playfair">2020</h3>
-                        <p class="text-gray-700">Révision du cadre réglementaire pour intégrer les nouvelles technologies publicitaires (écrans LED, publicité digitale) et renforcement des normes de sécurité.</p>
-                    </div>
-                </div>
-                <div class="timeline-item pl-12 pb-10">
-                    <div class="timeline-dot"></div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold text-primary mb-2 font-playfair">2022</h3>
-                        <p class="text-gray-700">Lancement du programme "Kinshasa Ville Belle" visant à harmoniser l'affichage publicitaire avec l'esthétique urbaine et inauguration du nouveau siège de l'ARGPK.</p>
-                    </div>
-                </div>
-                <div class="timeline-item pl-12">
-                    <div class="timeline-dot"></div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold text-primary mb-2 font-playfair">2025</h3>
-                        <p class="text-gray-700">Déploiement de la cartographie numérique complète des emplacements publicitaires et mise en place d'un système de surveillance en temps réel des installations.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mission et Vision Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div class="bg-light p-8 rounded-lg shadow-lg">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <i class="ri-flag-line ri-xl text-white"></i>
-                    </div>
-                    <h2 class="text-3xl font-bold text-primary mb-6 text-center font-playfair">Notre Mission</h2>
-                    <p class="text-lg text-gray-700 mb-4">L'ARGPK a pour mission principale de garantir que toutes les communications publicitaires dans la ville-province de Kinshasa respectent les normes éthiques, esthétiques et légales en vigueur.</p>
-                    <p class="text-lg text-gray-700 mb-4">Nous œuvrons pour un environnement urbain harmonieux où la publicité contribue positivement au paysage de notre capitale tout en permettant aux entreprises de communiquer efficacement avec leur public.</p>
-                    <p class="text-lg text-gray-700">Notre agence veille à l'application stricte des réglementations, tout en accompagnant les acteurs du secteur dans leur mise en conformité et en encourageant les pratiques innovantes et responsables.</p>
-                </div>
-                <div class="bg-light p-8 rounded-lg shadow-lg">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <i class="ri-eye-line ri-xl text-white"></i>
-                    </div>
-                    <h2 class="text-3xl font-bold text-primary mb-6 text-center font-playfair">Notre Vision</h2>
-                    <p class="text-lg text-gray-700 mb-4">Notre vision est de faire de Kinshasa une référence africaine en matière de régulation publicitaire, où l'affichage commercial s'intègre harmonieusement dans le paysage urbain tout en contribuant à son dynamisme économique.</p>
-                    <p class="text-lg text-gray-700 mb-4">Nous aspirons à créer un environnement où la publicité est non seulement conforme aux réglementations, mais aussi créative, respectueuse du cadre de vie des citoyens et porteuse de messages positifs.</p>
-                    <p class="text-lg text-gray-700">À terme, nous souhaitons développer un modèle de régulation qui puisse être adapté et reproduit dans d'autres villes congolaises et africaines, contribuant ainsi à l'amélioration globale des paysages urbains du continent.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Valeurs Section -->
-    <section class="py-16 bg-light">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-primary mb-12 text-center font-playfair">Nos Valeurs</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <i class="ri-scales-3-line ri-xl text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-primary mb-4 text-center font-playfair">Intégrité</h3>
-                    <p class="text-gray-700 text-center">Nous agissons avec honnêteté, transparence et équité dans toutes nos interactions avec les parties prenantes, garantissant un traitement impartial de tous les dossiers.</p>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <i class="ri-palette-line ri-xl text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-primary mb-4 text-center font-playfair">Esthétique</h3>
-                    <p class="text-gray-700 text-center">Nous valorisons la beauté et l'harmonie du paysage urbain, en veillant à ce que les supports publicitaires s'intègrent de manière élégante dans leur environnement.</p>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <i class="ri-shield-check-line ri-xl text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-primary mb-4 text-center font-playfair">Responsabilité</h3>
-                    <p class="text-gray-700 text-center">Nous promouvons une publicité socialement responsable, respectueuse des valeurs culturelles et morales de notre société et soucieuse de l'impact environnemental.</p>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <i class="ri-lightbulb-line ri-xl text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-primary mb-4 text-center font-playfair">Innovation</h3>
-                    <p class="text-gray-700 text-center">Nous encourageons la créativité et l'adoption de nouvelles technologies publicitaires, tout en veillant à ce qu'elles respectent notre cadre réglementaire.</p>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <i class="ri-team-line ri-xl text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-primary mb-4 text-center font-playfair">Collaboration</h3>
-                    <p class="text-gray-700 text-center">Nous travaillons en étroite coopération avec tous les acteurs du secteur publicitaire, les autorités locales et les citoyens pour créer un environnement publicitaire qui bénéficie à tous.</p>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <i class="ri-service-line ri-xl text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-primary mb-4 text-center font-playfair">Excellence</h3>
-                    <p class="text-gray-700 text-center">Nous nous engageons à fournir des services de haute qualité, en améliorant constamment nos processus et en développant les compétences de notre personnel.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Structure Organisationnelle Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-primary mb-12 text-center font-playfair">Notre Structure Organisationnelle</h2>
-            
-            <div class="bg-light p-8 rounded-lg shadow-lg mb-12">
-                <h3 class="text-2xl font-semibold text-primary mb-6 text-center font-playfair">Organigramme</h3>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Introduction -->
+        <section class="section bg-white">
+            <div class="container">
                 <div class="max-w-4xl mx-auto">
-                    <img src="https://readdy.ai/api/search-image?query=Professional%2520organizational%2520chart%2520diagram%2520for%2520government%2520agency%2520with%2520hierarchical%2520structure.%2520Clean%2520corporate%2520design%2520with%2520blue%2520and%2520gold%2520color%2520scheme%2520showing%2520director%2520general%2520at%2520top%252C%2520departments%2520below%252C%2520and%2520clear%2520reporting%2520lines.%2520High-quality%2520vector-style%2520image%2520on%2520white%2520background%2520with%2520professional%2520layout&width=800&height=500&seq=10&orientation=landscape" alt="Organigramme de l'ARGPK" class="w-full h-auto rounded">
+                    <div class="prose prose-lg mx-auto">
+                        <p class="lead text-xl text-neutral-700 mb-8">
+                            L'Agence de Régulation de la Publicité à Kinshasa (ARGPK) est l'autorité publique chargée de réguler, contrôler et promouvoir une publicité responsable dans la ville-province de Kinshasa.
+                        </p>
+                        
+                        <p>
+                            Créée pour répondre aux défis de l'affichage publicitaire dans une métropole en pleine expansion, l'ARGPK œuvre quotidiennement pour garantir que la publicité à Kinshasa respecte les normes éthiques, esthétiques et réglementaires, tout en contribuant à l'embellissement urbain et au développement économique de la ville.
+                        </p>
+                    </div>
                 </div>
             </div>
-            
-            <h3 class="text-2xl font-semibold text-primary mb-8 text-center font-playfair">Notre Équipe Dirigeante</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden team-card group">
-                    <div class="relative">
-                        <img src="https://readdy.ai/api/search-image?query=Professional%2520portrait%2520of%2520African%2520male%2520executive%2520in%2520his%252050s%2520wearing%2520formal%2520business%2520suit%2520with%2520blue%2520tie.%2520Confident%2520expression%2520with%2520slight%2520smile%252C%2520neutral%2520background.%2520High-quality%2520photorealistic%2520headshot%2520with%2520perfect%2520lighting%2520for%2520corporate%2520website&width=400&height=500&seq=11&orientation=portrait" alt="Directeur Général" class="w-full h-64 object-cover object-top">
-                        <div class="team-overlay absolute inset-0 bg-primary bg-opacity-80 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-white">
-                            <p class="text-center mb-4">Dr. Mukendi dirige l'ARGPK depuis 2019. Docteur en droit et expert en régulation des médias, il a précédemment occupé des postes à responsabilité au Ministère de la Communication.</p>
-                            <div class="flex space-x-3">
-                                <a href="#" class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-primary">
-                                    <i class="ri-linkedin-fill"></i>
+        </section>
+
+        <!-- Mission & Vision -->
+        <section class="section bg-neutral-50">
+            <div class="container">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Mission -->
+                    <div class="animate-on-scroll">
+                        <div class="bg-white rounded-2xl p-8 shadow-lg">
+                            <div class="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+                                <i class="ri-target-line text-2xl text-primary"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold text-primary mb-4">Notre Mission</h2>
+                            <p class="text-neutral-600 mb-6">
+                                Encadrer, réglementer et promouvoir une publicité responsable, éthique et conforme aux normes pour un environnement urbain harmonieux à Kinshasa.
+                            </p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3">
+                                    <i class="ri-check-line text-secondary mt-1"></i>
+                                    <span>Élaborer et mettre en œuvre la réglementation</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="ri-check-line text-secondary mt-1"></i>
+                                    <span>Contrôler la conformité des supports publicitaires</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="ri-check-line text-secondary mt-1"></i>
+                                    <span>Promouvoir les bonnes pratiques publicitaires</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="ri-check-line text-secondary mt-1"></i>
+                                    <span>Sensibiliser les acteurs du secteur</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Vision -->
+                    <div class="animate-on-scroll" style="animation-delay: 0.2s;">
+                        <div class="bg-white rounded-2xl p-8 shadow-lg">
+                            <div class="w-16 h-16 rounded-xl bg-secondary/10 flex items-center justify-center mb-6">
+                                <i class="ri-eye-line text-2xl text-secondary"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold text-primary mb-4">Notre Vision</h2>
+                            <p class="text-neutral-600 mb-6">
+                                Faire de Kinshasa une référence en matière de publicité responsable, innovante et respectueuse de l'environnement urbain en Afrique.
+                            </p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3">
+                                    <i class="ri-check-line text-secondary mt-1"></i>
+                                    <span>Une ville où la publicité embellit l'espace urbain</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="ri-check-line text-secondary mt-1"></i>
+                                    <span>Un secteur publicitaire professionnel et éthique</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="ri-check-line text-secondary mt-1"></i>
+                                    <span>Des normes adaptées au développement urbain</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="ri-check-line text-secondary mt-1"></i>
+                                    <span>Une collaboration public-privé renforcée</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values -->
+        <section class="section bg-white">
+            <div class="container">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-primary mb-6">Nos Valeurs</h2>
+                    <p class="text-lg text-neutral-600">
+                        Les principes qui guident nos actions et nos décisions au quotidien.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Value 1 -->
+                    <div class="text-center animate-on-scroll">
+                        <div class="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                            <i class="ri-scale-3-line text-3xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-4">Intégrité</h3>
+                        <p class="text-neutral-600">
+                            Nous agissons avec transparence, honnêteté et équité dans toutes nos décisions et actions.
+                        </p>
+                    </div>
+
+                    <!-- Value 2 -->
+                    <div class="text-center animate-on-scroll" style="animation-delay: 0.1s;">
+                        <div class="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                            <i class="ri-team-line text-3xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-4">Service Public</h3>
+                        <p class="text-neutral-600">
+                            Nous mettons l'intérêt général au cœur de notre mission au service des Kinois et du développement urbain.
+                        </p>
+                    </div>
+
+                    <!-- Value 3 -->
+                    <div class="text-center animate-on-scroll" style="animation-delay: 0.2s;">
+                        <div class="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                            <i class="ri-lightbulb-flash-line text-3xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-4">Innovation</h3>
+                        <p class="text-neutral-600">
+                            Nous encourageons et adoptons les meilleures pratiques pour une publicité moderne et responsable.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Timeline -->
+        <section class="section bg-neutral-50">
+            <div class="container">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-primary mb-6">Notre Histoire</h2>
+                    <p class="text-lg text-neutral-600">
+                        Les étapes clés du développement de l'ARGPK depuis sa création.
+                    </p>
+                </div>
+
+                <div class="max-w-3xl mx-auto">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item relative pl-10 pb-12 animate-on-scroll">
+                        <div class="timeline-dot absolute left-0 top-0 w-4 h-4 bg-secondary rounded-full"></div>
+                        <div class="bg-white rounded-xl p-6 shadow-md">
+                            <div class="flex items-center gap-4 mb-3">
+                                <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">2018</span>
+                                <h3 class="text-lg font-bold text-primary">Création de l'ARGPK</h3>
+                            </div>
+                            <p class="text-neutral-600">
+                                L'Agence de Régulation de la Publicité à Kinshasa est officiellement créée par décret provincial pour répondre aux défis croissants de l'affichage publicitaire dans la capitale.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item relative pl-10 pb-12 animate-on-scroll" style="animation-delay: 0.1s;">
+                        <div class="timeline-dot absolute left-0 top-0 w-4 h-4 bg-secondary rounded-full"></div>
+                        <div class="bg-white rounded-xl p-6 shadow-md">
+                            <div class="flex items-center gap-4 mb-3">
+                                <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">2019</span>
+                                <h3 class="text-lg font-bold text-primary">Premier Code de la Publicité</h3>
+                            </div>
+                            <p class="text-neutral-600">
+                                Adoption du premier code de la publicité à Kinshasa, établissant les règles fondamentales pour l'affichage publicitaire dans l'espace urbain.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item relative pl-10 pb-12 animate-on-scroll" style="animation-delay: 0.2s;">
+                        <div class="timeline-dot absolute left-0 top-0 w-4 h-4 bg-secondary rounded-full"></div>
+                        <div class="bg-white rounded-xl p-6 shadow-md">
+                            <div class="flex items-center gap-4 mb-3">
+                                <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">2020</span>
+                                <h3 class="text-lg font-bold text-primary">Lancement des E-services</h3>
+                            </div>
+                            <p class="text-neutral-600">
+                                Mise en place de la plateforme numérique permettant aux usagers de soumettre leurs demandes d'autorisation en ligne et de suivre l'état de leurs dossiers.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 4 -->
+                    <div class="timeline-item relative pl-10 animate-on-scroll" style="animation-delay: 0.3s;">
+                        <div class="timeline-dot absolute left-0 top-0 w-4 h-4 bg-secondary rounded-full"></div>
+                        <div class="bg-white rounded-xl p-6 shadow-md">
+                            <div class="flex items-center gap-4 mb-3">
+                                <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">2023</span>
+                                <h3 class="text-lg font-bold text-primary">Modernisation et Expansion</h3>
+                            </div>
+                            <p class="text-neutral-600">
+                                Lancement du programme de modernisation des processus et expansion des services pour mieux répondre aux besoins d'une Kinshasa en pleine transformation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team -->
+        <section id="direction" class="section bg-white">
+            <div class="container">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-primary mb-6">Notre Équipe de Direction</h2>
+                    <p class="text-lg text-neutral-600">
+                        Des experts dévoués à la régulation et au développement de la publicité à Kinshasa.
+                    </p>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                        <div class="flex flex-col lg:flex-row">
+                            <!-- Director Image -->
+                            <div class="lg:w-2/5 p-8">
+                                <img src="assets/images/profils/lobo_dg.jpg" 
+                                     alt="M. LOBO KASONGO Graciel - Directeur Général ARGPK"
+                                     class="w-full h-auto rounded-xl shadow-md"
+                                     loading="lazy">
+                            </div>
+
+                            <!-- Director Info -->
+                            <div class="lg:w-3/5 p-8">
+                                <span class="badge badge-primary mb-4">Directeur Général</span>
+                                <h3 class="text-2xl font-bold text-primary mb-2">M. LOBO KASONGO Graciel</h3>
+                                
+                                <div class="space-y-4 mb-8">
+                                    <p class="text-neutral-600">
+                                        Expert en communication publique, marketing urbain et régulation des médias, M. LOBO KASONGO Graciel dirige l'ARGPK avec plus de 20 ans d'expérience dans les secteurs publicitaire, institutionnel et administratif.
+                                    </p>
+                                    
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        <div>
+                                            <h4 class="font-bold text-neutral-700 mb-2">Formation</h4>
+                                            <ul class="text-sm text-neutral-600 space-y-1">
+                                                <li>Master en Communication Publique</li>
+                                                <li>Diplôme en Marketing Urbain</li>
+                                                <li>Certification en Régulation des Médias</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-neutral-700 mb-2">Expérience</h4>
+                                            <ul class="text-sm text-neutral-600 space-y-1">
+                                                <li>15 ans dans le secteur publicitaire</li>
+                                                <li>5 ans dans l'administration publique</li>
+                                                <li>Expert en régulation médiatique</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col sm:flex-row gap-4">
+                                    <a href="contact.html" class="btn btn-primary">
+                                        <i class="ri-mail-line"></i>
+                                        Contacter le directeur
+                                    </a>
+                                    <a href="missions.html" class="btn btn-outline">
+                                        <i class="ri-book-open-line"></i>
+                                        Voir nos missions
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Équipe de Direction - Directeurs -->
+        <section class="section bg-neutral-50">
+            <div class="container">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-primary mb-6">Notre Équipe Directoriale</h2>
+                    <p class="text-lg text-neutral-600">
+                        Une équipe compétente au service de la régulation publicitaire à Kinshasa.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Directeur des Ressources Humaines -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden animate-on-scroll">
+                        <div class="h-48 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
+                            <img src="assets/images/profils/didier.jpg" 
+                                 alt="Directeur des Ressources Humaines"
+                                 class="h-full w-auto object-cover"
+                                 loading="lazy">
+                        </div>
+                        <div class="p-6">
+                            <span class="badge badge-secondary mb-3">DRH</span>
+                            <h3 class="text-xl font-bold text-primary mb-2">Directeur des Ressources Humaines</h3>
+                            <p class="text-neutral-600 text-sm mb-4">
+                                Responsable de la gestion des ressources humaines et du développement des compétences au sein de l'ARGPK.
+                            </p>
+                            <div class="flex items-center gap-3">
+                                <a href="contact.html" class="text-primary hover:text-primary-light transition-colors">
+                                    <i class="ri-mail-line text-lg"></i>
                                 </a>
-                                <a href="#" class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-primary">
-                                    <i class="ri-twitter-x-fill"></i>
-                                </a>
-                                <a href="#" class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-primary">
-                                    <i class="ri-mail-fill"></i>
+                                <a href="contact.html" class="text-primary hover:text-primary-light transition-colors">
+                                    <i class="ri-linkedin-box-line text-lg"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="p-4">
-                        <h4 class="text-xl font-semibold text-primary font-playfair">Dr. Joseph Mukendi</h4>
-                        <p class="text-gray-600">Directeur Général</p>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-lg shadow-md overflow-hidden team-card group">
-                    <div class="relative">
-                        <img src="https://readdy.ai/api/search-image?query=Professional%2520portrait%2520of%2520African%2520female%2520executive%2520in%2520her%252040s%2520wearing%2520elegant%2520business%2520attire%2520with%2520blue%2520blazer.%2520Confident%2520expression%2520with%2520professional%2520demeanor%252C%2520neutral%2520background.%2520High-quality%2520photorealistic%2520headshot%2520with%2520perfect%2520lighting%2520for%2520corporate%2520website&width=400&height=500&seq=12&orientation=portrait" alt="Directrice Administrative" class="w-full h-64 object-cover object-top">
-                        <div class="team-overlay absolute inset-0 bg-primary bg-opacity-80 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-white">
-                            <p class="text-center mb-4">Mme Kabongo supervise l'ensemble des opérations administratives et financières de l'agence. Elle est titulaire d'un MBA et possède plus de 15 ans d'expérience en gestion publique.</p>
-                            <div class="flex space-x-3">
-                                <a href="#" class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-primary">
-                                    <i class="ri-linkedin-fill"></i>
+
+                    <!-- Directeur Technique -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden animate-on-scroll" style="animation-delay: 0.1s;">
+                        <div class="h-48 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                                    <i class="ri-settings-3-line text-2xl text-primary"></i>
+                                </div>
+                                <p class="text-xs text-neutral-500">Photo disponible<br>bientôt</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <span class="badge badge-primary mb-3">DT</span>
+                            <h3 class="text-xl font-bold text-primary mb-2">Directeur Technique</h3>
+                            <p class="text-neutral-600 text-sm mb-4">
+                                Chargé de la gestion des systèmes d'information, des infrastructures numériques et des e-services.
+                            </p>
+                            <div class="flex items-center gap-3">
+                                <a href="contact.html" class="text-primary hover:text-primary-light transition-colors">
+                                    <i class="ri-mail-line text-lg"></i>
                                 </a>
-                                <a href="#" class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-primary">
-                                    <i class="ri-twitter-x-fill"></i>
-                                </a>
-                                <a href="#" class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-primary">
-                                    <i class="ri-mail-fill"></i>
+                                <a href="contact.html" class="text-primary hover:text-primary-light transition-colors">
+                                    <i class="ri-linkedin-box-line text-lg"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="p-4">
-                        <h4 class="text-xl font-semibold text-primary font-playfair">Mme. Françoise Kabongo</h4>
-                        <p class="text-gray-600">Directrice Administrative et Financière</p>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-lg shadow-md overflow-hidden team-card group">
-                    <div class="relative">
-                        <img src="https://readdy.ai/api/search-image?query=Professional%2520portrait%2520of%2520African%2520male%2520executive%2520in%2520his%252040s%2520wearing%2520smart%2520business%2520casual%2520attire%2520with%2520blue%2520shirt.%2520Confident%2520expression%2520with%2520friendly%2520smile%252C%2520neutral%2520background.%2520High-quality%2520photorealistic%2520headshot%2520with%2520perfect%2520lighting%2520for%2520corporate%2520website&width=400&height=500&seq=13&orientation=portrait" alt="Directeur Technique" class="w-full h-64 object-cover object-top">
-                        <div class="team-overlay absolute inset-0 bg-primary bg-opacity-80 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-white">
-                            <p class="text-center mb-4">M. Diallo dirige le département technique responsable de l'évaluation des installations publicitaires. Ingénieur civil de formation, il est expert en sécurité des structures urbaines.</p>
-                            <div class="flex space-x-3">
-                                <a href="#" class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-primary">
-                                    <i class="ri-linkedin-fill"></i>
+
+                    <!-- Directeur Finance -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden animate-on-scroll" style="animation-delay: 0.2s;">
+                        <div class="h-48 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-3">
+                                    <i class="ri-money-dollar-circle-line text-2xl text-primary"></i>
+                                </div>
+                                <p class="text-xs text-neutral-500">Photo disponible<br>bientôt</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <span class="badge badge-primary mb-3">DF</span>
+                            <h3 class="text-xl font-bold text-primary mb-2">Directeur Finance</h3>
+                            <p class="text-neutral-600 text-sm mb-4">
+                                Responsable de la gestion budgétaire, financière et comptable de l'ARGPK.
+                            </p>
+                            <div class="flex items-center gap-3">
+                                <a href="contact.html" class="text-primary hover:text-primary-light transition-colors">
+                                    <i class="ri-mail-line text-lg"></i>
                                 </a>
-                                <a href="#" class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-primary">
-                                    <i class="ri-twitter-x-fill"></i>
-                                </a>
-                                <a href="#" class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-primary">
-                                    <i class="ri-mail-fill"></i>
+                                <a href="contact.html" class="text-primary hover:text-primary-light transition-colors">
+                                    <i class="ri-linkedin-box-line text-lg"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="p-4">
-                        <h4 class="text-xl font-semibold text-primary font-playfair">M. Amadou Diallo</h4>
-                        <p class="text-gray-600">Directeur Technique</p>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-lg shadow-md overflow-hidden team-card group">
-                    <div class="relative">
-                        <img src="https://readdy.ai/api/search-image?query=Professional%2520portrait%2520of%2520African%2520female%2520executive%2520in%2520her%252030s%2520wearing%2520modern%2520business%2520attire%2520with%2520stylish%2520glasses.%2520Confident%2520expression%2520with%2520professional%2520demeanor%252C%2520neutral%2520background.%2520High-quality%2520photorealistic%2520headshot%2520with%2520perfect%2520lighting%2520for%2520corporate%2520website&width=400&height=500&seq=14&orientation=portrait" alt="Directrice Juridique" class="w-full h-64 object-cover object-top">
-                        <div class="team-overlay absolute inset-0 bg-primary bg-opacity-80 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-white">
-                            <p class="text-center mb-4">Me Mwanzo supervise tous les aspects juridiques et réglementaires de l'agence. Avocate de formation, elle a participé à l'élaboration du cadre légal régissant la publicité à Kinshasa.</p>
-                            <div class="flex space-x-3">
-                                <a href="#" class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-primary">
-                                    <i class="ri-linkedin-fill"></i>
-                                </a>
-                                <a href="#" class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-primary">
-                                    <i class="ri-twitter-x-fill"></i>
-                                </a>
-                                <a href="#" class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-primary">
-                                    <i class="ri-mail-fill"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h4 class="text-xl font-semibold text-primary font-playfair">Me. Claudine Mwanzo</h4>
-                        <p class="text-gray-600">Directrice Juridique</p>
-                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Cadre Légal Section -->
-    <section class="py-16 bg-light">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-primary mb-12 text-center font-playfair">Cadre Légal</h2>
-            <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-                <p class="text-lg text-gray-700 mb-8">L'ARGPK opère dans le cadre d'un ensemble de textes légaux qui définissent ses missions, ses pouvoirs et les règles applicables à la publicité dans la ville-province de Kinshasa. Voici les principaux textes qui encadrent notre action :</p>
-                
-                <div class="space-y-6">
-                    <div class="flex">
-                        <div class="w-12 h-12 flex-shrink-0 bg-primary rounded-lg flex items-center justify-center mr-4">
-                            <i class="ri-file-text-line ri-lg text-white"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold text-primary mb-2 font-playfair">Décret présidentiel n°15/023 du 15 juin 2015</h3>
-                            <p class="text-gray-700">Texte fondateur qui établit l'ARGPK, définit ses missions et son organisation. Ce décret confère à l'agence le statut d'établissement public doté de la personnalité juridique.</p>
-                            <a href="#" class="text-secondary font-medium hover:underline flex items-center mt-2">
-                                Télécharger le document
-                                <i class="ri-download-line ml-1"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="flex">
-                        <div class="w-12 h-12 flex-shrink-0 bg-primary rounded-lg flex items-center justify-center mr-4">
-                            <i class="ri-file-text-line ri-lg text-white"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold text-primary mb-2 font-playfair">Arrêté ministériel n°16/045 du 23 février 2016</h3>
-                            <p class="text-gray-700">Définit les conditions d'installation des supports publicitaires dans l'espace public kinois, les normes techniques à respecter et les procédures d'autorisation.</p>
-                            <a href="#" class="text-secondary font-medium hover:underline flex items-center mt-2">
-                                Télécharger le document
-                                <i class="ri-download-line ml-1"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="flex">
-                        <div class="w-12 h-12 flex-shrink-0 bg-primary rounded-lg flex items-center justify-center mr-4">
-                            <i class="ri-file-text-line ri-lg text-white"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold text-primary mb-2 font-playfair">Ordonnance-loi n°18/003 du 13 mars 2018</h3>
-                            <p class="text-gray-700">Établit le régime fiscal applicable aux activités publicitaires et définit les redevances dues pour l'occupation du domaine public à des fins publicitaires.</p>
-                            <a href="#" class="text-secondary font-medium hover:underline flex items-center mt-2">
-                                Télécharger le document
-                                <i class="ri-download-line ml-1"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="flex">
-                        <div class="w-12 h-12 flex-shrink-0 bg-primary rounded-lg flex items-center justify-center mr-4">
-                            <i class="ri-file-text-line ri-lg text-white"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold text-primary mb-2 font-playfair">Arrêté provincial n°20/078 du 5 novembre 2020</h3>
-                            <p class="text-gray-700">Réglemente spécifiquement les supports publicitaires numériques et lumineux, leur emplacement, leur luminosité et leurs horaires de fonctionnement.</p>
-                            <a href="#" class="text-secondary font-medium hover:underline flex items-center mt-2">
-                                Télécharger le document
-                                <i class="ri-download-line ml-1"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="flex">
-                        <div class="w-12 h-12 flex-shrink-0 bg-primary rounded-lg flex items-center justify-center mr-4">
-                            <i class="ri-file-text-line ri-lg text-white"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold text-primary mb-2 font-playfair">Code de déontologie de la publicité (2021)</h3>
-                            <p class="text-gray-700">Établit les principes éthiques que doivent respecter les messages publicitaires diffusés à Kinshasa, notamment en matière de respect de la dignité humaine, de protection des mineurs et de véracité des informations.</p>
-                            <a href="#" class="text-secondary font-medium hover:underline flex items-center mt-2">
-                                Télécharger le document
-                                <i class="ri-download-line ml-1"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Galerie Photos Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-primary mb-12 text-center font-playfair">Galerie Photos</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="overflow-hidden rounded-lg shadow-md">
-                    <img src="https://readdy.ai/api/search-image?query=Modern%2520government%2520building%2520exterior%2520in%2520Kinshasa%252C%2520Congo%2520with%2520professional%2520architecture%2520and%2520well-maintained%2520entrance.%2520Official%2520flags%2520visible%2520and%2520clean%2520surroundings%2520High-quality%2520photorealistic%2520image%2520showing%2520the%2520headquarters%2520of%2520the%2520advertising%2520regulation%2520agency%2520in%2520daylight&width=600&height=400&seq=15&orientation=landscape" alt="Siège de l'ARGPK" class="w-full h-64 object-cover object-top hover:scale-105 transition-transform duration-300">
-                    <div class="p-4">
-                        <h3 class="font-semibold text-primary font-playfair">Siège de l'ARGPK</h3>
-                        <p class="text-sm text-gray-600">Boulevard du 30 Juin, Kinshasa</p>
-                    </div>
-                </div>
-                
-                <div class="overflow-hidden rounded-lg shadow-md">
-                    <img src="https://readdy.ai/api/search-image?query=Professional%2520meeting%2520room%2520in%2520government%2520office%2520building%2520with%2520modern%2520conference%2520table%2520and%2520chairs.%2520Clean%2520corporate%2520environment%2520with%2520national%2520flag%2520and%2520official%2520emblems%2520on%2520wall.%2520High-quality%2520photorealistic%2520image%2520showing%2520formal%2520meeting%2520space%2520with%2520perfect%2520lighting&width=600&height=400&seq=16&orientation=landscape" alt="Salle de réunion" class="w-full h-64 object-cover object-top hover:scale-105 transition-transform duration-300">
-                    <div class="p-4">
-                        <h3 class="font-semibold text-primary font-playfair">Salle du Conseil d'Administration</h3>
-                        <p class="text-sm text-gray-600">Réunion trimestrielle des administrateurs</p>
-                    </div>
-                </div>
-                
-                <div class="overflow-hidden rounded-lg shadow-md">
-                    <img src="https://readdy.ai/api/search-image?query=Modern%2520customer%2520service%2520center%2520in%2520government%2520office%2520with%2520professional%2520staff%2520helping%2520clients.%2520Clean%2520reception%2520area%2520with%2520multiple%2520service%2520counters%2520and%2520waiting%2520area.%2520High-quality%2520photorealistic%2520image%2520showing%2520efficient%2520public%2520service%2520environment%2520with%2520perfect%2520lighting&width=600&height=400&seq=17&orientation=landscape" alt="Accueil du public" class="w-full h-64 object-cover object-top hover:scale-105 transition-transform duration-300">
-                    <div class="p-4">
-                        <h3 class="font-semibold text-primary font-playfair">Espace d'accueil du public</h3>
-                        <p class="text-sm text-gray-600">Service des autorisations publicitaires</p>
-                    </div>
-                </div>
-                
-                <div class="overflow-hidden rounded-lg shadow-md">
-                    <img src="https://readdy.ai/api/search-image?query=Professional%2520team%2520of%2520African%2520government%2520officials%2520in%2520formal%2520attire%2520posing%2520for%2520group%2520photo.%2520Mixed%2520gender%2520group%2520of%25208-10%2520people%2520standing%2520in%2520front%2520of%2520official%2520building.%2520High-quality%2520photorealistic%2520image%2520with%2520perfect%2520lighting%2520showing%2520confident%2520professionals&width=600&height=400&seq=18&orientation=landscape" alt="Équipe ARGPK" class="w-full h-64 object-cover object-top hover:scale-105 transition-transform duration-300">
-                    <div class="p-4">
-                        <h3 class="font-semibold text-primary font-playfair">L'équipe dirigeante</h3>
-                        <p class="text-sm text-gray-600">Comité de direction, janvier 2025</p>
-                    </div>
-                </div>
-                
-                <div class="overflow-hidden rounded-lg shadow-md">
-                    <img src="https://readdy.ai/api/search-image?query=Government%2520officials%2520inspecting%2520billboard%2520installation%2520in%2520Kinshasa.%2520Team%2520of%2520professionals%2520in%2520business%2520attire%2520with%2520safety%2520vests%2520examining%2520large%2520advertising%2520structure.%2520High-quality%2520photorealistic%2520image%2520showing%2520regulatory%2520inspection%2520in%2520urban%2520setting&width=600&height=400&seq=19&orientation=landscape" alt="Inspection terrain" class="w-full h-64 object-cover object-top hover:scale-105 transition-transform duration-300">
-                    <div class="p-4">
-                        <h3 class="font-semibold text-primary font-playfair">Inspection sur le terrain</h3>
-                        <p class="text-sm text-gray-600">Contrôle de conformité des installations</p>
-                    </div>
-                </div>
-                
-                <div class="overflow-hidden rounded-lg shadow-md">
-                    <img src="https://readdy.ai/api/search-image?query=Official%2520ceremony%2520in%2520Kinshasa%2520with%2520government%2520officials%2520cutting%2520ribbon%2520in%2520front%2520of%2520new%2520building.%2520Formal%2520event%2520with%2520attendees%2520in%2520business%2520attire%2520and%2520national%2520flags%2520visible.%2520High-quality%2520photorealistic%2520image%2520showing%2520inauguration%2520ceremony%2520with%2520perfect%2520lighting&width=600&height=400&seq=20&orientation=landscape" alt="Inauguration" class="w-full h-64 object-cover object-top hover:scale-105 transition-transform duration-300">
-                    <div class="p-4">
-                        <h3 class="font-semibold text-primary font-playfair">Inauguration du nouveau siège</h3>
-                        <p class="text-sm text-gray-600">Cérémonie officielle, novembre 2022</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="py-16 bg-primary">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold text-white mb-6 font-playfair">Rejoignez-nous dans notre mission</h2>
-            <p class="text-lg text-white mb-8 max-w-3xl mx-auto">Ensemble, contribuons à faire de Kinshasa une ville où la publicité s'intègre harmonieusement dans le paysage urbain tout en permettant aux entreprises de communiquer efficacement avec leur public.</p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#" class="bg-secondary text-primary px-6 py-3 font-semibold rounded-button hover:bg-opacity-90 transition-all whitespace-nowrap">Nos services</a>
-                <a href="#" class="bg-white text-primary px-6 py-3 font-semibold rounded-button hover:bg-opacity-90 transition-all whitespace-nowrap">Nous contacter</a>
-            </div>
-        </div>
-    </section>
-<br>
-
-     <!-- Footer -->
-     <footer class="bg-primary text-white pt-16 pb-8">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-                <div>
-                    <a href="index.html">
-                        <img src="assets/images/logo/kinshasay_argpk.png" alt="ARGPK Logo" class="h-18 mb-6">
-                    </a>
-                    <p class="text-gray-300 mb-6">L'Agence de Régulation de la Publicité à Kinshasa œuvre pour un environnement publicitaire responsable et harmonieux dans la ville-province de Kinshasa.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
-                            <i class="ri-facebook-fill text-white"></i>
+        <!-- CTA Section -->
+        <section class="section bg-neutral-50">
+            <div class="container">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-3xl font-bold text-primary mb-6">Prêt à collaborer avec nous ?</h2>
+                    <p class="text-lg text-neutral-600 mb-8">
+                        Que vous soyez annonceur, agence publicitaire ou citoyen intéressé par la régulation de la publicité à Kinshasa, nous sommes là pour vous accompagner.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="contact.html" class="btn btn-primary btn-lg">
+                            <i class="ri-mail-line"></i>
+                            Nous contacter
                         </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
-                            <i class="ri-twitter-x-fill text-white"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
-                            <i class="ri-instagram-fill text-white"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
-                            <i class="ri-linkedin-fill text-white"></i>
+                        <a href="e-services.html" class="btn btn-outline btn-lg">
+                            <i class="ri-computer-line"></i>
+                            Découvrir nos services
                         </a>
                     </div>
                 </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-6">Liens rapides</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Accueil</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">À propos</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Missions</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Réglementation</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">E-services</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Emplacements</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Actualités</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-6">Services</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Demande d'autorisation</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Suivi de dossier</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Paiement en ligne</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Calendrier des inspections</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Signalement d'infractions</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Consultation de la réglementation</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-6">Newsletter</h3>
-                    <p class="text-gray-300 mb-4">Abonnez-vous à notre newsletter pour recevoir les dernières actualités et mises à jour.</p>
-                    <form class="mb-4">
-                        <div class="flex">
-                            <input type="email" placeholder="Votre email" class="px-4 py-2 rounded-l-md w-full focus:outline-none text-gray-800">
-                            <button type="submit" class="bg-secondary text-primary px-4 py-2 rounded-r-md font-medium hover:bg-opacity-90 transition duration-300 whitespace-nowrap">S'abonner</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Style Gouvernemental -->
+    <footer class="bg-primary text-white" aria-labelledby="footer-heading">
+        <div class="container">
+            <!-- Main Footer Content -->
+            <div class="py-12 md:py-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12">
+                    <!-- Column 1: Logo & About -->
+                    <div class="lg:col-span-2">
+                        <a href="index.html" class="flex items-center gap-3 mb-6">
+                            <img src="assets/images/logo/kinshasay_argpk.png" 
+                                 alt="Logo ARGPK" 
+                                 class="logo-img"
+                                 width="220" height="80">
+                        </a>
+                        <p class="text-white/85 mb-6 max-w-lg text-sm leading-relaxed">
+                            L'Agence de Régulation de la Publicité à Kinshasa (ARGPK) est une institution publique chargée de réglementer, contrôler et promouvoir une publicité responsable dans la ville-province de Kinshasa.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="Facebook">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="Twitter">
+                                <i class="ri-twitter-x-line"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="LinkedIn">
+                                <i class="ri-linkedin-fill"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="YouTube">
+                                <i class="ri-youtube-fill"></i>
+                            </a>
                         </div>
-                    </form>
-                    <div class="flex items-center space-x-4">
-                        <div class="flex items-center">
-                            <i class="ri-visa-fill text-2xl mr-1"></i>
-                            <i class="ri-mastercard-fill text-2xl mr-1"></i>
-                            <i class="ri-paypal-fill text-2xl"></i>
-                        </div>
+                    </div>
+
+                    <!-- Column 2: Services -->
+                    <div>
+                        <h3 class="text-base font-bold mb-5 text-secondary pb-2 border-b border-white/20">Services</h3>
+                        <ul class="space-y-2.5">
+                            <li><a href="e-services.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Demande d'autorisation</a></li>
+                            <li><a href="e-services.html#suivi" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Suivi de dossier</a></li>
+                            <li><a href="e-services.html#paiement" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Paiement en ligne</a></li>
+                            <li><a href="emplacements.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Emplacements</a></li>
+                            <li><a href="e-services.html#calendrier" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Calendrier inspections</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Documents -->
+                    <div>
+                        <h3 class="text-base font-bold mb-5 text-secondary pb-2 border-b border-white/20">Documents</h3>
+                        <ul class="space-y-2.5">
+                            <li><a href="reglementation.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> Réglementation</a></li>
+                            <li><a href="missions.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> Missions</a></li>
+                            <li><a href="actualites.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> Actualités</a></li>
+                            <li><a href="about.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> À propos</a></li>
+                            <li><a href="contact.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> Nous contacter</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Contact -->
+                    <div>
+                        <h3 class="text-base font-bold mb-5 text-secondary pb-2 border-b border-white/20">Contact</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3 text-sm">
+                                <i class="ri-map-pin-line text-secondary mt-0.5"></i>
+                                <span class="text-white/85">Avenue des Aviateurs,<br>Kinshasa, RDC</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="ri-phone-line text-secondary"></i>
+                                <a href="tel:+243815555555" class="text-white/85 hover:text-white transition-colors text-sm">+243 81 555 5555</a>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="ri-mail-line text-secondary"></i>
+                                <a href="mailto:contact@argpk.cd" class="text-white/85 hover:text-white transition-colors text-sm">contact@argpk.cd</a>
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <i class="ri-time-line text-secondary"></i>
+                                <span class="text-white/85">Lun - Ven: 8h00 - 17h00</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            
-            <div class="border-t border-white/20 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-gray-300 text-sm mb-4 md:mb-0">© 2025 ARGPK - Agence de Régulation de la Publicité à Kinshasa. Tous droits réservés.</p>
-                    <div class="flex space-x-6">
-                        <a href="#" class="text-gray-300 hover:text-white text-sm transition duration-300">Politique de confidentialité</a>
-                        <a href="#" class="text-gray-300 hover:text-white text-sm transition duration-300">Conditions d'utilisation</a>
-                        <a href="#" class="text-gray-300 hover:text-white text-sm transition duration-300">Mentions légales</a>
+
+            <!-- Quick Links Banner -->
+            <div class="py-6 border-y border-white/10 bg-white/5">
+                <div class="flex flex-wrap justify-center gap-6 md:gap-10">
+                    <a href="reglementation.html#lois" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Lois & Décrets</a>
+                    <a href="reglementation.html#normes" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Normes en vigueur</a>
+                    <a href="actualites.html" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Actualités</a>
+                    <a href="emplacements.html" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Carte des emplacements</a>
+                    <a href="contact.html" class="text-white/70 hover:text-white text-sm font-medium transition-colors">FAQ</a>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="py-6">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-white/50 text-xs text-center md:text-left">
+                        © <span id="current-year">2024</span> ARGPK - Agence de Régulation de la Publicité à Kinshasa. Tous droits réservés.
+                    </p>
+                    <div class="flex items-center gap-4 text-xs">
+                        <a href="#" class="text-white/50 hover:text-white transition-colors">Mentions légales</a>
+                        <span class="text-white/20">|</span>
+                        <a href="#" class="text-white/50 hover:text-white transition-colors">Politique de confidentialité</a>
+                        <span class="text-white/20">|</span>
+                        <a href="#" class="text-white/50 hover:text-white transition-colors">Plan du site</a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script>
-         document.addEventListener('DOMContentLoaded', function() {
-            const openMenuBtn = document.getElementById('open-menu');
-            const closeMenuBtn = document.getElementById('close-menu');
-            const mobileMenu = document.querySelector('.mobile-menu');
-            
-            openMenuBtn.addEventListener('click', function() {
-                mobileMenu.classList.remove('hidden');
-                setTimeout(() => {
-                    mobileMenu.classList.add('active');
-                }, 10);
-            });
-            
-            closeMenuBtn.addEventListener('click', function() {
-                mobileMenu.classList.remove('active');
-                setTimeout(() => {
-                    mobileMenu.classList.add('hidden');
-                }, 300);
-            });
-        });
-    </script>
-         <!-- Bouton retour en haut -->
-    <button id="backToTop" class="fixed bottom-4 right-4 bg-primary text-white p-3 rounded-full shadow-lg opacity-0 invisible hover:bg-secondary transition-all duration-300">
+    <!-- Back to Top Button -->
+    <button id="back-to-top" 
+            class="back-to-top"
+            aria-label="Retour en haut de la page">
         <i class="ri-arrow-up-line text-xl"></i>
     </button>
-        
 </body>
 </html>

@@ -9,8 +9,8 @@
     <script>tailwind.config={theme:{extend:{colors:{primary:'#003366',secondary:'#FFCC00'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Fonts - Style Gouvernemental RDC -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js"></script>
@@ -26,6 +26,7 @@
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
+            min-height: auto;
         }
         .mobile-menu {
                 transform: translateX(-100%);
@@ -55,26 +56,25 @@
 </head>
 <body class="bg-gray-50">
     <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <header class="bg-primary backdrop-blur-lg border-b border-primary-dark sticky top-0 z-50">
         <nav class="container mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
+            <div class="flex justify-between items-center h-20">
                 <a href="../index.html" class="flex items-center space-x-3">
-                    <img src="../assets/images/logo/argpk.png" alt="ARGPK Logo" class="h-10">
-                    <span class="text-xl font-bold text-primary">ARGPK</span>
+                    <img src="../assets/images/logo/kinshasay_argpk.png" alt="ARGPK Logo" class="logo-img h-16">
                 </a>
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8">
-                    <a href="../index.html" class="text-gray-700 hover:text-primary">Accueil</a>
-                    <a href="../about.html" class="text-gray-700 hover:text-primary">À propos</a>
-                    <a href="../missions.html" class="text-gray-700 hover:text-primary">Missions</a>
-                    <a href="../reglementation.html" class="text-gray-700 hover:text-primary">Réglementation</a>
-                    <a href="../actualites.html" class="text-gray-700 hover:text-primary">Actualités</a>
-                    <a href="../contact.html" class="text-gray-700 hover:text-primary">Contact</a>
+                    <a href="../index.html" class="nav-link">Accueil</a>
+                    <a href="../about.html" class="nav-link">À propos</a>
+                    <a href="../missions.html" class="nav-link">Missions</a>
+                    <a href="../reglementation.html" class="nav-link">Réglementation</a>
+                    <a href="../actualites.html" class="nav-link">Actualités</a>
+                    <a href="../contact.html" class="nav-link">Contact</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button class="md:hidden text-gray-700 hover:text-primary" id="mobile-menu-button">
+                <button class="md:hidden transition-colors" id="mobile-menu-button">
                     <i class="ri-menu-line ri-2x"></i>
                 </button>
             </div>
@@ -134,69 +134,104 @@
         </div>
     </article>
 
-    <!-- Footer -->
+    <!-- Footer Style Gouvernemental -->
     <footer class="bg-primary text-white pt-16 pb-8">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-                <div>
-                    <a href="../index.html">
-                        <img src="../assets/images/logo/kinshasay_argpk.png" alt="ARGPK Logo" class="h-18 mb-6">
-                    </a>
-                    <p class="text-gray-300 mb-6">L'Agence de Régulation de la Publicité à Kinshasa œuvre pour un environnement publicitaire responsable et harmonieux dans la ville-province de Kinshasa.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
-                            <i class="ri-facebook-fill text-white"></i>
+            <!-- Main Footer Content -->
+            <div class="py-8 md:py-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12">
+                    <!-- Column 1: Logo & About -->
+                    <div class="lg:col-span-2">
+                        <a href="../index.html" class="flex items-center gap-3 mb-6">
+                            <img src="../assets/images/logo/kinshasay_argpk.png" 
+                                 alt="Logo ARGPK" 
+                                 class="h-14 w-auto"
+                                 width="160" height="60">
                         </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
-                            <i class="ri-twitter-x-fill text-white"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition duration-300">
-                            <i class="ri-instagram-fill text-white"></i>
-                        </a>
+                        <p class="text-white/85 mb-6 max-w-lg text-sm leading-relaxed">
+                            L'Agence de Régulation de la Publicité à Kinshasa (ARGPK) est une institution publique chargée de réglementer, contrôler et promouvoir une publicité responsable dans la ville-province de Kinshasa.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="Facebook">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="Twitter">
+                                <i class="ri-twitter-x-line"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="LinkedIn">
+                                <i class="ri-linkedin-fill"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" aria-label="YouTube">
+                                <i class="ri-youtube-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Services -->
+                    <div>
+                        <h3 class="text-base font-bold mb-5 text-secondary pb-2 border-b border-white/20">Services</h3>
+                        <ul class="space-y-2.5">
+                            <li><a href="../e-services.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Demande d'autorisation</a></li>
+                            <li><a href="../e-services.html#suivi" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Suivi de dossier</a></li>
+                            <li><a href="../e-services.html#paiement" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Paiement en ligne</a></li>
+                            <li><a href="../emplacements.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-xs"></i> Emplacements</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Documents -->
+                    <div>
+                        <h3 class="text-base font-bold mb-5 text-secondary pb-2 border-b border-white/20">Documents</h3>
+                        <ul class="space-y-2.5">
+                            <li><a href="../reglementation.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> Réglementation</a></li>
+                            <li><a href="../missions.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> Missions</a></li>
+                            <li><a href="../actualites.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> Actualités</a></li>
+                            <li><a href="../about.html" class="text-white/75 hover:text-white hover:translate-x-1 transition-all text-sm flex items-center gap-2"><i class="ri-file-text-line text-xs"></i> À propos</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Contact -->
+                    <div>
+                        <h3 class="text-base font-bold mb-5 text-secondary pb-2 border-b border-white/20">Contact</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3 text-sm">
+                                <i class="ri-map-pin-line text-secondary mt-0.5"></i>
+                                <span class="text-white/85">Avenue des Aviateurs,<br>Kinshasa, RDC</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="ri-phone-line text-secondary"></i>
+                                <a href="tel:+243815555555" class="text-white/85 hover:text-white transition-colors text-sm">+243 81 555 5555</a>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="ri-mail-line text-secondary"></i>
+                                <a href="mailto:contact@argpk.cd" class="text-white/85 hover:text-white transition-colors text-sm">contact@argpk.cd</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Liens Rapides</h3>
-                    <ul class="space-y-2">
-                        <li><a href="../about.html" class="text-gray-300 hover:text-white">À propos</a></li>
-                        <li><a href="../missions.html" class="text-gray-300 hover:text-white">Nos missions</a></li>
-                        <li><a href="../actualites.html" class="text-gray-300 hover:text-white">Actualités</a></li>
-                        <li><a href="../contact.html" class="text-gray-300 hover:text-white">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Services</h3>
-                    <ul class="space-y-2">
-                        <li><a href="../e-services.html" class="text-gray-300 hover:text-white">E-Services</a></li>
-                        <li><a href="../reglementation.html" class="text-gray-300 hover:text-white">Réglementation</a></li>
-                        <li><a href="../emplacements.html" class="text-gray-300 hover:text-white">Emplacements</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Contact</h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-start space-x-3">
-                            <i class="ri-map-pin-line mt-1"></i>
-                            <span class="text-gray-300">123 Avenue de la Justice<br>Gombe, Kinshasa<br>République Démocratique du Congo</span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <i class="ri-phone-line"></i>
-                            <span class="text-gray-300">+243 123 456 789</span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <i class="ri-mail-line"></i>
-                            <span class="text-gray-300">contact@argpk.cd</span>
-                        </li>
-                    </ul>
+            </div>
+
+            <!-- Quick Links Banner -->
+            <div class="py-6 border-y border-white/10 bg-white/5">
+                <div class="flex flex-wrap justify-center gap-6 md:gap-10">
+                    <a href="../reglementation.html#lois" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Lois & Décrets</a>
+                    <a href="../reglementation.html#normes" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Normes en vigueur</a>
+                    <a href="../actualites.html" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Actualités</a>
+                    <a href="../emplacements.html" class="text-white/70 hover:text-white text-sm font-medium transition-colors">Carte des emplacements</a>
+                    <a href="../contact.html" class="text-white/70 hover:text-white text-sm font-medium transition-colors">FAQ</a>
                 </div>
             </div>
-            
-            <div class="border-t border-white/10 pt-8">
-                <div class="text-center text-gray-400">
-                    <p>&copy; 2024 ARGPK - Agence de Régulation de la Publicité à Kinshasa. Tous droits réservés.</p>
+
+            <!-- Bottom Bar -->
+            <div class="pt-6">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-white/50 text-xs text-center md:text-left">
+                        © <span id="current-year">2024</span> ARGPK - Agence de Régulation de la Publicité à Kinshasa. Tous droits réservés.
+                    </p>
+                    <div class="flex items-center gap-4 text-xs">
+                        <a href="#" class="text-white/50 hover:text-white transition-colors">Mentions légales</a>
+                        <span class="text-white/20">|</span>
+                        <a href="#" class="text-white/50 hover:text-white transition-colors">Plan du site</a>
+                    </div>
                 </div>
             </div>
         </div>
